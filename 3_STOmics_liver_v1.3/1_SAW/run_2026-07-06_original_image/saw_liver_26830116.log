@@ -1,0 +1,39 @@
+================================================
+SAW Stereo-seq Analysis Workflow
+================================================
+Job started at: Mon Jul  6 11:26:10 AM AEST 2026
+Job ID: 26830116
+Running on node: spartan-bm139.hpc.unimelb.edu.au
+Working directory: /data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW
+SAW directory: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2
+Reference directory: /data/projects/punim1236/AAA_Chen_is_here/Mus_musculus_index
+Output directory: /data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics
+FASTQ directory: /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq
+Snakemake cache: /data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/.snakemake_cache
+CPUs: 32
+Memory: 200GB
+
+Verifying SAW installation...
+SAW 8.2.2
+
+================================================
+Processing sample: Y01453J8
+================================================
+Chip mask: /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/mask/Y01453J8.barcodeToPos.h5
+Image: /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/images/Y01453J8_DAPI.tif
+FASTQ directory: /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq
+Expected FASTQ files: Y01453J8_1.fq.gz, Y01453J8_2.fq.gz
+
+Starting SAW count for Y01453J8...
+
+execute:  snakemake -c 32 -s /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/config/count.smk --configfile /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/pipeline-logs/config.yaml -d .snakemake_oskinner --retries 0 --nolock --rerun-incomplete --rerun-triggers mtime --resources mem_gb=200   --jobs 500 --latency-wait 120 >/data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/pipeline-logs/log 2>&1
+The program execution has completed successfully.
+
+SUCCESS: SAW count completed for sample Y01453J8
+Output directory: /data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8
+
+================================================
+All samples processed
+Job completed at: Mon Jul  6 02:59:32 PM AEST 2026
+Total runtime: 12802 seconds
+================================================

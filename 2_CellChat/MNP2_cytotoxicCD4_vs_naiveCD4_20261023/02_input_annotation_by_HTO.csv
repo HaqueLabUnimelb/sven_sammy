@@ -1,0 +1,29 @@
+"annotation_clean","HTO_classification","Freq"
+"cytotoxic CD4","B1: Naive CD4s Liver (infected mice)",77
+"effector CD4","B1: Naive CD4s Liver (infected mice)",12
+"MNP1","B1: Naive CD4s Liver (infected mice)",2
+"MNP2","B1: Naive CD4s Liver (infected mice)",1
+"naive CD4","B1: Naive CD4s Liver (infected mice)",754
+"proliferating CD4","B1: Naive CD4s Liver (infected mice)",4
+"uninfected MNP","B1: Naive CD4s Liver (infected mice)",0
+"cytotoxic CD4","B2: Activated CD4s Liver (infected mice)",85
+"effector CD4","B2: Activated CD4s Liver (infected mice)",455
+"MNP1","B2: Activated CD4s Liver (infected mice)",9
+"MNP2","B2: Activated CD4s Liver (infected mice)",14
+"naive CD4","B2: Activated CD4s Liver (infected mice)",0
+"proliferating CD4","B2: Activated CD4s Liver (infected mice)",102
+"uninfected MNP","B2: Activated CD4s Liver (infected mice)",0
+"cytotoxic CD4","B3: MNPs Liver (infected mice)",1
+"effector CD4","B3: MNPs Liver (infected mice)",11
+"MNP1","B3: MNPs Liver (infected mice)",438
+"MNP2","B3: MNPs Liver (infected mice)",144
+"naive CD4","B3: MNPs Liver (infected mice)",0
+"proliferating CD4","B3: MNPs Liver (infected mice)",6
+"uninfected MNP","B3: MNPs Liver (infected mice)",12
+"cytotoxic CD4","B4: Naive MNPs Liver (uninfected mice)",0
+"effector CD4","B4: Naive MNPs Liver (uninfected mice)",4
+"MNP1","B4: Naive MNPs Liver (uninfected mice)",42
+"MNP2","B4: Naive MNPs Liver (uninfected mice)",8
+"naive CD4","B4: Naive MNPs Liver (uninfected mice)",0
+"proliferating CD4","B4: Naive MNPs Liver (uninfected mice)",4
+"uninfected MNP","B4: Naive MNPs Liver (uninfected mice)",352

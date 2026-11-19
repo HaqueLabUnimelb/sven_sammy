@@ -1,0 +1,305 @@
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.5.0
+✔ ggplot2   4.0.3     ✔ tibble    3.2.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter()    masks stats::filter()
+✖ dplyr::lag()       masks stats::lag()
+✖ lubridate::stamp() masks cowplot::stamp()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: SeuratObject
+Loading required package: sp
+
+Attaching package: ‘SeuratObject’
+
+The following objects are masked from ‘package:base’:
+
+    intersect, t
+
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following object is masked from ‘package:dplyr’:
+
+    count
+
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: generics
+
+Attaching package: ‘generics’
+
+The following object is masked from ‘package:lubridate’:
+
+    as.difftime
+
+The following object is masked from ‘package:dplyr’:
+
+    explain
+
+The following objects are masked from ‘package:base’:
+
+    as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
+    setequal, union
+
+
+Attaching package: ‘BiocGenerics’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,
+    unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:lubridate’:
+
+    second, second<-
+
+The following objects are masked from ‘package:dplyr’:
+
+    first, rename
+
+The following object is masked from ‘package:tidyr’:
+
+    expand
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:sp’:
+
+    %over%
+
+The following object is masked from ‘package:lubridate’:
+
+    %within%
+
+The following objects are masked from ‘package:dplyr’:
+
+    collapse, desc, slice
+
+The following object is masked from ‘package:purrr’:
+
+    reduce
+
+Loading required package: Seqinfo
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘SummarizedExperiment’
+
+The following object is masked from ‘package:Seurat’:
+
+    Assays
+
+The following object is masked from ‘package:SeuratObject’:
+
+    Assays
+
+Loading required package: SingleCellExperiment
+Updating from v2.X to v3.X
+Validating object structure
+Updating object slots
+Ensuring keys are in the proper structure
+Updating matrix keys for DimReduc ‘pca’
+Updating matrix keys for DimReduc ‘tsne’
+Ensuring keys are in the proper structure
+Ensuring feature names don't have underscores or pipes
+Updating slots in RNA
+Updating slots in pca
+Updating slots in tsne
+Setting tsne DimReduc to global
+Validating object structure for Assay ‘RNA’
+Validating object structure for DimReduc ‘pca’
+Validating object structure for DimReduc ‘tsne’
+Object representation is consistent with the most current Seurat version
+Warning messages:
+1: Not validating Assay objects 
+2: Not validating Assay objects 
+3: Not validating DimReduc objects 
+4: Not validating DimReduc objects 
+5: Not validating DimReduc objects 
+6: Not validating DimReduc objects 
+7: Not validating Seurat objects 
+8: Not validating Seurat objects 
+9: Not validating Seurat objects 
+
+                duct epithelial cell endothelial cell of hepatic sinusoid 
+                                  27                                   28 
+                          hepatocyte                            leukocyte 
+                                1764                                   26 
+
+hepatocyte 
+      1764 
+Immune object version: 5.1.0 
+Immune assay class: Assay5 
+
+     naive CD4   infected CD4           MNP1           MNP2 uninfected MNP 
+           754            761            491            167            364 
+
+    hepatocyte           MNP1   infected CD4      naive CD4 uninfected MNP 
+          1764            491            761            754            364 
+          MNP2 
+           167 
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8791539 469.6   14487650  773.8  14487650  773.8
+Vcells 76748898 585.6  308780792 2355.9 358275945 2733.5
+
+    hepatocyte           MNP1   infected CD4      naive CD4 uninfected MNP 
+          1764            491            761            754            364 
+          MNP2 
+           167 
+Validating object structure
+Updating object slots
+Ensuring keys are in the proper structure
+Updating matrix keys for DimReduc ‘spatial’
+Ensuring keys are in the proper structure
+Ensuring feature names don't have underscores or pipes
+Updating slots in RNA
+Updating slots in spatial
+Validating object structure for Assay5 ‘RNA’
+Validating object structure for DimReduc ‘spatial’
+Object representation is consistent with the most current Seurat version
+Number of cells in reference: 4301
+Number of genes in reference: 35856
+
+    hepatocyte           MNP1   infected CD4      naive CD4 uninfected MNP 
+          1764            491            761            754            364 
+          MNP2 
+           167 
+Getting regression differentially expressed genes: 
+getInitialGeneList: Filtering out mitochondrial genes.
+hepatocyte found DE genes: 518
+MNP1 found DE genes: 193
+infected CD4 found DE genes: 271
+ naive CD4 found DE genes: 322
+uninfected MNP found DE genes: 191
+MNP2 found DE genes: 200
+Total DE genes: 1432
+Getting bulk differentially expressed genes: 
+getInitialGeneList: Filtering out mitochondrial genes.
+hepatocyte found DE genes: 779
+MNP1 found DE genes: 533
+infected CD4 found DE genes: 674
+ naive CD4 found DE genes: 791
+uninfected MNP found DE genes: 531
+MNP2 found DE genes: 482
+Total DE genes: 2779
+            used   (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells   9117331  487.0   14487650  773.8  14487650  773.8
+Vcells 190268382 1451.7  640666857 4888.0 665542718 5077.7
+fitBulk: decomposing bulk
+chooseSigma: using initial Q_mat with sigma = 1
+Likelihood value: 321571.587598211
+Sigma value: 0.88
+Likelihood value: 321191.956859221
+Sigma value: 0.86
+Likelihood value: 321173.972966815
+Sigma value: 0.86
+Warning message:
+In asMethod(object) :
+  sparse->dense coercion: allocating vector of size 3.1 GiB
+Job ID           : 32372823
+Cluster          : spartan
+User/Project     : oskinner/punim1236
+Nodes            : 1
+Wall-clock time  : 00:19:18 / 31-00:00:00
+
+Displaying overall resources usage from 2026-10-06 17:34:19 to 2026-10-06 17:53:37:
+
+NODE            CPU#        TOT%   ( USR   / SYS   / WIO   / IDLE  ) 
+
+spartan-bm180 : 
+                CPU# 1    : 88.9   (  88.4 /   0.5 /   0.0 /  11.1 ) 
+                CPU# 2    : 0.2    (   0.1 /   0.1 /   0.0 /  99.8 ) 
+                CPU# 3    : 0.1    (   0.1 /   0.0 /   0.0 /  99.9 ) 
+                CPU# 4    : 0.1    (   0.1 /   0.0 /   0.0 /  99.9 ) 
+                CPU# 5    : 0.4    (   0.3 /   0.0 /   0.0 /  99.6 ) 
+                CPU# 6    : 5.1    (   4.2 /   0.9 /   0.1 /  94.8 ) 
+                CPU# 7    : 0.6    (   0.4 /   0.3 /   0.0 /  99.4 ) 
+                CPU# 8    : 0.2    (   0.1 /   0.1 /   0.0 /  99.8 ) 
+                CPU# 9    : 0.4    (   0.3 /   0.1 /   0.0 /  99.6 ) 
+                CPU# 10   : 0.0    (   0.0 /   0.0 /   0.0 / 100.0 ) 
+                CPU# 11   : 0.4    (   0.3 /   0.0 /   0.0 /  99.6 ) 
+                CPU# 12   : 2.3    (   2.1 /   0.2 /   0.0 /  97.6 ) 
+                CPU# 13   : 90.6   (  90.0 /   0.6 /   0.0 /   9.4 ) 
+                CPU# 14   : 90.6   (  90.0 /   0.6 /   0.0 /   9.4 ) 
+                CPU# 15   : 90.5   (  90.0 /   0.6 /   0.0 /   9.5 ) 
+                CPU# 16   : 1.0    (   0.9 /   0.1 /   0.0 /  99.0 ) 
+
+
+Allocated CPUs            : 16   
+  CPUs with usage <25%    : 12   
+  CPUs with usage <50%    : 0    
+  CPUs with usage >50%    : 4    
+
+Memory used (RAM)         : 14.7%  [15757MB of 107375MB]
+
+--------------------------------------------
+

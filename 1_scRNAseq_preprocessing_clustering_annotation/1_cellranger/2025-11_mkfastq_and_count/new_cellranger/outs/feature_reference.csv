@@ -1,0 +1,9 @@
+id,name,read,pattern,sequence,feature_type
+HTO1,B1: Naive CD4s Liver (infected mice),R2,5PNNNNNNNNNN(BC),ACCCACCAGTAAGAC,Antibody Capture
+HTO2,B2: Activated CD4s Liver (infected mice),R2,5PNNNNNNNNNN(BC),GGTCGAGAGCATTCA,Antibody Capture
+HTO3,B3: MNPs Liver (infected mice),R2,5PNNNNNNNNNN(BC),CTTGCCGCATGTCAT,Antibody Capture
+HTO4,B4: Naive MNPs Liver (uninfected mice),R2,5PNNNNNNNNNN(BC),AAAGCATTCTTCACG,Antibody Capture
+HTO7,B7: Naive CD4s Spleen (infected mice),R2,5PNNNNNNNNNN(BC),GAGTCTGCCAGTATC,Antibody Capture
+HTO8,B8: Activated CD4s Spleen (infected mice),R2,5PNNNNNNNNNN(BC),TATAGAACGCCAGGC,Antibody Capture
+HTO9,B9: MNPs Spleen (infected mice),R2,5PNNNNNNNNNN(BC),TGCCTATGAAACAAG,Antibody Capture
+HTO10,B10: Naive MNPs Spleen (uninfected mice),R2,5PNNNNNNNNNN(BC),CCGATTGTAACAGAC,Antibody Capture

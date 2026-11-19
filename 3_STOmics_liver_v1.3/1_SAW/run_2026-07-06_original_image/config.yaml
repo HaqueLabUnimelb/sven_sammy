@@ -1,0 +1,98 @@
+inputs:
+  SAW_DIRECTORY: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/bin
+  SAW_VERSION: 8.2.2
+  bin_size:
+  - '20'
+  - '50'
+  chip_mask: /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/mask/Y01453J8.barcodeToPos.h5
+  clean_reads_fastq: false
+  commands:
+    cmd: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/bin/saw
+      count --id Y01453J8 --sn Y01453J8 --omics transcriptomics --kit-version 'Stereo-seq
+      T FF V1.3' --sequencing-type PE75_50+100 --chip-mask /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/mask/Y01453J8.barcodeToPos.h5
+      --organism mouse --tissue liver --reference /data/projects/punim1236/AAA_Chen_is_here/Mus_musculus_index
+      --fastqs /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq --image
+      /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/images/Y01453J8_DAPI.tif
+      --output /data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics
+      --threads-num 32 --memory 200 --create-gem --job-mode local
+  create_gem: true
+  description: null
+  fq1:
+  - /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq/Y01453J8_1.fq.gz
+  fq2:
+  - /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq/Y01453J8_2.fq.gz
+  gpu_id: -1
+  id: Y01453J8
+  image: /data/scratch/projects/punim1445/liver_stomicsv1.3/raw/images/Y01453J8_DAPI.tif
+  image_tar: null
+  kit_version: Stereo-seq T FF V1.3
+  memory: 200
+  metrics_file: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/config/Metrics_default_V8.0.2_FF_V1.3.xlsx
+  microorganism_detect: false
+  no_bam: false
+  omics: transcriptomics
+  organism: mouse
+  rRNA_remove: false
+  reference:
+    STAR: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Mus_musculus_index
+  resources_yaml: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/config/resources.yaml
+  sequencing_type: PE75_50+100
+  skip_cellbin: false
+  skip_cluster: false
+  sn: Y01453J8
+  stereo_log_file: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/pipeline-logs/stereo_log
+  summary_display_bin_size: 50
+  threads_num: 32
+  tissue: liver
+  uniquely_mapped_only: false
+  unmapped_STAR_fastq: false
+  unmapped_fastq: false
+outputs:
+  analysis_multi_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/ANALYSIS/multiomics
+  analysis_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/ANALYSIS
+  analysis_sp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/ANALYSIS/protein
+  anno_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/ANNOTATION
+  exp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/EXPRESSION_MATRIX
+  exp_sp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/EXPRESSION_MATRIX/protein
+  img_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/IMAGE
+  img_sp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/IMAGE/protein
+  map_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/ALIGNMENT
+  map_sp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/ALIGNMENT/protein
+  micro_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/MICROORGANISM
+  path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8
+  report_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/STEREO_ANALYSIS_WORKFLOW_PROCESSING/REPORT
+  res_analysis_multi_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/analysis/multiomics
+  res_analysis_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/analysis
+  res_analysis_sp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/analysis/protein
+  res_bam_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/bam
+  res_exp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/feature_expression
+  res_exp_sp_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/feature_expression/protein
+  res_img_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/image
+  res_visual_path: /data/gpfs/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics/Y01453J8/outs/visualization
+software:
+  anno: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_count/Bam2Gem
+  cellchunk: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/cellshape/cellShape.pyc
+  cellcorrect: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_cellcorrect/cell_correct.pyc
+  checkgtf: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_count/checkGTF
+  cidcount: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_cidcount/calBcNumFromMask
+  cluster: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_cluster/main.pyc
+  cluster_py310: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_cluster_py310/main.pyc
+  coexp: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_spatialcoexpress/main.pyc
+  geftools: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/geftools/bin/geftools
+  imagetools: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/imagetools/main.pyc
+  makeRef: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_count/makeRef.pyc
+  map: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/bcstar/bcSTAR
+  mapping_sp: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/proteinmap/proteinMap
+  matrix_template: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/register/register/matrix_template/matrix_template.pyc
+  merge: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_merge/mergeBcCount
+  micro: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/microbiome
+  multiomicsAnalysis: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_multianalysis/multiAnalysis.pyc
+  proteinstat: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/proteinstat/ProteinAndGeneCorrelation.pyc
+  register: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/register/register/main.pyc
+  removebackground: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/removebackground/RemoveBackgroundMethodPipeline.pyc
+  report: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_report/src/main.pyc
+  saturation: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_saturation/saturation
+  script: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_scripts
+  splitmask: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_splitmask/splitBcBin
+  stereo: /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_stereo2h5ad
+  tissuecut: python /data/scratch/projects/punim1236/spleen_stomicsv1.3_serial/saw-8.2.2/lib/saw_tissuecut/Tissuecut.pyc

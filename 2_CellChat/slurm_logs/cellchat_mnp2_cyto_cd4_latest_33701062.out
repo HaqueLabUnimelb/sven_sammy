@@ -1,0 +1,60 @@
+2026-10-23 13:11:34 | STEP 1: load input Seurat object
+TRUE2026-10-23 13:11:36 | Input dimensions: 32285 x 2537
+TRUE2026-10-23 13:11:36 | CellChat version: 2.2.0.9001
+TRUE2026-10-23 13:11:36 | CellChat library: /data/gpfs/projects/punim2394/AAA_Sorry_Its_Chen_Here/Rlib_new/CellChat
+TRUE2026-10-23 13:11:36 | Seurat version: 5.4.0
+TRUE2026-10-23 13:11:36 | STEP 2: run CellChat separately for cytotoxic-CD4 and naive-CD4 comparisons
+TRUE2026-10-23 13:11:36 | Create MNP2_with_cytotoxic_CD4 object: 330 cells (MNP2, cytotoxic CD4)
+TRUE[1] "Create a CellChat object from a Seurat object"
+The `meta.data` slot in the Seurat object is used as cell meta information 
+Set cell identities for the new CellChat object 
+The cell groups used for CellChat analysis are  MNP2, cytotoxic CD4 
+2026-10-23 13:11:38 | MNP2_with_cytotoxic_CD4: identify over-expressed genes
+TRUE2026-10-23 13:13:36 | MNP2_with_cytotoxic_CD4: identify over-expressed interactions
+TRUEThe number of highly variable ligand-receptor pairs used for signaling inference is 176 
+2026-10-23 13:14:09 | MNP2_with_cytotoxic_CD4: compute communication probabilities
+TRUEtruncatedMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-10-23 13:14:22.517993]"
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-23 13:16:29.527785]"
+2026-10-23 13:16:29 | MNP2_with_cytotoxic_CD4: filter and aggregate network
+TRUE2026-10-23 13:16:37 | MNP2_with_cytotoxic_CD4: saved CellChat object
+TRUE2026-10-23 13:16:37 | Create MNP2_with_naive_CD4 object: 921 cells (MNP2, naive CD4)
+TRUE[1] "Create a CellChat object from a Seurat object"
+The `meta.data` slot in the Seurat object is used as cell meta information 
+Set cell identities for the new CellChat object 
+The cell groups used for CellChat analysis are  MNP2, naive CD4 
+2026-10-23 13:16:38 | MNP2_with_naive_CD4: identify over-expressed genes
+TRUE2026-10-23 13:17:31 | MNP2_with_naive_CD4: identify over-expressed interactions
+TRUEThe number of highly variable ligand-receptor pairs used for signaling inference is 347 
+2026-10-23 13:18:04 | MNP2_with_naive_CD4: compute communication probabilities
+TRUEtruncatedMean is used for calculating the average gene expression per cell group. 
+[1] ">>> Run CellChat on sc/snRNA-seq data <<< [2026-10-23 13:19:01.094268]"
+[1] ">>> CellChat inference is done. Parameter values are stored in `object@options$parameter` <<< [2026-10-23 13:21:45.539487]"
+2026-10-23 13:21:45 | MNP2_with_naive_CD4: filter and aggregate network
+TRUE2026-10-23 13:22:01 | MNP2_with_naive_CD4: saved CellChat object
+TRUE2026-10-23 13:22:01 | STEP 3: extract source-target ligand-receptor communications
+TRUE2026-10-23 13:22:01 | CD4 -> MNP2 differential LR pairs: 41
+TRUE2026-10-23 13:22:01 | MNP2 -> CD4 differential LR pairs: 42
+TRUE2026-10-23 13:22:01 | STEP 4: plot screenshot-style differential LR bars
+TRUE2026-10-23 13:22:05 | STEP 5: create lifted merged object and standard CellChat comparison plots
+TRUEUpdate slots object@net, object@netP, object@idents in a single dataset... 
+Update slots object@net, object@netP, object@idents in a single dataset... 
+The cell barcodes in merged 'meta' is  AAACGAACACGTTGGC-1 AAAGGATCAGATGCGA-1 AAAGGTAGTCTGATCA-1 AAAGGTAGTGTGAATA-1 AAAGGTATCATTTGGG-1 AAATGGATCTCAAAGC-1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+2026-10-23 13:22:15 | DONE
+TRUE

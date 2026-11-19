@@ -1,0 +1,207 @@
+================================================================
+Y01453J8 bin20 RCTD pipeline
+================================================================
+Job ID:             27327937
+Node:               spartan-bm031
+CPUs:               16
+Memory requested:   250G
+Start time:         Thu 16 Jul 2026 11:56:07 AEST
+Working directory:  /data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20
+R library:          /data/projects/punim1236/liver_stomicsv1.3/RCTD_CLAHE_old/R_library_4.5
+================================================================
+
+================================================================
+Step 1/3: Convert tissue.gef to bin20 raw-count H5AD
+Start: Thu 16 Jul 2026 11:56:07 AEST
+================================================================
+Output already exists; skipping Step 1:
+  /data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_raw_counts.h5ad
+Step 1 completed: Thu 16 Jul 2026 11:56:07 AEST
+
+R executable: /apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/R/4.5.0/bin/Rscript
+Rscript (R) version 4.5.0 (2025-04-11)
+
+All required R packages are available.
+
+================================================================
+Step 2/3: Convert bin20 H5AD to Seurat RDS
+Start: Thu 16 Jul 2026 11:56:24 AEST
+================================================================
+============================================================
+Convert Y01453J8 bin20 H5AD to Seurat RDS
+============================================================
+
+Input:
+/data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_raw_counts.h5ad
+
+Using obs index dataset: obs/bin_id
+Using var index dataset: var/gene
+
+H5AD dimensions: 293,543 bins x 24,886 genes
+Sparse X encoding: csr_matrix
+Non-zero entries: 57,212,888
+Reading X as CSR: bins x genes.
+Count matrix: 24,886 genes x 293,543 bins
+Mean UMI per bin: 356.92
+Median UMI per bin: 351.00
+Mean genes per bin: 194.90
+Median genes per bin: 192.00
+
+Creating Seurat object...
+
+Seurat object summary:
+An object of class Seurat 
+24886 features across 293543 samples within 1 assay 
+Active assay: RNA (24886 features, 0 variable features)
+ 1 layer present: counts
+ 1 dimensional reduction calculated: spatial
+
+Saving RDS:
+/data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_raw_counts.rds
+Saved RDS size: 0.68 GB
+
+Done.
+Step 2 completed: Thu 16 Jul 2026 11:56:53 AEST
+
+================================================================
+Step 3/3: Run RCTD on Y01453J8 bin20
+Start: Thu 16 Jul 2026 11:56:53 AEST
+RCTD worker cores: 16
+================================================================
+============================================================
+RCTD analysis: Y01453J8 bin20
+============================================================
+
+spacexr version: 1.2.0
+Spatial input:
+/data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_raw_counts.rds
+
+Loading Tabula Muris liver reference...
+
+Original Tabula Muris cell types:
+
+                duct epithelial cell endothelial cell of hepatic sinusoid 
+                                  27                                   28 
+                          hepatocyte                            leukocyte 
+                                1764                                   26 
+
+Selected liver reference cell types:
+
+                duct epithelial cell endothelial cell of hepatic sinusoid 
+                                  27                                   28 
+                          hepatocyte 
+                                1764 
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8600810 459.4   13135552  701.6  13135552  701.6
+Vcells 65522360 499.9  191145930 1458.4 167311891 1276.5
+
+Loading immune reference...
+Immune object version: 5.4.0 
+Immune RNA assay class: Assay5 
+
+Immune cell types:
+
+        naive CD4     cytotoxic CD4      effector CD4      MNP infected 
+              754               163               482               658 
+        naive MNP proliferating CD4 
+              364               116 
+           used (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8630807  461   13135552  701.6  13135552  701.6
+Vcells 77976883  595  191145930 1458.4 185532446 1415.6
+
+Merging liver and immune references...
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8636340 461.3   13135552  701.6  13135552  701.6
+Vcells 77968659 594.9  213626524 1629.9 264877596 2020.9
+
+Merged reference cell types:
+cell_types
+                           naive CD4                        cytotoxic CD4 
+                                 754                                  163 
+                duct epithelial cell                         effector CD4 
+                                  27                                  482 
+endothelial cell of hepatic sinusoid                           hepatocyte 
+                                  28                                 1764 
+                        MNP infected                            naive MNP 
+                                 658                                  364 
+                   proliferating CD4 
+                                 116 
+
+Reference dimensions: 35,856 genes x 4,356 cells
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8643675 461.7   13135552  701.6  13135552  701.6
+Vcells 31439482 239.9  170901220 1303.9 264877596 2020.9
+
+Loading Y01453J8 bin20 spatial data...
+Coordinates extracted from Seurat metadata.
+
+Spatial data dimensions: 24,886 genes x 293,543 bins
+Mean UMI per bin: 356.92
+Median UMI per bin: 351.00
+Bins with at least 100 UMI: 289,703 / 293,543
+
+Shared genes between spatial data and reference: 24,126
+
+SpatialExperiment created successfully.
+
+Creating RCTD object...
+           used  (Mb) gc trigger   (Mb)  max used   (Mb)
+Ncells  8959037 478.5   13135552  701.6  13135552  701.6
+Vcells 77420342 590.7  541962560 4134.9 582589187 4444.9
+
+Running RCTD in doublet mode with 16 cores...
+
+Saving RCTD result:
+/data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_rctd_results.rds
+
+RCTD analysis completed successfully.
+Step 3 completed: Thu 16 Jul 2026 13:14:33 AEST
+
+Final RCTD result:
+  /data/gpfs/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_rctd_results.rds
+
+================================================================
+Pipeline completed successfully.
+Job ID: 27327937
+End time: Thu 16 Jul 2026 13:14:33 AEST
+================================================================
+
+Resource usage:
+Job ID           : 27327937
+Cluster          : spartan
+User/Project     : czhu3869/punim1236
+Nodes            : 1
+Wall-clock time  : 01:18:28 / 31-00:00:00
+
+Displaying overall resources usage from 2026-07-16 11:56:05 to 2026-07-16 13:14:33:
+
+NODE            CPU#        TOT%   ( USR   / SYS   / WIO   / IDLE  ) 
+
+spartan-bm031 : 
+                CPU# 1    : 92.0   (  90.8 /   1.2 /   0.0 /   8.0 ) 
+                CPU# 2    : 91.5   (  90.4 /   1.1 /   0.0 /   8.5 ) 
+                CPU# 3    : 89.9   (  89.0 /   0.9 /   0.0 /  10.1 ) 
+                CPU# 4    : 89.7   (  88.8 /   0.9 /   0.0 /  10.3 ) 
+                CPU# 5    : 91.0   (  90.1 /   0.9 /   0.0 /   9.0 ) 
+                CPU# 6    : 90.9   (  90.0 /   0.9 /   0.0 /   9.1 ) 
+                CPU# 7    : 91.3   (  90.4 /   0.9 /   0.0 /   8.7 ) 
+                CPU# 8    : 89.7   (  88.8 /   0.9 /   0.0 /  10.3 ) 
+                CPU# 9    : 88.9   (  88.0 /   0.8 /   0.0 /  11.1 ) 
+                CPU# 10   : 88.9   (  88.0 /   0.8 /   0.0 /  11.1 ) 
+                CPU# 11   : 89.3   (  88.4 /   0.9 /   0.0 /  10.7 ) 
+                CPU# 12   : 88.8   (  88.0 /   0.9 /   0.0 /  11.2 ) 
+                CPU# 13   : 88.2   (  87.4 /   0.9 /   0.0 /  11.8 ) 
+                CPU# 14   : 87.6   (  86.8 /   0.8 /   0.0 /  12.4 ) 
+                CPU# 15   : 91.4   (  90.4 /   1.0 /   0.0 /   8.6 ) 
+                CPU# 16   : 86.9   (  86.1 /   0.8 /   0.0 /  13.1 ) 
+
+
+Allocated CPUs            : 16   
+  CPUs with usage <25%    : 0    
+  CPUs with usage <50%    : 0    
+  CPUs with usage >50%    : 16   
+
+Memory used (RAM)         : 20.2%  [54255MB of 268436MB]
+
+--------------------------------------------
+

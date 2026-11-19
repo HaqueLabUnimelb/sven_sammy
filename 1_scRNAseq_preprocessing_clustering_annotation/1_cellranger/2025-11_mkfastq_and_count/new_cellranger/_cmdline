@@ -1,0 +1,1 @@
+cellranger count --id=new_cellranger --libraries=/data/projects/punim1236/liver_scRNAseq/library.csv --transcriptome=/data/gpfs/projects/punim1236/liver_scRNAseq/mm10/refdata-gex-mm10-2020-A --feature-ref=/data/projects/punim2394/AAA_Sorry_Its_Chen_Here/Ollie_cellranger/feature_hto.csv --create-bam=false --localcores=24 --localmem=128
