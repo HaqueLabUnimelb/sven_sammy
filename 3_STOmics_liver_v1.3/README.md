@@ -31,7 +31,8 @@ scripts speak of the "NI revision"; the archived files do not expand `NI`.
 |---|---|---|
 | 1. SAW | `1_SAW/run_2026-07-06_original_image/config.yaml` | Settings and the full `saw count` command that SAW 8.2.2 recorded for the run of 6 July 2026 (SLURM job 26830116): kit version `Stereo-seq T FF V1.3`, sequencing type `PE75_50+100`, organism mouse, tissue liver, the original DAPI image, 32 threads, memory 200. Its output `Y01453J8.tissue.gef` is the input of step 2. |
 | | `1_SAW/run_2026-07-06_original_image/saw_liver_26830116.log` | SLURM log of that run. |
-| | `1_SAW/SAWv1.3_pipeline.sh` | SLURM script that runs `saw count`. This is the script of a second SAW run of the chip (10 July 2026, job 27045467). It differs from the first run in the image folder (`IMAGEDIR`, a contrast-enhanced copy of the DAPI image), 16 threads and `--memory 300`. The output of the second run is not used in steps 2 to 5. The script that submitted the first run was not found. |
+| | `1_SAW/run_2026-07-06_original_image/SAWv1.3_pipeline_modified.slurm` | SLURM script that submitted that run: `saw count` with the original DAPI image, 32 CPUs, 200 GB and `--memory 200`, output in `/data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics` (the output now sits in `/data/projects/punim1236/output_liver_stomics/`). The file was later removed from Spartan; this copy is the version kept in the edit history of code-server (the browser version of the VS Code editor) in the home folder of `czhu3869`, saved at 11:25:29 on 6 July 2026, 20 seconds before the job was submitted. The settings it prints match the log. |
+| | `1_SAW/SAWv1.3_pipeline.sh` | SLURM script that runs `saw count`. This is the script of a second SAW run of the chip (10 July 2026, job 27045467). It differs from the script of the first run in the image folder (`IMAGEDIR`, a contrast-enhanced copy of the DAPI image), the working and output folder (`WORKDIR`), the SLURM request (partition `long`, 16 CPUs, 100 GB, 31 days instead of `sapphire`, 32 CPUs, 200 GB, 48 hours) and `--memory 300`. The output of the second run is not used in steps 2 to 5. |
 | 2. bin20 matrix | `2_bin20_matrix/run_Y01453J8_bin20_RCTD.slurm` | SLURM wrapper that runs the three scripts below, one after the other. Each step is skipped when its output file exists. |
 | | `2_bin20_matrix/01_Y01453J8_bin20_gef_to_h5ad.py` | Reads `Y01453J8.tissue.gef` of the first SAW run with stereopy (`st.io.read_gef(bin_size=20)`) and writes the raw counts as `Y01453J8_tissue_bin20_raw_counts.h5ad`, with the bin coordinates in `obs["x"]` and `obs["y"]`. This file is the input of step 4. The stereopy version of the run is not recorded; the Python environment that the wrapper names held stereopy 1.6.2 and Python 3.8.20 when it was removed on 18 November 2026. |
 | | `2_bin20_matrix/02_Y01453J8_bin20_h5ad_to_rds.R` | Converts the h5ad file to a Seurat object, `Y01453J8_tissue_bin20_raw_counts.rds` (no gene or bin filter). This file is the input of step 3. |
@@ -64,9 +65,10 @@ scripts speak of the "NI revision"; the archived files do not expand `NI`.
 
 ## How to reproduce
 
-1. SAW: run `saw count` with the arguments in `config.yaml` (SAW 8.2.2, FASTQ files, chip mask, DAPI image,
-   mouse reference index). `SAWv1.3_pipeline.sh` shows the SLURM set-up; edit `WORKDIR`, `SAWDIR`, `REFDIR`,
-   `FASTQDIR` and `MASKDIR`, and set `IMAGEDIR` to the folder of the original DAPI image.
+1. SAW: edit the paths at the top of `run_2026-07-06_original_image/SAWv1.3_pipeline_modified.slurm`
+   (`WORKDIR`, `SAWDIR`, `REFDIR`, `FASTQDIR`, `MASKDIR`, `IMAGEDIR`) and the `--output` and `--error` lines,
+   then submit it with `sbatch` (SAW 8.2.2, FASTQ files, chip mask, original DAPI image, mouse reference
+   index). `config.yaml` records the full `saw count` command of the run.
 2. bin20 matrix: edit the paths at the top of `run_Y01453J8_bin20_RCTD.slurm` and of the scripts `01` and
    `02`, then `sbatch run_Y01453J8_bin20_RCTD.slurm`. `01` needs Python with stereopy. Before `02`
    starts, the wrapper checks that the R packages Matrix, hdf5r, Seurat, spacexr, SummarizedExperiment,

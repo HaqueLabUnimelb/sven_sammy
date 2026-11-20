@@ -22,7 +22,11 @@ Terms used in all parts:
   the "NI revision"; the archived files do not expand `NI` and do not name the manuscript.
 
 The archived files are byte-for-byte copies of the files on the lab's storage on the Spartan cluster
-(University of Melbourne), copied on 20 November 2026. They were not edited for this archive.
+(University of Melbourne), copied on 20 November 2026. They were not edited for this archive. Four files
+come from records in the home folder of the account `czhu3869` instead: the contents of an RStudio editor
+buffer, a SAW script from the edit history of the code-server editor (both copied byte for byte), and the
+text of two commands taken from the log of the session that ran them. The folder READMEs say which files
+these are.
 `MANIFEST.tsv` lists, for every archived file, its original path, its owner (cluster account), its
 last-modified time and its md5. Six scripts were last saved by their author on 19 November 2026, after the
 results had been produced (`liver_scRNAseq_processed_NI.R`, `sven_liverscRNAseq.R`, `rctd_script_NI.R`,
@@ -34,7 +38,7 @@ folder READMEs list the differences from the results that could be identified.
 | Part | Folder | Main files |
 |---|---|---|
 | 1. scRNA-seq: Cell Ranger, clustering, cell annotation | [`1_scRNAseq_preprocessing_clustering_annotation/`](1_scRNAseq_preprocessing_clustering_annotation) | `1_cellranger/` (Cell Ranger 8.0.1 input tables and command records), `2_seurat_clustering_annotation/liver_scRNAseq_processed_NI.R` (clustering, annotation, UMAPs, dot plot), `sven_liverscRNAseq.R` and `Tcell_combined_ref.R` (annotated objects for RCTD and CellChat). No script was found for the hashtag demultiplexing and first clustering. |
-| 2. CellChat | [`2_CellChat/`](2_CellChat) | `run_cellchat_MNP2_infected_vs_naive_CD4_latest.R`, `run_cellchat_MNP2_cytotoxic_vs_naive_CD4_latest.R`, their SLURM wrappers and logs, and the two output folders with the run settings, result tables and figures |
+| 2. CellChat | [`2_CellChat/`](2_CellChat) | `run_cellchat_MNP2_infected_vs_naive_CD4_latest.R`, `run_cellchat_MNP2_cytotoxic_vs_naive_CD4_latest.R`, their SLURM wrappers and logs, and the two output folders with the run settings, result tables and figures; `commands_for_two_extra_tables/`; `earlier_analysis_2025-11/` (code and one result table of the November 2025 CellChat analysis of the same cells) |
 | 3. Stereo-seq v1.3 | [`3_STOmics_liver_v1.3/`](3_STOmics_liver_v1.3) | `1_SAW/` (SAW 8.2.2), `2_bin20_matrix/` (bin20 count matrix), `3_RCTD/rctd_script_NI.R`, `4_Hotspot/hotspot_liverstomics_NI.ipynb`, `5_DBSCAN_regions_enrichment/liverstomics_hotspot_dbscan_NI.R` and `colocalisation_script_NI.R` |
 
 Each folder has its own README with one row per file, the parameters, and notes on the archived state.
@@ -90,10 +94,12 @@ and result object with its path on Spartan, size and md5. The main ones:
 These items are not in the archive or do not agree with each other. Details are in the folder READMEs.
 
 - Part 1: the R script that created `GEX_HTO_Processed.rds` and the Cell Ranger output it read were not
-  found. The code that saved `sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS` was not found. Three SLURM
-  scripts (the bcl2fastq script and two Cell Ranger wrappers) are not archived.
-- Part 2: no script was found for the earlier CellChat analyses that the archived runs were matched to,
-  nor for two tables that were added to an output folder after the run.
+  found. The code that saved `sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS` was not found. Four SLURM
+  scripts (the bcl2fastq script and three Cell Ranger scripts) are not archived because they contain a
+  personal e-mail address; their commands are given in the part 1 README or in the archived Cell Ranger
+  command records.
+- Part 2: the code of the November 2025 CellChat analysis was found only in its last edited state (an
+  RStudio editor buffer, archived); the code of the June 2025 CellChat analyses was not found.
 - Part 3: the Hotspot notebook shows `n_neighbors=15`, while the result tables used downstream were
   written by a run with `n_neighbors=30`. The RCTD script names an output file that differs from the file
-  read in the next step. The script that submitted the first SAW run was not found.
+  read in the next step.

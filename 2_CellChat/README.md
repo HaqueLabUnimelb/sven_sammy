@@ -8,9 +8,12 @@ analysis (see the table "Objects and labels" in
 [`../1_scRNAseq_preprocessing_clustering_annotation/README.md`](../1_scRNAseq_preprocessing_clustering_annotation/README.md#objects-and-labels)).
 MNPs are mononuclear phagocytes; MNP2 is one of their clusters.
 
-All files are byte-for-byte copies of the files in
+The files of the two runs are byte-for-byte copies of the files in
 `/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/` on the Spartan cluster
-(University of Melbourne). [`../MANIFEST.tsv`](../MANIFEST.tsv) lists the original path and md5 of each file.
+(University of Melbourne). Two further folders hold the code and one result table of an earlier CellChat
+analysis of the same cells (`earlier_analysis_2025-11/`) and the commands that wrote two extra tables
+(`commands_for_two_extra_tables/`); see the sections at the end. [`../MANIFEST.tsv`](../MANIFEST.tsv) lists
+the original path and md5 of each file.
 
 ## The two runs
 
@@ -96,14 +99,16 @@ Values are the ones written in the scripts. The CellChat objects saved by the ru
 
 ## Notes on the archived runs
 
-- **Earlier CellChat analyses.** Earlier CellChat analyses of the liver cells exist on Spartan in
-  `/data/projects/punim1236/liver_scRNAseq/`: CellChat objects of November 2025 with the same 2,537
-  cells, and objects of June 2025 with 2,555 or 1,284 cells and earlier labels. No script of them was
-  found. `00_run_config.txt` refers to them in two lines: `database=CellChatDB.mouse subset to Secreted
-  Signaling and Cell-Cell Contact, matching the existing 2025-11-19 CellChat object` and
-  `identifyOverExpressedGenes=do.fast FALSE to match the historical scripts/templates`; the output folder
-  name ends in `matched_original_params` for the same reason. `FigS2E_style` and `screenshot` refer to
-  the bar-chart layout of a figure panel that served as the template; that figure is not in this archive.
+- **Earlier analysis in the run settings.** One line of `00_run_config.txt` refers to the earlier analysis
+  (see "Earlier CellChat analysis (November 2025)" below): `database=CellChatDB.mouse subset to Secreted
+  Signaling and Cell-Cell Contact, matching the existing 2025-11-19 CellChat object`. The line
+  `identifyOverExpressedGenes=do.fast FALSE to match the historical scripts/templates` does not name those
+  scripts; the November 2025 code calls `identifyOverExpressedGenes()` with its default arguments, and
+  `do.fast = FALSE` is written in a CellChat script of another lab project
+  (`/data/projects/punim1236/b_cells/CellChat/IdeasGrant/CellChat_Ideasgrant.R`, line 114). The output
+  folder name ends in `matched_original_params` for these reasons. `FigS2E_style` and `screenshot` refer to
+  the bar-chart layout of panel E of a Figure S2 ("Cytotoxic vs Naive CD4+ -> MNP") that served as the
+  template; that figure is not in this archive.
 - **`latest` and `existing` in file names.** The default CellChat library written in the R scripts,
   `Rlib_cellchat_latest`, does not exist. The wrappers point `CELLCHAT_LIB` to the library that was already
   installed (`Rlib_new`, CellChat 2.2.0.9001).
@@ -119,9 +124,68 @@ Values are the ones written in the scripts. The CellChat objects saved by the ru
   argument `flush = TRUE` is printed by `cat()`), so many lines of the `.out` logs start with `TRUE` and
   the logs end with `TRUE`. It has no meaning.
 - **Two tables that the scripts did not write.** `MNP2_CD4_20261023/example_LR_expression_support.csv`
-  (mean expression and percentage of expressing cells per label for seven genes) and
-  `MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv` (pair-by-pair comparison of run 1 with an
-  earlier CellChat result in which the MNP clusters were combined) were added to the folder about one
-  hour after the run. No script that produced them was found.
+  and `MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv` were written about one hour after
+  run 1 by two separate commands; see "Commands that wrote the two extra tables" below.
 - **Not archived here.** The CellChat result objects (`cellchat_*.rds`, 1.4 to 4.9 MB each) and
   `99_sessionInfo.rds` stay on Spartan; rerunning the scripts recreates them.
+
+## Commands that wrote the two extra tables
+
+The folder `commands_for_two_extra_tables/` holds the exact text of the two commands, recovered from the
+log of the session that ran them on 23 October 2026 in `/data/scratch/projects/punim1236/AAA_Chen_is_here`.
+They write into the output folder under its name at that time
+(`cellchat_latest_MNP2_CD4_20261023_matched_original_params/`, now `MNP2_CD4_20261023/`).
+
+| File | Run at | What it does |
+|---|---|---|
+| `make_MNP2_vs_original_combinedMNP_comparison.sh` | 11:13 | Python (pandas). Takes from `earlier_analysis_2025-11/AAA_complete_altogether.csv` the pairs sent by `cytotoxic CD4` or `naive CD4` to `MNP infected` (clusters MNP1 and MNP2 together), joins them with `03_differential_LR_CD4_to_MNP2_infected_minus_naive.csv` of run 1, and writes `MNP2_vs_original_combinedMNP_comparison.csv`. |
+| `make_example_LR_expression_support.sh` | 11:33 | R, with the `Rscript` of `/data/scratch/projects/punim1236/python_envs/rseurat`. For Ifng, Ifngr1, Ifngr2, Thy1, Adgre5, Cd6 and Alcam: mean log-normalised expression (Seurat `data` layer) and percentage of cells with expression above 0 per label of `sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS`; writes `example_LR_expression_support.csv`. |
+
+On 20 November 2026 both commands were run again. For the re-run the input path of the Python command was
+changed to the renamed folder and both output paths were changed to a scratch folder; nothing else was
+changed. Both tables were reproduced byte for byte.
+
+## Earlier CellChat analysis (November 2025)
+
+`earlier_analysis_2025-11/rstudio_editor_buffer_2025-11-21.R` is a copy of the contents of an RStudio editor
+buffer that RStudio kept in `~/.local/share/rstudio/sources/` of the account `czhu3869` (last changed on
+21 November 2025). RStudio's record of the file name and saved state of this buffer is gone, and no saved
+file with this content was found. No other code of the November 2025 CellChat analysis was found in the
+home folder of `czhu3869` or in the project folders. The buffer also holds other work:
+
+| Lines | What they do |
+|---|---|
+| 1 to 21 | library calls and package installation |
+| 23 to 98 | Seurat processing of the November 2025 Cell Ranger run into `new_livescRNA.RDS` (see part 1; this object is not used by the archived analyses) |
+| 106 to 144 | CellChat on `sven_liver_new_cytotoxic_cluster_forRCTD_v2.RDS`, cell groups = column `annotation`; database `CellChatDB <- CellChatDB.mouse` and `subsetDB(CellChatDB, search = c("Secreted Signaling", "Cell-Cell Contact"), key = "annotation")`; `identifyOverExpressedGenes(cellchat)` with default arguments; `computeCommunProb(cellchat, type = "truncatedMean", trim = 0.1, population.size = TRUE)`; `filterCommunication(cellchat, min.cells = 10)`; saves `2025_11_19_newCellchat_combined_MNP.rds` |
+| 146 to 160 | reads `cellchat_humanSkin_LS.rds` (a CellChat object of June 2025), draws network plots, and writes `subsetCommunication(cellchat, slot.name = "net")` to `AAA_complete_altogether.csv` |
+| 162 to 334 | bar charts of `log(prob + 1)` comparing `cytotoxic CD4` and `naive CD4` as senders to, and receivers from, `MNP` (black and grey bars, then red and blue, then black and grey); the last chart is saved as `interaction_bar.pdf` |
+| 344 to 390 | further CellChat plots of an object whose groups are hashtag names |
+| 398 to 525 | RCTD on a different spatial data set (Curio Seeker liver pucks); outside the three topics of this archive |
+
+The buffer holds the last state of the code. Two CellChat objects of this analysis are on Spartan:
+
+- `2025_11_19_newCellchat_combined_MNP.rds` (21 November 2025): groups naive CD4 (stored with a leading
+  space, `" naive CD4"`), cytotoxic CD4, effector CD4, proliferating CD4 and `MNP` (1,022 cells), the labels of `..._forRCTD_v2.RDS`; this is the object
+  that lines 106 to 144 write.
+- `2025_11_19_newCellchat.rds` (19 November 2025): the same 2,537 cells with `MNP infected` (658) and
+  `naive MNP` (364) kept apart, the labels of `sven_liver_new_cytotoxic_cluster_forRCTD.RDS`. The version of
+  the code that read this file is not preserved; the buffer reads `_v2` at line 106.
+
+Both objects store the `computeCommunProb` settings `truncatedMean`, `trim = 0.1`, `raw.use = TRUE`,
+`population.size = TRUE`, `nboot = 100`, `seed.use = 1` and the 1,942-interaction database subset.
+`earlier_analysis_2025-11/AAA_complete_altogether.csv` (19 November 2025) is identical, byte for byte, to
+`write.csv(subsetCommunication(<2025_11_19_newCellchat.rds>, slot.name = "net"), row.names = FALSE)`
+(checked on 20 November 2026). The table was therefore written from the 19 November object, in the way
+lines 159 and 160 do it, and not from the object that line 146 reads. Which code drew the Figure S2E panel
+shown in the template screenshot is not recorded.
+
+Compared with the October 2026 runs, the November 2025 code reads `..._forRCTD_v2.RDS`, in which the MNP
+clusters form one group `MNP` (October 2026: `MNP2` alone, with `infected CD4` or `cytotoxic CD4`), uses
+all cell groups of the object in one CellChat object (October 2026: two groups per object) and calls
+`identifyOverExpressedGenes()` with default arguments (October 2026: `do.fast = FALSE`). The database
+subset and the stored `computeCommunProb` settings are the same.
+
+CellChat objects of June 2025 (2,555 or 1,284 cells, earlier labels or hashtag names) are also on Spartan.
+Their code was not found; an R history file of the account `czhu3869` holds only fragments, such as the
+line that saved `cellchat_humanSkin_LS.rds`.

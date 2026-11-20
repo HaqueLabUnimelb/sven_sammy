@@ -5,7 +5,7 @@ part	path_on_spartan	kind	size_bytes	md5	what_it_is
 1	/data/projects/punim1236/liver_scRNAseq/Split_Output_new/outs/fastq_path/AAH2VJHM5	folder (8 files)	20181727669	not computed	FASTQ files of cellranger mkfastq (November 2025): GEX_C11 and CSP_B1, 8 files
 1	/data/projects/punim1236/liver_scRNAseq/mm10/refdata-gex-mm10-2020-A	folder (20 files)	15945646031	not computed	10x Genomics mouse reference mm10 2020-A
 1	/data/projects/punim1236/liver_scRNAseq/new_cellranger/outs/filtered_feature_bc_matrix.h5	file	38065624	2ee3e37cb22461001dbdf4d6637a54e6	Filtered count matrix of the November 2025 cellranger count run
-1	/data/projects/punim1236/liver_scRNAseq/new_cellranger/new_livescRNA.RDS	file	1707887573	a278127e2b6134629106593b8d5f3d82	R object made from the November 2025 count run; not read by any archived script
+1	/data/projects/punim1236/liver_scRNAseq/new_cellranger/new_livescRNA.RDS	file	1707887573	a278127e2b6134629106593b8d5f3d82	Seurat object made from the November 2025 count run by lines 23 to 98 of rstudio_editor_buffer_2025-11-21.R; not read by any archived script
 1	/data/projects/punim1236/liver_scRNAseq/GEX_HTO_Processed.rds	file	186066989	27185c114ba4b7d16318d7eddf2145f8	Seurat object with all cells, hashtag calls and first clustering; input of liver_scRNAseq_processed_NI.R
 1	/data/projects/punim1236/liver_scRNAseq/sven_cluster_markers.csv	file	5134836	199be610913a942d450ac7a3f8f1dd3d	Cluster marker table read on line 56 of liver_scRNAseq_processed_NI.R
 1	/data/projects/punim1236/liver_scRNAseq/sven_refined.RDS	file	168180111	a7ee7be9fcb2c31a09c9335b31761d14	Seurat object after removal of contaminating clusters (8,319 cells)
@@ -22,6 +22,10 @@ part	path_on_spartan	kind	size_bytes	md5	what_it_is
 2	/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/MNP2_cytotoxicCD4_vs_naiveCD4_20261023/cellchat_MNP2_with_naive_CD4.rds	file	4501448	2d7c8e67306ecf73ce3f478851a3684f	CellChat object, MNP2 with naive CD4 (run 2)
 2	/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/MNP2_cytotoxicCD4_vs_naiveCD4_20261023/cellchat_merged_lifted_MNP2_CD4.rds	file	1447036	f078703675bca026dae6dd0453ecc1d9	Merged CellChat object (run 2)
 2	/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/MNP2_cytotoxicCD4_vs_naiveCD4_20261023/99_sessionInfo.rds	file	105315	b33b0e908b05381708053b354aced78c	sessionInfo() object of run 2; same content as 99_sessionInfo.txt
+1,2	/data/projects/punim1236/liver_scRNAseq/sven_liver_new_cytotoxic_cluster_forRCTD_v2.RDS	file	48421707	188e6a65c6275ac1959dc6644506d623	Annotated liver cells (2,537) with the MNP clusters under one label MNP; saved by line 430 of sven_liverscRNAseq.R; input of the November 2025 CellChat code
+2	/data/projects/punim1236/liver_scRNAseq/2025_11_19_newCellchat.rds	file	22649510	d7265ee082ef39a9710496e8e668c44d	CellChat object of 19 November 2025 (labels of sven_liver_new_cytotoxic_cluster_forRCTD.RDS); AAA_complete_altogether.csv is its communication table
+2	/data/projects/punim1236/liver_scRNAseq/2025_11_19_newCellchat_combined_MNP.rds	file	22627079	86b717f2d898f6d52d9bb078124b7316	CellChat object of 21 November 2025 written by lines 106 to 144 of rstudio_editor_buffer_2025-11-21.R
+2	/data/projects/punim1236/liver_scRNAseq/cellchat_humanSkin_LS.rds	file	13197999	0fb30ab47c46e0ff98a55a54fc23cf51	CellChat object of June 2025 (1,284 cells, hashtag groups B2 and B3); read on line 146 of rstudio_editor_buffer_2025-11-21.R; code not found
 3	/data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq/Y01453J8_1.fq.gz	file	49027449822	not computed	Stereo-seq FASTQ read 1 of chip Y01453J8
 3	/data/scratch/projects/punim1445/liver_stomicsv1.3/raw/fastq/Y01453J8_2.fq.gz	file	112812061250	not computed	Stereo-seq FASTQ read 2 of chip Y01453J8
 3	/data/scratch/projects/punim1445/liver_stomicsv1.3/raw/mask/Y01453J8.barcodeToPos.h5	file	3051434914	5d45738570583900799a010166ac4303	Chip mask of chip Y01453J8
