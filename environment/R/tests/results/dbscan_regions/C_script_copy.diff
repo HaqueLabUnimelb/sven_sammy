@@ -1,0 +1,160 @@
+43c43
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module1_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module1_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+45c45
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module2_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module2_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+47c47
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module3_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module3_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+49c49
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module4_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module4_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+51c51
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+53c53
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module6_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module6_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+57,59c57,59
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< saveRDS(rctd.res, file = "/data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_results/rctd_res_hotspot_modules.RDS")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> saveRDS(rctd.res, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rctd_res_hotspot_modules.RDS")
+61c61
+< rctd.res <- readRDS(file = "/data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_results/rctd_res_hotspot_modules.RDS")
+---
+> rctd.res <- readRDS(file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rctd_res_hotspot_modules.RDS")
+75c75
+< setwd('/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/')
+---
+> setwd('/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/')
+77c77
+< rctd_loc <- "rctd_MNP1_2_Tcell_combined_no_sinusoids.rds"
+---
+> rctd_loc <- "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/rctd_MNP1_2_Tcell_combined_no_sinusoids.rds"
+144c144
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_4.0_k15_eps200.png"),
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200.png"),
+168c168
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_4.0_k15_eps200_border.png"),   b, width = 15, height = 12, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200_border.png"),   b, width = 15, height = 12, dpi = 300, bg = "white")
+206c206
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_4.0_k15_eps200_border_fill.png"),   c, width = 15, height = 12, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200_border_fill.png"),   c, width = 15, height = 12, dpi = 300, bg = "white")
+253c253
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+277,278c277,278
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check_infectedCD4.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check_MNP2.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_infectedCD4.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_MNP2.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+294,304c294,304
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_infected_CD4.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_MNP2.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_hepatocyte.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_uninfectedMNP.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< 
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_infected_CD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_MNP2.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_hepatocyte.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_uninfectedMNP.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_MNP1.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_naiveCD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_infected_CD4.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_MNP2.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_hepatocyte.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_uninfectedMNP.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> 
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_infected_CD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_MNP2.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_hepatocyte.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_uninfectedMNP.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_MNP1.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_naiveCD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+307,308c307,308
+< saveRDS(hs_out, file = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/hs_out.rds")
+< saveRDS(sub_df, file = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/sub_df_containsdbscan_info.rds")
+---
+> saveRDS(hs_out, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/hs_out.rds")
+> saveRDS(sub_df, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/sub_df_containsdbscan_info.rds")
+342c342
+<     filename = file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/", paste0("coloc_region40um_", nm, ".pdf")),
+---
+>     filename = file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", paste0("coloc_region40um_", nm, ".pdf")),
+352c352
+< ggsave(filename = "outs_40_all_dbscanned_regions.pdf", device = "pdf", path = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/", width = 15, height = 15, units = "cm")
+---
+> ggsave(filename = "outs_40_all_dbscanned_regions.pdf", device = "pdf", path = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", width = 15, height = 15, units = "cm")
+359c359
+<     file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/", paste0("rho_region_40um", nm, ".csv"))
+---
+>     file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", paste0("rho_region_40um", nm, ".csv"))
+387c387
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check_radius40.png"),   e, width = 15, height = 12, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_radius40.png"),   e, width = 15, height = 12, dpi = 300, bg = "white")
+411,412c411,412
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/bakcground_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+< write.csv(outs_background$rho_mat, "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/rho_background40um.csv")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/bakcground_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+> write.csv(outs_background$rho_mat, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rho_background40um.csv")
+414,415c414,415
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/bakcground_minus_dbscan_rgeions_coloc100um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+< write.csv(outs_background$rho_mat, "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/rho_background100um.csv")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/bakcground_minus_dbscan_rgeions_coloc100um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+> write.csv(outs_background$rho_mat, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rho_background100um.csv")
+492c492
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/randomwindows.png"),   f, width = 12, height = 12, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/randomwindows.png"),   f, width = 12, height = 12, dpi = 300, bg = "white")
+494c494
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/randomwindows.pdf"),   f, width = 6, height = 6, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/randomwindows.pdf"),   f, width = 6, height = 6, dpi = 300, bg = "white")
+510c510
+<   ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/", paste0("coloc_", nm, ".pdf")),
+---
+>   ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/", paste0("coloc_", nm, ".pdf")),
+512c512
+<   write.csv(outs_rand[[nm]]$rho_mat, file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/", paste0("rho_", nm, ".csv")))
+---
+>   write.csv(outs_rand[[nm]]$rho_mat, file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/", paste0("rho_", nm, ".csv")))
+523c523
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/background_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/background_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+562c562
+< write.csv(enrich, "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/enrichment_of_celltypes.csv")
+---
+> write.csv(enrich, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/enrichment_of_celltypes.csv")
+573c573
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/foldchange.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/foldchange.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+583c583
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/distribution.png"), width = 5, height = 5, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/distribution.png"), width = 5, height = 5, dpi = 300, bg = "white")
+615c615
+< ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/enrichment_foldchnage_heatmap.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+---
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/enrichment_foldchnage_heatmap.pdf"), width = 5, height = 5, dpi = 300, bg = "white")

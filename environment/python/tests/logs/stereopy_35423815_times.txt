@@ -1,0 +1,4 @@
+build exit=0 elapsed=1:39.95 maxrss_kb=973628
+run_script exit=0 elapsed=0:40.51 maxrss_kb=8363280
+compare exit=0 elapsed=0:09.50 maxrss_kb=2550724
+lockcheck elapsed=46s

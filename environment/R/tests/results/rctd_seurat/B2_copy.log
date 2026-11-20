@@ -1,0 +1,7 @@
+copy_with_paths: <build_dir>/sven_sammy/3_STOmics_liver_v1.3/3_RCTD/rctd_script_NI.R -> /tmp/renv_rctd_seurat_35425723/test_rctd/rctd_copy.R; 2 line(s) changed
+  line 1
+    - setwd('/data/gpfs/projects/punim1236/liver_curio')
+    + setwd('/tmp/renv_rctd_seurat_35425723/test_rctd')
+  line 59
+    - rctd_save_loc <- "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/rctd_MNP1_2_Tcell_splitup_no_sinusoids.rds"
+    + rctd_save_loc <- "/tmp/renv_rctd_seurat_35425723/test_rctd/rctd_MNP1_2_Tcell_combined_no_sinusoids_TEST.rds"

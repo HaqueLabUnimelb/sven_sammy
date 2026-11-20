@@ -1,0 +1,58 @@
+[2026-11-20T14:14:33.984] error: couldn't chdir to `/tmp/renv_rctd_seurat_35425723/build': No such file or directory: going to /tmp instead
+============================================================
+Convert Y01453J8 bin20 H5AD to Seurat RDS
+============================================================
+
+Input:
+/data/projects/punim1236/liver_curio/2026714RCTDnew/bin20/Y01453J8_tissue_bin20_raw_counts.h5ad
+
+Using obs index dataset: obs/bin_id
+Using var index dataset: var/gene
+
+H5AD dimensions: 293,543 bins x 24,886 genes
+Sparse X encoding: csr_matrix
+Non-zero entries: 57,212,888
+Reading X as CSR: bins x genes.
+Count matrix: 24,886 genes x 293,543 bins
+Mean UMI per bin: 356.92
+Median UMI per bin: 351.00
+Mean genes per bin: 194.90
+Median genes per bin: 192.00
+
+Creating Seurat object...
+
+Seurat object summary:
+An object of class Seurat 
+24886 features across 293543 samples within 1 assay 
+Active assay: RNA (24886 features, 0 variable features)
+ 1 layer present: counts
+ 1 dimensional reduction calculated: spatial
+
+Saving RDS:
+/tmp/renv_rctd_seurat_35425723/test_bin20/Y01453J8_tissue_bin20_raw_counts.rds
+Saved RDS size: 0.68 GB
+
+Done.
+	Command being timed: "env R_PROFILE_USER=<build_dir>/_build_tools/env_staging/R/tests/sessioninfo_at_exit.R SESSIONINFO_FILE=<build_dir>/_build_tools/env_staging/R/tests/results/rctd_seurat/B1_sessionInfo_bin20_run.txt Rscript /tmp/renv_rctd_seurat_35425723/test_bin20/bin20_copy.R"
+	User time (seconds): 15.16
+	System time (seconds): 3.69
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5322012
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2953710
+	Voluntary context switches: 945
+	Involuntary context switches: 43
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1426680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,148 @@
+56c56
+< sven.markers <- read.csv(file = "/data/projects/punim1236/liver_scRNAseq/sven_cluster_markers.csv")
+---
+> sven.markers <- read.csv(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_cluster_markers.csv")
+76c76
+< saveRDS(sven.refined, file = "/data/projects/punim1236/liver_scRNAseq/sven_refined.RDS" )
+---
+> saveRDS(sven.refined, file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_refined.RDS" )
+78c78
+< sven.refined <- readRDS(file = "/data/projects/punim1236/liver_scRNAseq/sven_refined.RDS")
+---
+> sven.refined <- readRDS(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_refined.RDS")
+104c104
+< saveRDS(seurat_obj, file = "/data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS")
+---
+> saveRDS(seurat_obj, file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_liver_for_paper.RDS")
+106c106
+< seurat_obj <- readRDS(file = "/data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS")
+---
+> seurat_obj <- readRDS(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_liver_for_paper.RDS")
+110c110
+< ggsave(filename = "liver_scRNAseq_UMAP_SEURAT_CLUSTERS.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "liver_scRNAseq_UMAP_SEURAT_CLUSTERS.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+115c115
+< ggsave(filename = "liver_scRNAseq_UMAP_annotated.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "liver_scRNAseq_UMAP_annotated.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+118c118
+< ggsave(filename = "liver_scRNAseq_UMAP_hashtag.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "liver_scRNAseq_UMAP_hashtag.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+123c123
+< ggsave(filename = "Cd4.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Cd4.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+125c125
+< ggsave(filename = "Cd44.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Cd44.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+127c127
+< ggsave(filename = "Tbx21.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Tbx21.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+129c129
+< ggsave(filename = "Cxcr6.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Cxcr6.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+131c131
+< ggsave(filename = "Ifng.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Ifng.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+134c134
+< ggsave(filename = "S1pr5.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "S1pr5.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+136c136
+< ggsave(filename = "Klrg1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Klrg1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+138c138
+< ggsave(filename = "Cx3cr1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Cx3cr1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+140c140
+< ggsave(filename = "Zeb2.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Zeb2.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+142c142
+< ggsave(filename = "Mki67.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Mki67.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+145c145
+< ggsave(filename = "Lyz2.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Lyz2.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+147c147
+< ggsave(filename = "Cd11c.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Cd11c.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+149c149
+< ggsave(filename = "Cd11b.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Cd11b.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+153c153
+< ggsave(filename = "Fas.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Fas.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+155c155
+< ggsave(filename = "Fasl.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Fasl.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+157c157
+< ggsave(filename = "Ifngr1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Ifngr1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+159c159
+< ggsave(filename = "Ifngr2.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Ifngr2.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+161c161
+< ggsave(filename = "Tnf.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Tnf.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+163c163
+< ggsave(filename = "Tnfrsf1a.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Tnfrsf1a.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+165c165
+< ggsave(filename = "Tnfrsf1b.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Tnfrsf1b.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+169c169
+< ggsave(filename = "Gzma.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Gzma.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+171c171
+< ggsave(filename = "Prf1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Prf1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+173c173
+< ggsave(filename = "Gzmb.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "Gzmb.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+180,182c180,182
+< MNP2 <- read.table(file = "/data/gpfs/projects/punim1236/liver_scRNAseq/Ollie/MNP2.txt")
+< MNP1 <- read.table(file = "/data/gpfs/projects/punim1236/liver_scRNAseq/Ollie/MNP1.txt")
+< pDCs <- read.table(file = "/data/gpfs/projects/punim1236/liver_scRNAseq/Ollie/pDCs.txt")
+---
+> MNP2 <- read.table(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/Ollie/MNP2.txt")
+> MNP1 <- read.table(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/Ollie/MNP1.txt")
+> pDCs <- read.table(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/Ollie/pDCs.txt")
+256c256
+< seurat_obj <- readRDS(file = "/data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS")
+---
+> seurat_obj <- readRDS(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_liver_for_paper.RDS")
+269c269
+< ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+---
+> ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+272c272
+< ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision_hashtag.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 16, height = 16, units = "cm")
+---
+> ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision_hashtag.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 16, height = 16, units = "cm")
+284c284
+< ggsave(filename = "Dotplot_NI_revision_v3.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 15, height = 19, units = "cm")
+---
+> ggsave(filename = "Dotplot_NI_revision_v3.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 15, height = 19, units = "cm")

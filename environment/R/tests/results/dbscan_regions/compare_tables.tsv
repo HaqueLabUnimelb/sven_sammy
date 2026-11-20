@@ -1,0 +1,26 @@
+table	bytes_identical	nrow_new	nrow_old	ncol_new	ncol_old	same_columns	text_cells_differing	numeric_columns	max_abs_diff	max_rel_diff	status	bins	sampled_bins
+enrichment_of_celltypes.csv	TRUE	6	6	8	8	TRUE	0	7	0	0	identical (bytes)	NA	NA
+rho_region_40um1.csv	FALSE	6	6	7	7	TRUE	0	6	1.55812739700834e-06	1.34332582802049e-05	numeric differences only	1029	1029
+rho_region_40um10.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	153	153
+rho_region_40um11.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	215	215
+rho_region_40um12.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	257	257
+rho_region_40um2.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	252	252
+rho_region_40um3.csv	FALSE	6	6	7	7	TRUE	0	6	2.046938632011e-06	6.67436199471334e-05	numeric differences only	629	629
+rho_region_40um4.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	229	229
+rho_region_40um5.csv	FALSE	6	6	7	7	TRUE	0	6	8.53965449312821e-07	1.00745832603712e-05	numeric differences only	1063	1063
+rho_region_40um6.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	230	230
+rho_region_40um7.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	418	418
+rho_region_40um8.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	268	268
+rho_region_40um9.csv	FALSE	6	6	7	7	TRUE	0	6	0.000159045457290008	0.000981853266859286	numeric differences only	164	164
+rho_rand_1.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_2.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_3.csv	FALSE	6	6	7	7	TRUE	0	6	5.23823760201214e-06	0.000116300722465183	numeric differences only	709	709
+rho_rand_4.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_5.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_6.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_7.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_8.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	591	591
+rho_rand_9.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_10.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_11.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709
+rho_rand_12.csv	TRUE	6	6	7	7	TRUE	0	6	0	0	identical (bytes)	709	709

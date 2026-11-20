@@ -1,0 +1,15 @@
+input_rds=/data/projects/punim1236/liver_scRNAseq/sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS
+output_dir=/tmp/renv_cellchat_35423699/test_infected/out
+R_version=R version 4.5.1 (2025-06-13)
+CellChat_version=2.2.0.9001
+CellChat_path=/tmp/renv_cellchat_35423699/Rlib/CellChat
+Seurat_version=5.4.0
+n_workers=8
+cell_groups=MNP2; infected CD4; naive CD4
+database=CellChatDB.mouse subset to Secreted Signaling and Cell-Cell Contact, matching the existing 2025-11-19 CellChat object
+identifyOverExpressedGenes=do.fast FALSE to match the historical scripts/templates
+computeCommunProb=type truncatedMean, trim 0.1, raw.use TRUE, population.size TRUE, nboot 100, seed.use 1
+comparison=signed log1p probability; positive bars use infected-CD4 probability when higher, negative bars use -naive-CD4 probability when higher
+main_direction_matching_screenshot=infected/naive CD4 -> MNP2
+literal_reverse_direction=MNP2 -> infected/naive CD4
+MNP2_selection=all cells annotated as MNP2 in the input RDS

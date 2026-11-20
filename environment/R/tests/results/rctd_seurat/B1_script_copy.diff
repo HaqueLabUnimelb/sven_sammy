@@ -1,0 +1,12 @@
+27,28c27,28
+<   "/data/gpfs/projects/punim1236/",
+<   "liver_curio/2026714RCTDnew/bin20/",
+---
+>   "/data/projects/punim1236/liver_curio/2026714RCTDnew/bin20/",
+>   "",
+33,34c33,34
+<   "/data/gpfs/projects/punim1236/",
+<   "liver_curio/2026714RCTDnew/bin20/",
+---
+>   "/tmp/renv_rctd_seurat_35425723/test_bin20/",
+>   "",

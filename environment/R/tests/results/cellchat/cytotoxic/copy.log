@@ -1,0 +1,4 @@
+copy_with_paths: <build_dir>/sven_sammy/2_CellChat/run_cellchat_MNP2_cytotoxic_vs_naive_CD4_latest.R -> /tmp/renv_cellchat_35423699/test_cytotoxic/script_copy.R; 1 line(s) changed
+  line 20
+    - outdir <- "/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_cytotoxicCD4_vs_naiveCD4_20261023_matched_original_params"
+    + outdir <- "/tmp/renv_cellchat_35423699/test_cytotoxic/out"

@@ -1,0 +1,13 @@
+copy_with_paths: <build_dir>/sven_sammy/3_STOmics_liver_v1.3/2_bin20_matrix/02_Y01453J8_bin20_h5ad_to_rds.R -> /tmp/renv_rctd_seurat_35425723/test_bin20/bin20_copy.R; 4 line(s) changed
+  line 27
+    -   "/data/gpfs/projects/punim1236/",
+    +   "/data/projects/punim1236/liver_curio/2026714RCTDnew/bin20/",
+  line 28
+    -   "liver_curio/2026714RCTDnew/bin20/",
+    +   "",
+  line 33
+    -   "/data/gpfs/projects/punim1236/",
+    +   "/tmp/renv_rctd_seurat_35425723/test_bin20/",
+  line 34
+    -   "liver_curio/2026714RCTDnew/bin20/",
+    +   "",

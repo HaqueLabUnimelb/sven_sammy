@@ -1,0 +1,16 @@
+cowplot
+tidyverse
+spacexr
+Seurat
+SeuratObject
+SummarizedExperiment
+SpatialExperiment
+Matrix
+hdf5r
+S4Vectors
+ggplot2
+dplyr
+ggrepel
+BiocVersion
+BiocManager
+otel

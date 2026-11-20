@@ -1,0 +1,6 @@
+JobID|JobName|Account|Partition|AllocCPUS|ReqMem|Elapsed|MaxRSS|State|ExitCode|NodeList
+35423699|renv_cellchat|punim2394|sapphire|16|64G|00:28:55||COMPLETED|0:0|spartan-bm075
+35423699.batch|batch|punim2394||16||00:28:55|7851000K|COMPLETED|0:0|spartan-bm075
+35423699.extern|extern|punim2394||16||00:28:55||COMPLETED|0:0|spartan-bm075
+35423699.0|bash|punim2394||8||00:10:55|14141520K|COMPLETED|0:0|spartan-bm075
+35423699.1|bash|punim2394||8||00:08:34|13832648K|COMPLETED|0:0|spartan-bm075

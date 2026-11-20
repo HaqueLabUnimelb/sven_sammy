@@ -1,0 +1,9 @@
+--- archived notebook (code cells)
++++ test copy (code cells)
+@@ -21 +21 @@
+-hs.create_knn_graph(weighted_graph=False, n_neighbors=15)
++hs.create_knn_graph(weighted_graph=False, n_neighbors=30)
+@@ -67 +67 @@
+-os.chdir("/data/projects/punim1236/liver_stomicsv1.3/hotspot/")
++os.chdir("/tmp/ss_hotspot_35427216/b_seeded/out")
+code lines changed: 2 (expected 2)

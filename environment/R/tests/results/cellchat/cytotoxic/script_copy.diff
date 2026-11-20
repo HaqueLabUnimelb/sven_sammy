@@ -1,0 +1,4 @@
+20c20
+< outdir <- "/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_cytotoxicCD4_vs_naiveCD4_20261023_matched_original_params"
+---
+> outdir <- "/tmp/renv_cellchat_35423699/test_cytotoxic/out"

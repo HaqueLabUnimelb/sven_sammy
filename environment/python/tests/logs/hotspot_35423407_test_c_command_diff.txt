@@ -1,0 +1,8 @@
+--- <build_dir>/sven_sammy/2_CellChat/commands_for_two_extra_tables/make_MNP2_vs_original_combinedMNP_comparison.sh
++++ /tmp/ss_hotspot_35423407/test_c/make_MNP2_vs_original_combinedMNP_comparison_test.sh
+@@ -5 +5 @@
+-newp=Path('/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_CD4_20261023_matched_original_params/03_differential_LR_CD4_to_MNP2_infected_minus_naive.csv')
++newp=Path('/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/MNP2_CD4_20261023/03_differential_LR_CD4_to_MNP2_infected_minus_naive.csv')
+@@ -46 +46 @@
+-out=Path('/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_CD4_20261023_matched_original_params/MNP2_vs_original_combinedMNP_comparison.csv')
++out=Path('/tmp/ss_hotspot_35423407/test_c/MNP2_vs_original_combinedMNP_comparison.csv')

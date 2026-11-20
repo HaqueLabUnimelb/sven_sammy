@@ -1,0 +1,9 @@
+/etc/profile.d/slurm.sh: line 8: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 5: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 6: pathmunge: command not found
+job 35427217 part unseeded on spartan-bm161.hpc.unimelb.edu.au, Fri 20 Nov 2026 14:49:53 AEDT, 16 CPUs
+CPU(s):                                  128
+Model name:                              Intel(R) Xeon(R) Gold 6448H
+CPU(s) scaling MHz:                      88%
+REBUILD: lock file and pip freeze identical to the first build
+done Fri 20 Nov 2026 15:20:41 AEDT

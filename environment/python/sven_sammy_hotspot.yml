@@ -1,0 +1,100 @@
+# Environment for 3_STOmics_liver_v1.3/4_Hotspot/hotspot_liverstomics_NI.ipynb
+# and for the pandas command in 2_CellChat/commands_for_two_extra_tables/.
+#
+# The notebook ran on Spartan in the module Anaconda3/2022.10 (Python 3.9.13). Its first
+# cell ran `pip install hotspotsc scanpy`, which put 25 packages into the user site; these
+# are the pip packages below, at the versions that pip reported. Every other package came
+# from the Anaconda 2022.10 base; the conda packages below are pinned to the versions of
+# that base. numpy and pandas are listed twice on purpose: the conda versions are those of
+# the base, and pip replaces them with the versions that the notebook used, as in the
+# original user-site installation.
+#
+# Create:  conda env create -f sven_sammy_hotspot.yml
+name: sven_sammy_hotspot
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.9.13
+  - pip=22.2.2
+  - setuptools=63.4.1
+  - wheel=0.37.1
+  # Anaconda 2022.10 base packages used by Hotspot, scanpy and anndata
+  - numpy=1.21.5
+  - pandas=1.4.4
+  - scipy=1.9.1
+  - h5py=3.7.0
+  - statsmodels=0.13.2
+  - patsy=0.5.2
+  - networkx=2.8.4
+  - numexpr=2.8.3
+  - bottleneck=1.3.5
+  - tqdm=4.64.1
+  - packaging=21.3
+  - python-dateutil=2.8.2
+  - pytz=2022.1
+  - six=1.16.0
+  - zipp=3.8.0
+  - pillow=9.2.0
+  - kiwisolver=1.4.2
+  - cycler=0.11.0
+  - pyparsing=3.0.9
+  # Jupyter, at the Anaconda 2022.10 versions, to execute the notebook
+  - ipykernel=6.15.2
+  - ipython=7.31.1
+  - jupyter_client=7.3.4
+  - jupyter_core=4.11.1
+  - nbconvert=6.4.4
+  - nbclient=0.5.13
+  - nbformat=5.5.0
+  - traitlets=5.1.1
+  - jinja2=2.11.3
+  - markupsafe=2.0.1
+  - mistune=0.8.4
+  - tornado=6.1
+  - pyzmq=23.2.0
+  - matplotlib-inline=0.1.6
+  - debugpy=1.5.1
+  - nest-asyncio=1.5.5
+  - psutil=5.9.0
+  - jedi=0.18.1
+  - parso=0.8.3
+  - prompt-toolkit=3.0.20
+  - pygments=2.11.2
+  - jsonschema=4.16.0
+  - bleach=4.1.0
+  - beautifulsoup4=4.11.1
+  - defusedxml=0.7.1
+  - entrypoints=0.4
+  - jupyterlab_pygments=0.1.2
+  - pandocfilters=1.5.0
+  - testpath=0.6.0
+  - pip:
+      # fonttools 4.25.0 is the Anaconda 2022.10 version; conda-forge has no build of it
+      - fonttools==4.25.0
+      # the 25 packages installed by the notebook's first cell
+      - anndata==0.10.9
+      - array-api-compat==1.11.2
+      - contourpy==1.3.0
+      - exceptiongroup==1.3.1
+      - get-annotations==0.1.2
+      - hotspotsc==1.1.3
+      - importlib-resources==6.5.2
+      - joblib==1.5.3
+      - legacy-api-wrap==1.5
+      - llvmlite==0.43.0
+      - matplotlib==3.9.4
+      - natsort==8.4.0
+      - numba==0.60.0
+      - numpy==1.24.4
+      - pandas==2.3.3
+      - pynndescent==0.6.0
+      - scanpy==1.10.3
+      - scikit-learn==1.6.1
+      - seaborn==0.13.2
+      - session-info==1.0.1
+      - stdlib-list==0.12.0
+      - threadpoolctl==3.7.0
+      - typing-extensions==4.16.0
+      - tzdata==2026.5
+      - umap-learn==0.5.12

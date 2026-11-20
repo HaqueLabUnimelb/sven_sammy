@@ -1,0 +1,22 @@
+# seeded notebook run (b_seeded) against seeded script run (a_seeded), byte for byte
+hotspot_results/hotspot_autocorrelation.csv identical
+hotspot_results/hotspot_gene_modules.csv identical
+hotspot_results/hotspot_local_correlation_z.csv identical
+hotspot_results/hotspot_module_scores.csv identical
+hotspot_results/hotspot_modules.csv identical
+hotspot_results/hotspot_spot_scores.csv identical
+hotspot_plots/hotspot_module_genes.csv identical
+hotspot_plots/hotspot_module_genes_ranked.csv identical
+hotspot_plots/hotspot_module_top20_ranked.csv identical
+hotspot_plots/module_1_genelist.txt identical
+hotspot_plots/module_1_genes.csv identical
+hotspot_plots/module_2_genelist.txt identical
+hotspot_plots/module_2_genes.csv identical
+hotspot_plots/module_3_genelist.txt identical
+hotspot_plots/module_3_genes.csv identical
+hotspot_plots/module_4_genelist.txt identical
+hotspot_plots/module_4_genes.csv identical
+hotspot_plots/module_5_genelist.txt identical
+hotspot_plots/module_5_genes.csv identical
+hotspot_plots/module_6_genelist.txt identical
+hotspot_plots/module_6_genes.csv identical

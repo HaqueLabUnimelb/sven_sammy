@@ -1,0 +1,4 @@
+code cells: 15 executed: 14 error outputs: 0
+Requirement already satisfied: hotspotsc in /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages (1.1.3)
+Requirement already satisfied: scanpy in /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages (1.10.3)
+Requirement already satisfied: numba>=0.43

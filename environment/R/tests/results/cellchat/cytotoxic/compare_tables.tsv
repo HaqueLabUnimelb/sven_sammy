@@ -1,0 +1,5 @@
+table	bytes_identical	nrow_new	nrow_old	ncol_new	ncol_old	same_columns	text_cells_differing	numeric_columns	max_abs_diff	max_rel_diff	status
+01_input_annotation_counts.csv	TRUE	7	7	2	2	TRUE	0	1	0	0	identical (bytes)
+02_input_annotation_by_HTO.csv	TRUE	28	28	3	3	TRUE	0	1	0	0	identical (bytes)
+03_differential_LR_CD4_to_MNP2_cytotoxic_minus_naive.csv	TRUE	41	41	25	25	TRUE	0	8	0	0	identical (bytes)
+04_differential_LR_MNP2_to_CD4_cytotoxic_minus_naive.csv	TRUE	42	42	25	25	TRUE	0	8	0	0	identical (bytes)

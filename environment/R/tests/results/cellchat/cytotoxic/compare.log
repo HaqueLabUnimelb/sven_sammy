@@ -1,0 +1,23 @@
+                                                    table bytes_identical
+                           01_input_annotation_counts.csv            TRUE
+                           02_input_annotation_by_HTO.csv            TRUE
+ 03_differential_LR_CD4_to_MNP2_cytotoxic_minus_naive.csv            TRUE
+ 04_differential_LR_MNP2_to_CD4_cytotoxic_minus_naive.csv            TRUE
+ nrow_new nrow_old ncol_new ncol_old same_columns text_cells_differing
+        7        7        2        2         TRUE                    0
+       28       28        3        3         TRUE                    0
+       41       41       25       25         TRUE                    0
+       42       42       25       25         TRUE                    0
+ numeric_columns max_abs_diff max_rel_diff            status
+               1            0            0 identical (bytes)
+               1            0            0 identical (bytes)
+               8            0            0 identical (bytes)
+               8            0            0 identical (bytes)
+
+00_run_config.txt lines that differ from the archived file:
+  new: output_dir=/tmp/renv_cellchat_35423699/test_cytotoxic/out
+  old: output_dir=/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_cytotoxicCD4_vs_naiveCD4_20261023_matched_original_params
+  new: CellChat_path=/tmp/renv_cellchat_35423699/Rlib/CellChat
+  old: CellChat_path=/data/gpfs/projects/punim2394/AAA_Sorry_Its_Chen_Here/Rlib_new/CellChat
+03_differential_LR_CD4_to_MNP2_cytotoxic_minus_naive.csv: 41 pairs, 23 positive, 18 negative
+04_differential_LR_MNP2_to_CD4_cytotoxic_minus_naive.csv: 42 pairs, 25 positive, 17 negative

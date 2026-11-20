@@ -1,0 +1,6 @@
+build exit=0 elapsed=0:55.57 maxrss_kb=972820
+test_c exit=0 elapsed=0:00.42 maxrss_kb=112640
+TEST C: output identical byte for byte to <build_dir>/sven_sammy/2_CellChat/MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv
+test_a exit=0 elapsed=15:10.68 maxrss_kb=4014784
+test_b exit=0 elapsed=18:44.62 maxrss_kb=4076784
+lockcheck elapsed=19s

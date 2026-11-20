@@ -1,0 +1,95 @@
+/tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/arrays/masked.py:61: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+numpy.random.seed 0
+numpy 1.24.4 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/numpy/__init__.py
+pandas 2.3.3 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/__init__.py
+scipy 1.9.1 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/scipy/__init__.py
+sklearn 1.6.1 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/sklearn/__init__.py
+numba 0.60.0 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/numba/__init__.py
+anndata 0.10.9 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/anndata/__init__.py
+scanpy 1.10.3 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/scanpy/__init__.py
+hotspot 1.1.3 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/hotspot/__init__.py
+statsmodels 0.13.2 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/statsmodels/__init__.py
+h5py 3.7.0 /tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/h5py/__init__.py
+[     3.5 s] read and filtered: 293543 bins x 3467 genes
+/tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/hotspot/hotspot.py:98: UserWarning: Hotspot will work faster when counts are a csr sparse matrix.
+  warnings.warn(
+
+                 C            Z  Pval  FDR
+Gene                                      
+Gm42418   0.455414  1080.565265   0.0  0.0
+Gphn      0.342230   920.532044   0.0  0.0
+Cmss1     0.349515   890.524234   0.0  0.0
+Saa2      0.461199   873.322767   0.0  0.0
+Alb       0.439578   859.667314   0.0  0.0
+Saa1      0.365915   728.277754   0.0  0.0
+Camk1d    0.213258   554.903886   0.0  0.0
+Lars2     0.167796   396.794788   0.0  0.0
+AY036118  0.146262   348.780054   0.0  0.0
+Glul      0.147467   337.020448   0.0  0.0
+Gm26917   0.087877   286.578963   0.0  0.0
+Gm19951   0.119033   281.737531   0.0  0.0
+Cdk8      0.119484   271.721111   0.0  0.0
+Igkc      0.104406   229.467754   0.0  0.0
+Cyp2e1    0.106842   228.325074   0.0  0.0
+Spp1      0.109197   214.606705   0.0  0.0
+Oat       0.081518   183.909168   0.0  0.0
+Tmem56    0.076908   183.814921   0.0  0.0
+Il31ra    0.074592   175.711994   0.0  0.0
+Cyp2a5    0.074805   159.841568   0.0  0.0
+[   261.9 s] autocorrelations done (n_neighbors=30)
+Computing pair-wise local correlation on 500 features...
+
+
+[  1288.0 s] local correlations done
+Module
+ 5    149
+ 4    111
+ 1     96
+ 2     62
+ 6     34
+ 3     26
+-1     22
+Name: count, dtype: int64
+Computing scores for 6 modules...
+
+[  1304.6 s] module scores done
+module
+1    [Alb, Hpx, Trf, Selenop, Gc, Rida, Kng1, Cyp2a...
+2    [Glul, Cyp2e1, Oat, Cyp2a5, Slc1a2, Gulo, Cyp1...
+3    [Gm42418, Cmss1, Gphn, Camk1d, Lars2, Gm19951,...
+4    [Apoa2, Apoe, Gm20425, Ttr, Apoc1, Fabp1, Apoa...
+5    [Tmsb4x, Lyz2, H2-Aa, Cd74, Actb, Psap, H2-Ab1...
+6    [Gm26917, Malat1, Celf2, Sox5, Lrmda, Xist, Im...
+Name: gene, dtype: object
+['module_1', 'module_2', 'module_3', 'module_4', 'module_5', 'module_6']
+[  1310.5 s] n_neighbors=30 tables written
+/tmp/ss_hotspot_35427216/envs/sven_sammy_hotspot/lib/python3.9/site-packages/hotspot/hotspot.py:98: UserWarning: Hotspot will work faster when counts are a csr sparse matrix.
+  warnings.warn(
+
+                 C           Z  Pval  FDR
+Gene                                     
+Gm42418   0.477297  813.124803   0.0  0.0
+Gphn      0.370039  715.133254   0.0  0.0
+Cmss1     0.371563  679.704759   0.0  0.0
+Saa2      0.468797  637.502734   0.0  0.0
+Alb       0.450608  632.931369   0.0  0.0
+Saa1      0.372709  532.229080   0.0  0.0
+Camk1d    0.231307  432.341353   0.0  0.0
+Lars2     0.178692  303.452247   0.0  0.0
+AY036118  0.150494  258.080300   0.0  0.0
+Glul      0.152903  250.723782   0.0  0.0
+Gm26917   0.103562  243.063572   0.0  0.0
+Gm19951   0.126679  215.340330   0.0  0.0
+Igkc      0.131796  209.485833   0.0  0.0
+Cdk8      0.128033  209.132280   0.0  0.0
+Spp1      0.130281  183.672763   0.0  0.0
+Cyp2e1    0.108017  165.714884   0.0  0.0
+Tmem56    0.083638  143.553222   0.0  0.0
+Oat       0.084823  137.439961   0.0  0.0
+Il31ra    0.078749  133.267950   0.0  0.0
+Apoa2     0.078438  119.283355   0.0  0.0
+[  1551.6 s] n_neighbors=15 autocorrelations written
+a_seeded exit=0 elapsed=26:05.03 maxrss_kb=4030044

@@ -1,0 +1,52 @@
+[2026-11-20 13:30:15][Stereo][173780][MainThread][23398816532288][reader][1357][INFO]: read_gef begin ...
+2026-11-20 13:30:15 [INFO   ] input file:/data/projects/punim1236/output_liver_stomics/Y01453J8/outs/feature_expression/Y01453J8.tissue.gef specify block size:20
+[2026-11-20 13:30:44][Stereo][173780][MainThread][23398816532288][reader][1530][INFO]: the matrix has 293543 cells, and 24886 genes.
+[2026-11-20 13:30:44][Stereo][173780][MainThread][23398816532288][reader][1531][INFO]: read_gef end.
+/tmp/ss_stereopy_35423815/envs/sven_sammy_stereopy/lib/python3.8/site-packages/anndata/_core/anndata.py:1840: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates("var")
+======================================================================
+Reading Stereo-seq tissue.gef as bin20
+======================================================================
+Input GEF: /data/projects/punim1236/output_liver_stomics/Y01453J8/outs/feature_expression/Y01453J8.tissue.gef
+Data shape: (293543, 24886)
+Number of bins: 293543
+Number of genes: 24886
+
+Expression matrix type: <class 'scipy.sparse._csr.csr_matrix'>
+Expression matrix shape: (293543, 24886)
+Number of non-zero entries: 57,212,888
+
+Checking raw counts...
+Sample non-zero values: [2 1 2 2 1 1 1 1 2 1]
+Are sampled values integers? True
+
+Coordinate shape: (293543, 2)
+Example bin IDs: ['21303037798160' '21303037798180' '21303037798200' '21303037798220'
+ '21303037798240']
+Example coordinates:
+[[ 4960 10000]
+ [ 4960 10020]
+ [ 4960 10040]
+ [ 4960 10060]
+ [ 4960 10080]]
+
+Gene metadata columns: ['real_gene_name']
+Using real_gene_name where available.
+Example gene names: ['Gnai3' 'Pbsn' 'Cdc45' 'H19' 'Scml2' 'Apoh' 'Narf' 'Cav2' 'Klf6' 'Scmh1']
+
+Creating AnnData object...
+
+AnnData summary:
+AnnData object with n_obs × n_vars = 293543 × 24886
+    obs: 'x', 'y', 'nCount_RNA', 'nFeature_RNA'
+Shape: (293543, 24886)
+Mean UMI per bin: 356.92
+Median UMI per bin: 351.00
+Mean genes per bin: 194.90
+Median genes per bin: 192.00
+
+Saving H5AD:
+/tmp/ss_stereopy_35423815/out/Y01453J8_tissue_bin20_raw_counts.h5ad
+
+Done.
+run_script exit=0 elapsed=0:40.51 maxrss_kb=8363280

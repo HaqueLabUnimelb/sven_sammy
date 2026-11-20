@@ -1,0 +1,9 @@
+JobID|JobName|Account|Partition|AllocCPUS|ReqMem|Elapsed|MaxRSS|State|ExitCode|NodeList
+35425723|renv_rctd_seurat|uom00060|sapphire|16|96G|00:28:59||COMPLETED|0:0|spartan-bm080
+35425723.batch|batch|uom00060||16||00:28:59|4498096K|COMPLETED|0:0|spartan-bm080
+35425723.extern|extern|uom00060||16||00:28:59||COMPLETED|0:0|spartan-bm080
+35425723.0|D_seurat|uom00060||4||00:00:11|2284956K|COMPLETED|0:0|spartan-bm080
+35425723.1|B1_bin20_run|uom00060||4||00:00:20|5302844K|COMPLETED|0:0|spartan-bm080
+35425723.2|B1_bin20_compare|uom00060||2||00:00:08|3151908K|COMPLETED|0:0|spartan-bm080
+35425723.3|B2_rctd_run|uom00060||16||00:20:25|16269828K|COMPLETED|0:0|spartan-bm080
+35425723.4|B2_rctd_compare|uom00060||2||00:00:12|1575096K|COMPLETED|0:0|spartan-bm080

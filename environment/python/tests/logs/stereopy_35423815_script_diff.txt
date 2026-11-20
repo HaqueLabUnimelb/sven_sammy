@@ -1,0 +1,6 @@
+--- <build_dir>/sven_sammy/3_STOmics_liver_v1.3/2_bin20_matrix/01_Y01453J8_bin20_gef_to_h5ad.py
++++ /tmp/ss_stereopy_35423815/run/01_Y01453J8_bin20_gef_to_h5ad_test.py
+@@ -28,2 +28 @@
+-    "/data/gpfs/projects/punim1236/"
+-    "liver_curio/2026714RCTDnew/bin20"
++    "/tmp/ss_stereopy_35423815/out"

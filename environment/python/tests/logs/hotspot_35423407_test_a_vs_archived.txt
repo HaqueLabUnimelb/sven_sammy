@@ -1,0 +1,55 @@
+/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/arrays/masked.py:61: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+autocorr.n_genes_new: 3467
+autocorr.n_genes_archived: 3467
+autocorr.same_gene_order: False
+autocorr.same_gene_set: True
+autocorr.max_abs_diff_C: 0.0004899638904183046
+autocorr.max_abs_diff_Z: 2.129323457313376
+autocorr.max_abs_diff_Pval: 0.2602347868544484
+autocorr.max_abs_diff_FDR: 0.2559819946407896
+autocorr.max_rel_diff_Z: 390.5091624669159
+autocorr.file_identical_to_archived: False
+autocorr.file_identical_to_repo: False
+top500.n_new: 500
+top500.same_set_as_archived_autocorr: False
+top500.same_order_as_archived_autocorr: False
+top500.same_order_as_archived_local_corr_matrix: False
+top500.n_in_common_with_archived: 490
+localcorrz.same_labels: False
+localcorrz.max_abs_diff: 0.9460847955659749
+localcorrz.file_identical_to_archived: False
+modules.n_genes_new: 500
+modules.n_genes_archived: 500
+modules.n_genes_same_module: 483
+modules.n_genes_different_module: 7
+modules.sizes_new: {-1: 22, 1: 95, 2: 62, 3: 25, 4: 102, 5: 160, 6: 34}
+modules.sizes_archived: {-1: 25, 1: 97, 2: 62, 3: 26, 4: 105, 5: 152, 6: 33}
+modules.file_identical_to_archived: False
+modules.file_identical_to_repo: False
+gene_modules.same_gene_and_module_columns: False
+gene_modules.file_identical_to_archived: False
+gene_modules.file_identical_to_repo: False
+spot_scores.n_bins_new: 293543
+spot_scores.n_bins_archived: 293543
+spot_scores.same_barcodes_in_order: True
+spot_scores.same_columns: True
+spot_scores.xy_identical: True
+spot_scores.max_abs_diff_per_module: {'module_1': 0.3616479881480458, 'module_2': 0.4565948887206509, 'module_3': 0.7028492097468426, 'module_4': 0.29476374885421697, 'module_5': 0.6692595111650519, 'module_6': 0.8561699181754161}
+spot_scores.max_abs_diff_all_modules: 0.8561699181754161
+spot_scores.n_values_not_identical: 1761258
+spot_scores.module5_bins_above_4_new: 1891
+spot_scores.module5_bins_above_4_archived: 1882
+spot_scores.file_identical_to_archived: False
+module_scores_csv.header_new: ['module_module_1', 'module_module_2', 'module_module_3', 'module_module_4', 'module_module_5', 'module_module_6']
+module_scores_csv.same_index: True
+module_scores_csv.max_abs_diff_values: 0.8561699181754161
+ranked.same_gene_module_order: False
+Traceback (most recent call last):
+  File "<build_dir>/_build_tools/env_staging/python/tests/compare_hotspot.py", line 146, in <module>
+    say("ranked.max_abs_diff_corr_with_module", maxabs(n_rk["corr_with_module"], o_rk["corr_with_module"]))
+  File "<build_dir>/_build_tools/env_staging/python/tests/compare_hotspot.py", line 45, in maxabs
+    return float(np.nanmax(np.abs(np.asarray(x, dtype=float) - np.asarray(y, dtype=float))))
+ValueError: operands could not be broadcast together with shapes (478,) (475,) 

@@ -1,0 +1,70 @@
+job 35423699 on spartan-bm075.hpc.unimelb.edu.au, Fri 20 Nov 2026 13:24:39 AEDT, CPUs 16
+STAGING=<build_dir>/_build_tools/env_staging/R
+ARCHIVE=<build_dir>/sven_sammy
+Channels:
+ - conda-forge
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+BUILD conda env: exit 0, 0 min 33 s
+/tmp/renv_cellchat_35423699/r451/bin/Rscript
+Rscript (R) version 4.5.1 (2025-06-13)
+BUILD R library: exit 0, 8 min 44 s
+TEST cellchat infected: exit 0, 10 min 55 s
+                                                   table bytes_identical
+                          01_input_annotation_counts.csv            TRUE
+                          02_input_annotation_by_HTO.csv            TRUE
+ 03_differential_LR_CD4_to_MNP2_infected_minus_naive.csv            TRUE
+ 04_differential_LR_MNP2_to_CD4_infected_minus_naive.csv            TRUE
+ nrow_new nrow_old ncol_new ncol_old same_columns text_cells_differing
+        5        5        2        2         TRUE                    0
+       20       20        3        3         TRUE                    0
+       51       51       25       25         TRUE                    0
+       50       50       25       25         TRUE                    0
+ numeric_columns max_abs_diff max_rel_diff            status
+               1            0            0 identical (bytes)
+               1            0            0 identical (bytes)
+               8            0            0 identical (bytes)
+               8            0            0 identical (bytes)
+
+00_run_config.txt lines that differ from the archived file:
+  new: output_dir=/tmp/renv_cellchat_35423699/test_infected/out
+  old: output_dir=/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_CD4_20261023_matched_original_params
+  new: CellChat_path=/tmp/renv_cellchat_35423699/Rlib/CellChat
+  old: CellChat_path=/data/gpfs/projects/punim2394/AAA_Sorry_Its_Chen_Here/Rlib_new/CellChat
+03_differential_LR_CD4_to_MNP2_infected_minus_naive.csv: 51 pairs, 37 positive, 14 negative
+04_differential_LR_MNP2_to_CD4_infected_minus_naive.csv: 50 pairs, 39 positive, 11 negative
+TEST cellchat cytotoxic: exit 0, 8 min 34 s
+                                                    table bytes_identical
+                           01_input_annotation_counts.csv            TRUE
+                           02_input_annotation_by_HTO.csv            TRUE
+ 03_differential_LR_CD4_to_MNP2_cytotoxic_minus_naive.csv            TRUE
+ 04_differential_LR_MNP2_to_CD4_cytotoxic_minus_naive.csv            TRUE
+ nrow_new nrow_old ncol_new ncol_old same_columns text_cells_differing
+        7        7        2        2         TRUE                    0
+       28       28        3        3         TRUE                    0
+       41       41       25       25         TRUE                    0
+       42       42       25       25         TRUE                    0
+ numeric_columns max_abs_diff max_rel_diff            status
+               1            0            0 identical (bytes)
+               1            0            0 identical (bytes)
+               8            0            0 identical (bytes)
+               8            0            0 identical (bytes)
+
+00_run_config.txt lines that differ from the archived file:
+  new: output_dir=/tmp/renv_cellchat_35423699/test_cytotoxic/out
+  old: output_dir=/data/projects/punim1236/liver_scRNAseq/Oct22newcellchat/cellchat_latest_MNP2_cytotoxicCD4_vs_naiveCD4_20261023_matched_original_params
+  new: CellChat_path=/tmp/renv_cellchat_35423699/Rlib/CellChat
+  old: CellChat_path=/data/gpfs/projects/punim2394/AAA_Sorry_Its_Chen_Here/Rlib_new/CellChat
+03_differential_LR_CD4_to_MNP2_cytotoxic_minus_naive.csv: 41 pairs, 23 positive, 18 negative
+04_differential_LR_MNP2_to_CD4_cytotoxic_minus_naive.csv: 42 pairs, 25 positive, 17 negative
+JobID|JobName|Elapsed|MaxRSS|State|ExitCode
+35423699|renv_cellchat|00:28:52||RUNNING|0:0
+35423699.batch|batch|00:28:52||RUNNING|0:0
+35423699.extern|extern|00:28:52||RUNNING|0:0
+35423699.0|bash|00:10:55|14141520K|COMPLETED|0:0
+35423699.1|bash|00:08:34||RUNNING|0:0
+finished Fri 20 Nov 2026 13:53:28 AEDT

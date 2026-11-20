@@ -1,0 +1,5 @@
+build exit=0 elapsed=0:54.36 maxrss_kb=971508
+REBUILD: lock file and pip freeze identical to the first build
+a_seeded exit=0 elapsed=26:05.03 maxrss_kb=4030044
+b_seeded exit=0 elapsed=26:29.97 maxrss_kb=4061496
+seeded pair: 21 files identical, 0 different

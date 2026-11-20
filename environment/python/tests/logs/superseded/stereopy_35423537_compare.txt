@@ -1,0 +1,8 @@
+anndata_version: 0.9.2
+Traceback (most recent call last):
+  File "<build_dir>/_build_tools/env_staging/python/tests/compare_h5ad.py", line 36, in <module>
+    say("md5_new", md5(new_p))
+  File "<build_dir>/_build_tools/env_staging/python/tests/compare_h5ad.py", line 29, in md5
+    with open(p, "rb") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/ss_stereopy_35423537/out/Y01453J8_tissue_bin20_raw_counts.h5ad'
+compare exit=1 elapsed=0:00.54 maxrss_kb=147456

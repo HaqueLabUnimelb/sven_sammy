@@ -1,0 +1,8 @@
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep1_job35427214.csv [0.455419832868473, 1080.5444384860118]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep2_job35427214.csv [0.4554103382239937, 1080.696350634767]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep3_job35427214.csv [0.45536300815593306, 1080.387193766292]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep4_job35427214.csv [0.45529541608462176, 1080.2748664057951]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep5_job35427214.csv [0.4554497215183589, 1080.6002212459048]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep6_job35427214.csv [0.45527085605308176, 1080.1560935004773]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep7_job35427214.csv [0.4554295170307267, 1080.6893203719621]
+<kept_outputs_dir>/hotspot_replicates/reps/n30_rep8_job35427214.csv [0.4554105073919413, 1080.5996972898902]

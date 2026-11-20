@@ -1,0 +1,95 @@
+/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/arrays/masked.py:61: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+old_unique_pairs 41
+new_unique_pairs 51
+overlap 33
+old_only 8
+new_only 18
+direction_agreement_overlap 19 / 33 (57.6%)
+spearman_signed_overlap 0.035093582887700536
+pearson_signed_overlap -0.1018627610395428
+median_abs_delta_signed_overlap 0.0019257142029559873
+
+Top old stronger infected/cytotoxic:
+                    old_signed  new_signed  delta_signed
+interaction_name                                        
+IFNG_IFNGR1_IFNGR2    0.001596    0.010353      0.008758
+CD48_CD244A           0.000673    0.002769      0.002097
+CSF1_CSF1R            0.000477    0.002229      0.001752
+LAIR1_LILRB4A         0.000374    0.001064      0.000690
+CCL5_CCR1             0.000354    0.000940      0.000587
+ICAM1_ITGAM_ITGB2     0.000310    0.003232      0.002922
+SEMA4A_PLXNB2         0.000263    0.002062      0.001799
+LAIR1_PIRA2           0.000153    0.000284      0.000131
+FASL_FAS              0.000098    0.000619      0.000520
+ENTPD1_ADORA2B        0.000039    0.000234      0.000195
+
+Top old stronger naive:
+                    old_signed  new_signed  delta_signed
+interaction_name                                        
+SELPLG_SELL          -0.005067    0.005038      0.010105
+THY1_ADGRE5          -0.004905    0.015999      0.020904
+MIF_CD74_CD44        -0.004251   -0.008755     -0.004504
+THY1_ITGAM_ITGB2     -0.003657    0.011742      0.015399
+CD55_ADGRE5          -0.003654   -0.006225     -0.002571
+CD6_ALCAM            -0.003560    0.012046      0.015606
+SEMA4D_PLXNB2        -0.002626   -0.003933     -0.001307
+NAMPT_ITGA5_ITGB1    -0.002459   -0.004520     -0.002062
+PECAM1_CD177         -0.002235   -0.000352      0.001883
+ITGAV_ITGB3_ADGRE5   -0.001386    0.002877      0.004263
+
+Largest absolute changes among overlap:
+                    old_signed  new_signed  delta_signed
+interaction_name                                        
+THY1_ADGRE5          -0.004905    0.015999      0.020904
+CD6_ALCAM            -0.003560    0.012046      0.015606
+THY1_ITGAM_ITGB2     -0.003657    0.011742      0.015399
+SELPLG_SELL          -0.005067    0.005038      0.010105
+IFNG_IFNGR1_IFNGR2    0.001596    0.010353      0.008758
+THY1_ITGAX_ITGB2     -0.000397    0.007407      0.007803
+CD40LG_ITGAM_ITGB2   -0.001056    0.005464      0.006520
+MIF_CD74_CD44        -0.004251   -0.008755     -0.004504
+ITGAV_ITGB3_ADGRE5   -0.001386    0.002877      0.004263
+CD40LG_ITGA5_ITGB1   -0.000532    0.003112      0.003643
+ICAM1_ITGAM_ITGB2     0.000310    0.003232      0.002922
+CD40LG_CD40          -0.000289    0.002456      0.002745
+CD55_ADGRE5          -0.003654   -0.006225     -0.002571
+CD48_CD244A           0.000673    0.002769      0.002097
+NAMPT_ITGA5_ITGB1    -0.002459   -0.004520     -0.002062
+
+Old-only notable:
+                    old_signed  new_signed
+interaction_name                          
+ITGAV_ITGB1_ADGRE5    0.001381         0.0
+CCL5_CCR5             0.000324         0.0
+APP_TREM2_TYROBP     -0.000126         0.0
+ICAM2_ITGAL_ITGB2    -0.000117         0.0
+ICAM2_ITGAM_ITGB2    -0.000098         0.0
+SEMA3C_NRP1_NRP2     -0.000027         0.0
+SEMA3C_PLXND1        -0.000026         0.0
+RAET1E_NKG2D_HCST     0.000021         0.0
+
+New-only notable:
+                     old_signed  new_signed
+interaction_name                           
+LGALS9_CD44                 NaN    0.007591
+APP_CD74                    NaN   -0.005775
+LGALS9_P4HB                 NaN    0.002540
+PECAM1_CD38                 NaN   -0.002171
+APP_SORL1                   NaN   -0.001665
+TGFB1_ACVR1_TGFBR1          NaN    0.001631
+TNF_TNFRSF1B                NaN    0.001447
+LGALS9_IGHM                 NaN    0.001279
+TGFB1_ACVR1B_TGFBR2         NaN    0.000986
+APP_TNFRSF21                NaN   -0.000864
+TNF_TNFRSF1A                NaN    0.000507
+SEMA4D_CD72                 NaN   -0.000213
+ULBP1_KLRK1                 NaN    0.000128
+TNFSF14_LTBR                NaN    0.000085
+GRN_SORT1                   NaN    0.000037
+saved /tmp/ss_hotspot_35423407/test_c/MNP2_vs_original_combinedMNP_comparison.csv
+test_c exit=0 elapsed=0:00.42 maxrss_kb=112640
+78fcc574d4a5b1ff26e053dbff977380  /tmp/ss_hotspot_35423407/test_c/MNP2_vs_original_combinedMNP_comparison.csv
+78fcc574d4a5b1ff26e053dbff977380  <build_dir>/sven_sammy/2_CellChat/MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv

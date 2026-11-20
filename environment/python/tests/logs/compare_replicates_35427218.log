@@ -1,0 +1,34 @@
+/etc/profile.d/slurm.sh: line 8: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 5: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 6: pathmunge: command not found
+<kept_outputs_dir>/hotspot_replicates:
+total 4
+drwxrwsr-x 7 czhu3869 punim2394 4096 Nov 20 15:20 .
+drwxrwsr-x 8 czhu3869 punim2394 4096 Nov 20 14:35 ..
+drwxrwsr-x 5 czhu3869 punim2394 4096 Nov 20 15:20 a2
+drwxrwsr-x 5 czhu3869 punim2394 4096 Nov 20 15:20 a3
+drwxrwsr-x 5 czhu3869 punim2394 4096 Nov 20 15:02 a_seeded
+drwxrwsr-x 4 czhu3869 punim2394 4096 Nov 20 15:02 b_seeded
+drwxrwsr-x 2 czhu3869 punim2394 4096 Nov 20 14:51 reps
+
+<kept_outputs_dir>/hotspot_replicates/reps:
+total 4737
+drwxrwsr-x 2 czhu3869 punim2394   4096 Nov 20 14:51 .
+drwxrwsr-x 7 czhu3869 punim2394   4096 Nov 20 15:20 ..
+-rw-rw-r-- 1 czhu3869 punim2394 301977 Nov 20 14:48 n15_rep1_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302108 Nov 20 14:48 n15_rep2_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 301955 Nov 20 14:48 n15_rep3_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302081 Nov 20 14:48 n15_rep4_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 301959 Nov 20 14:48 n15_rep5_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302051 Nov 20 14:48 n15_rep6_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302106 Nov 20 14:47 n15_rep7_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302082 Nov 20 14:47 n15_rep8_job35427215.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302105 Nov 20 14:51 n30_rep1_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302132 Nov 20 14:51 n30_rep2_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302204 Nov 20 14:51 n30_rep3_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302209 Nov 20 14:50 n30_rep4_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302227 Nov 20 14:50 n30_rep5_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 301954 Nov 20 14:51 n30_rep6_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302188 Nov 20 14:50 n30_rep7_job35427214.csv
+-rw-rw-r-- 1 czhu3869 punim2394 302245 Nov 20 14:50 n30_rep8_job35427214.csv
+done

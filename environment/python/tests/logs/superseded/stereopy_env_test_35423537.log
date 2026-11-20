@@ -1,0 +1,44 @@
+/etc/profile.d/slurm.sh: line 8: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 5: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 6: pathmunge: command not found
+job 35423537 on spartan-bm187.hpc.unimelb.edu.au, Fri 20 Nov 2026 13:21:09 AEDT; environment file <build_dir>/_build_tools/env_staging/python/sven_sammy_stereopy.yml
+CPU(s):                                  128
+Model name:                              Intel(R) Xeon(R) Gold 6448H
+CPU(s) scaling MHz:                      86%
+conda: conda 24.7.1
+records written for sven_sammy_stereopy: 30 lock lines, 162 pip lines
+3.8.20 | packaged by conda-forge | (default, Sep 30 2024, 17:52:49) 
+[GCC 13.3.0]
+sys.path: ['', '/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python38.zip', '/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8', '/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/lib-dynload', '/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages']
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/__init__.py", line 4, in <module>
+    from . import io
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/io/__init__.py", line 23, in <module>
+    from .writer import (
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/io/writer.py", line 29, in <module>
+    from stereo.core.ms_data import MSData
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/core/ms_data.py", line 13, in <module>
+    from .ms_pipeline import MSDataPipeLine
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/core/ms_pipeline.py", line 13, in <module>
+    from stereo.plots.decorator import download, download_only
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/plots/__init__.py", line 24, in <module>
+    from .vt3d_browser.example import Plot3DBrowser
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/plots/vt3d_browser/__init__.py", line 3, in <module>
+    from .stereopy_3D_browser import endServer
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/plots/vt3d_browser/stereopy_3D_browser.py", line 13, in <module>
+    from IPython.display import IFrame
+ModuleNotFoundError: No module named 'IPython'
+WARNING: input path not found in the script
+total 0
+drwxrwxr-x  2 czhu3869 punim1236   6 Nov 20 13:24 .
+drwxrwxr-x 11 czhu3869 punim1236 157 Nov 20 13:24 ..
+anndata_version: 0.9.2
+Traceback (most recent call last):
+  File "<build_dir>/_build_tools/env_staging/python/tests/compare_h5ad.py", line 36, in <module>
+    say("md5_new", md5(new_p))
+  File "<build_dir>/_build_tools/env_staging/python/tests/compare_h5ad.py", line 29, in md5
+    with open(p, "rb") as fh:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/ss_stereopy_35423537/out/Y01453J8_tissue_bin20_raw_counts.h5ad'
+compare exit=1 elapsed=0:00.54 maxrss_kb=147456
+[2026-11-20T13:25:28.054] error: *** JOB 35423537 ON spartan-bm187 CANCELLED AT 2026-11-20T13:25:28 DUE to SIGNAL Terminated ***

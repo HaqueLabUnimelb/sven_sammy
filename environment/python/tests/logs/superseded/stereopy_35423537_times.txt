@@ -1,0 +1,3 @@
+build exit=0 elapsed=3:36.13 maxrss_kb=972896
+run_script exit=1 elapsed=0:03.28 maxrss_kb=402000
+compare exit=1 elapsed=0:00.54 maxrss_kb=147456

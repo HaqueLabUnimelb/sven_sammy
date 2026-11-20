@@ -1,0 +1,9 @@
+class: new SpatialExperiment, archived SpatialExperiment
+dimensions (cell types x bins): new 6 x 289703, archived 6 x 289703
+assays: new weights; archived weights
+same cell types (rownames, in order): TRUE; same bins (colnames, in order): TRUE
+assay weights: identical() TRUE; max |new - archived| = 0; mean |diff| = 0; bins with any |diff| > 1e-6: 0 of 289703
+weights per cell type, max |diff|: hepatocyte=0; MNP1=0; infected CD4=0;  naive CD4=0; uninfected MNP=0; MNP2=0
+weights column sums: new range 0.132573-1.069828, archived range 0.132573-1.069828
+spatialCoords identical(): TRUE
+metadata entries: new spatial_rna, config, cell_type_info, internal_vars; archived spatial_rna, config, cell_type_info, internal_vars

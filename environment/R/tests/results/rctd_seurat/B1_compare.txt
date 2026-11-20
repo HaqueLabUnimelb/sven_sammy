@@ -1,0 +1,6 @@
+dimensions: new 24886 x 293543, archived 24886 x 293543
+counts matrix identical(): TRUE; same gene and bin names: TRUE
+meta.data identical(): TRUE
+spatial embedding identical(): TRUE
+whole object identical(): TRUE (version stamps and command logs may differ)
+SeuratObject version stamp: new 5.4.0, archived 5.4.0

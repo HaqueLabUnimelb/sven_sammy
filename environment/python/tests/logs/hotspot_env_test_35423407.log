@@ -1,0 +1,66 @@
+/etc/profile.d/slurm.sh: line 8: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 5: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 6: pathmunge: command not found
+job 35423407 on spartan-bm084.hpc.unimelb.edu.au, Fri 20 Nov 2026 13:24:39 AEDT
+CPU(s):                                  128
+Model name:                              Intel(R) Xeon(R) Gold 6448H
+CPU(s) scaling MHz:                      84%
+conda: conda 24.7.1
+records written for sven_sammy_hotspot: 137 lock lines, 90 pip lines
+python: /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/bin/python 3.9.13 | packaged by conda-forge | (main, May 27 2022, 16:58:50) 
+[GCC 10.3.0]
+/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.3' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/core/arrays/masked.py:61: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.5' currently installed).
+  from pandas.core import (
+sys.path: ['', '/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python39.zip', '/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9', '/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/lib-dynload', '/tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages']
+numpy 1.24.4 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/numpy/__init__.py
+pandas 2.3.3 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/pandas/__init__.py
+scipy 1.9.1 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/scipy/__init__.py
+sklearn 1.6.1 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/sklearn/__init__.py
+numba 0.60.0 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/numba/__init__.py
+anndata 0.10.9 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/anndata/__init__.py
+scanpy 1.10.3 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/scanpy/__init__.py
+hotspot 1.1.3 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/hotspot/__init__.py
+statsmodels 0.13.2 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/statsmodels/__init__.py
+h5py 3.7.0 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/h5py/__init__.py
+matplotlib 3.9.4 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/matplotlib/__init__.py
+nbconvert 6.4.4 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/nbconvert/__init__.py
+ipykernel 6.15.2 /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/lib/python3.9/site-packages/ipykernel/__init__.py
+openblas64__info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+blas_ilp64_opt_info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+openblas64__lapack_info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None), ('HAVE_LAPACKE', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+lapack_ilp64_opt_info:
+    libraries = ['openblas64_', 'openblas64_']
+    library_dirs = ['/usr/local/lib']
+    language = c
+    define_macros = [('HAVE_CBLAS', None), ('BLAS_SYMBOL_SUFFIX', '64_'), ('HAVE_BLAS_ILP64', None), ('HAVE_LAPACKE', None)]
+    runtime_library_dirs = ['/usr/local/lib']
+Supported SIMD extensions in this NumPy install:
+    baseline = SSE,SSE2,SSE3
+    found = SSSE3,SSE41,POPCNT,SSE42,AVX,F16C,FMA3,AVX2,AVX512F,AVX512CD,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL
+    not found = AVX512_KNL,AVX512_KNM
+Available kernels:
+  python3    /tmp/ss_hotspot_35423407/envs/sven_sammy_hotspot/share/jupyter/kernels/python3
+TEST C: output identical byte for byte to <build_dir>/sven_sammy/2_CellChat/MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv
+78fcc574d4a5b1ff26e053dbff977380  /tmp/ss_hotspot_35423407/test_c/MNP2_vs_original_combinedMNP_comparison.csv
+78fcc574d4a5b1ff26e053dbff977380  <build_dir>/sven_sammy/2_CellChat/MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv
+tests a and b finished Fri 20 Nov 2026 13:44:39 AEDT
+LOCKCHECK sven_sammy_hotspot: rebuilt from lock + freeze, pip list identical
+lockcheck elapsed=19s
+done Fri 20 Nov 2026 13:45:01 AEDT

@@ -1,0 +1,188 @@
+[2026-11-20T14:14:22.242] error: couldn't chdir to `/tmp/renv_rctd_seurat_35425723/build': No such file or directory: going to /tmp instead
+library(Seurat): loaded, version 5.5.1, from /tmp/renv_rctd_seurat_35425723/Rlib 
+library(ggplot2): loaded, version 4.0.3, from /tmp/renv_rctd_seurat_35425723/Rlib 
+library(tidyverse): loaded, version 2.0.0, from /tmp/renv_rctd_seurat_35425723/Rlib 
+library(dplyr): loaded, version 1.2.1, from /tmp/renv_rctd_seurat_35425723/Rlib 
+library(ggrepel): loaded, version 0.9.8, from /tmp/renv_rctd_seurat_35425723/Rlib 
+copy_with_paths: <build_dir>/sven_sammy/1_scRNAseq_preprocessing_clustering_annotation/2_seurat_clustering_annotation/liver_scRNAseq_processed_NI.R -> /tmp/renv_rctd_seurat_35425723/test_seurat/liver_scRNAseq_processed_NI_copy.R; 38 line(s) changed
+  line 56
+    - sven.markers <- read.csv(file = "/data/projects/punim1236/liver_scRNAseq/sven_cluster_markers.csv")
+    + sven.markers <- read.csv(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_cluster_markers.csv")
+  line 76
+    - saveRDS(sven.refined, file = "/data/projects/punim1236/liver_scRNAseq/sven_refined.RDS" )
+    + saveRDS(sven.refined, file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_refined.RDS" )
+  line 78
+    - sven.refined <- readRDS(file = "/data/projects/punim1236/liver_scRNAseq/sven_refined.RDS")
+    + sven.refined <- readRDS(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_refined.RDS")
+  line 104
+    - saveRDS(seurat_obj, file = "/data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS")
+    + saveRDS(seurat_obj, file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_liver_for_paper.RDS")
+  line 106
+    - seurat_obj <- readRDS(file = "/data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS")
+    + seurat_obj <- readRDS(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_liver_for_paper.RDS")
+  line 110
+    - ggsave(filename = "liver_scRNAseq_UMAP_SEURAT_CLUSTERS.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "liver_scRNAseq_UMAP_SEURAT_CLUSTERS.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 115
+    - ggsave(filename = "liver_scRNAseq_UMAP_annotated.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "liver_scRNAseq_UMAP_annotated.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 118
+    - ggsave(filename = "liver_scRNAseq_UMAP_hashtag.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "liver_scRNAseq_UMAP_hashtag.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 123
+    - ggsave(filename = "Cd4.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Cd4.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 125
+    - ggsave(filename = "Cd44.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Cd44.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 127
+    - ggsave(filename = "Tbx21.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Tbx21.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 129
+    - ggsave(filename = "Cxcr6.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Cxcr6.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 131
+    - ggsave(filename = "Ifng.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Ifng.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 134
+    - ggsave(filename = "S1pr5.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "S1pr5.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 136
+    - ggsave(filename = "Klrg1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Klrg1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 138
+    - ggsave(filename = "Cx3cr1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Cx3cr1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 140
+    - ggsave(filename = "Zeb2.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Zeb2.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 142
+    - ggsave(filename = "Mki67.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Mki67.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 145
+    - ggsave(filename = "Lyz2.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Lyz2.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 147
+    - ggsave(filename = "Cd11c.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Cd11c.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 149
+    - ggsave(filename = "Cd11b.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Cd11b.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 153
+    - ggsave(filename = "Fas.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Fas.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 155
+    - ggsave(filename = "Fasl.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Fasl.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 157
+    - ggsave(filename = "Ifngr1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Ifngr1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 159
+    - ggsave(filename = "Ifngr2.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Ifngr2.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 161
+    - ggsave(filename = "Tnf.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Tnf.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 163
+    - ggsave(filename = "Tnfrsf1a.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Tnfrsf1a.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 165
+    - ggsave(filename = "Tnfrsf1b.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Tnfrsf1b.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 169
+    - ggsave(filename = "Gzma.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Gzma.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 171
+    - ggsave(filename = "Prf1.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Prf1.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 173
+    - ggsave(filename = "Gzmb.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "Gzmb.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 180
+    - MNP2 <- read.table(file = "/data/gpfs/projects/punim1236/liver_scRNAseq/Ollie/MNP2.txt")
+    + MNP2 <- read.table(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/Ollie/MNP2.txt")
+  line 181
+    - MNP1 <- read.table(file = "/data/gpfs/projects/punim1236/liver_scRNAseq/Ollie/MNP1.txt")
+    + MNP1 <- read.table(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/Ollie/MNP1.txt")
+  line 182
+    - pDCs <- read.table(file = "/data/gpfs/projects/punim1236/liver_scRNAseq/Ollie/pDCs.txt")
+    + pDCs <- read.table(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/Ollie/pDCs.txt")
+  line 256
+    - seurat_obj <- readRDS(file = "/data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS")
+    + seurat_obj <- readRDS(file = "/tmp/renv_rctd_seurat_35425723/test_seurat/sven_liver_for_paper.RDS")
+  line 269
+    - ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 12, height = 12, units = "cm")
+    + ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 12, height = 12, units = "cm")
+  line 272
+    - ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision_hashtag.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 16, height = 16, units = "cm")
+    + ggsave(filename = "liver_scRNAseq_UMAP_annotated_NI_revision_hashtag.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 16, height = 16, units = "cm")
+  line 284
+    - ggsave(filename = "Dotplot_NI_revision_v3.pdf", device = "pdf", path = "/data/projects/punim1236/liver_scRNAseq/", width = 15, height = 19, units = "cm")
+    + ggsave(filename = "Dotplot_NI_revision_v3.pdf", device = "pdf", path = "/tmp/renv_rctd_seurat_35425723/test_seurat/", width = 15, height = 19, units = "cm")
+
+######## liver_scRNAseq_processed_NI_copy.R lines 1-3 (14:14:25)
+> library(Seurat)
+> library(ggplot2)
+> library(tidyverse)
+
+######## liver_scRNAseq_processed_NI_copy.R lines 6-6 (14:14:25)
+> sven <- readRDS("/data/projects/punim1236/liver_scRNAseq/GEX_HTO_Processed.rds")
+
+######## liver_scRNAseq_processed_NI_copy.R lines 20-20 (14:14:29)
+> liver <- subset(sven, cells = sven@meta.data %>% filter(hash.ID %in% c('B4: Naive MNPs Liver (uninfected mice)', 'B3: MNPs Liver (infected mice)', 'B1: Naive CD4s Liver (infected mice)', 'B2: Activated CD4s Liver (infected mice)')) %>% rownames())
+
+######## liver_scRNAseq_processed_NI_copy.R lines 65-65 (14:14:30)
+> sven.liver <- subset(liver, cells = sven@meta.data %>% filter(seurat_clusters %in% c('0', '1', '2', '4', '6', '7', '8', '9', '12', '13', '14')) %>% rownames())
+
+######## liver_scRNAseq_processed_NI_copy.R lines 98-98 (14:14:31)
+> seurat_obj <- sven.liver
+
+######## liver_scRNAseq_processed_NI_copy.R lines 101-101 (14:14:31)
+> seurat_obj <- FindClusters(seurat_obj, resolution = 0.7)
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 2934
+Number of edges: 55928
+
+Running Louvain algorithm...
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Maximum modularity in 10 random starts: 0.8821
+Number of communities: 15
+Elapsed time: 0 seconds
+cells: new 2934, sven_liver_for_paper.RDS 2934, same cell names in the same order: TRUE 
+clusters: new 15 (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14), stored 15 
+cells with the same cluster number: 2934 of 2934 
+cluster sizes, new:    0:754 1:491 2:364 3:312 4:215 5:170 6:167 7:163 8:72 9:67 10:65 11:51 12:24 13:13 14:6 
+cluster sizes, stored: 0:754 1:491 2:364 3:312 4:215 5:170 6:167 7:163 8:72 9:67 10:65 11:51 12:24 13:13 14:6 
+adjusted Rand index new vs stored: 1.000000 
+RNA_snn_res.0.7 identical to stored: TRUE 
+SeuratObject version stamp of GEX_HTO_Processed.rds: 5.1.0; of sven_liver_for_paper.RDS: 5.1.0 
+graph used by FindClusters: RNA_nn, RNA_snn 
+run time 0.2 min 
+Warning message:
+Adding a command log without an assay associated with it 
+	Command being timed: "Rscript <build_dir>/_build_tools/env_staging/R/tests/test_rctd_seurat.R seurat <build_dir>/sven_sammy /data/projects/punim1236/liver_scRNAseq/GEX_HTO_Processed.rds /data/projects/punim1236/liver_scRNAseq/sven_liver_for_paper.RDS /tmp/renv_rctd_seurat_35425723/test_seurat"
+	User time (seconds): 8.62
+	System time (seconds): 1.24
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2303940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 919744
+	Voluntary context switches: 847
+	Involuntary context switches: 22
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

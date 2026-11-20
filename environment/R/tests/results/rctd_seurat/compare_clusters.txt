@@ -1,0 +1,15 @@
+library(Seurat): loaded, version 5.5.1, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(ggplot2): loaded, version 4.0.3, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(tidyverse): loaded, version 2.0.0, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(dplyr): loaded, version 1.2.1, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(ggrepel): loaded, version 0.9.8, from /tmp/renv_rctd_seurat_35425723/Rlib
+cells: new 2934, sven_liver_for_paper.RDS 2934, same cell names in the same order: TRUE
+clusters: new 15 (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14), stored 15
+cells with the same cluster number: 2934 of 2934
+cluster sizes, new:    0:754 1:491 2:364 3:312 4:215 5:170 6:167 7:163 8:72 9:67 10:65 11:51 12:24 13:13 14:6
+cluster sizes, stored: 0:754 1:491 2:364 3:312 4:215 5:170 6:167 7:163 8:72 9:67 10:65 11:51 12:24 13:13 14:6
+adjusted Rand index new vs stored: 1.000000
+RNA_snn_res.0.7 identical to stored: TRUE
+SeuratObject version stamp of GEX_HTO_Processed.rds: 5.1.0; of sven_liver_for_paper.RDS: 5.1.0
+graph used by FindClusters: RNA_nn, RNA_snn
+run time 0.2 min

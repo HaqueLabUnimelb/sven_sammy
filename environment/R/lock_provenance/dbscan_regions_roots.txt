@@ -1,0 +1,16 @@
+data.table
+dplyr
+tidyr
+ggplot2
+SummarizedExperiment
+SpatialExperiment
+viridisLite
+patchwork
+Matrix
+MASS
+scales
+reshape2
+generics
+Rcpp
+BiocVersion
+BiocManager

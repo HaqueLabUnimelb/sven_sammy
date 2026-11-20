@@ -1,0 +1,21 @@
+job 35423372 on spartan-bm152.hpc.unimelb.edu.au, Fri 20 Nov 2026 13:18:30 AEDT, CPUs 8
+STAGING=<build_dir>/_build_tools/env_staging/R
+ARCHIVE=<build_dir>/sven_sammy
+/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/R/4.5.0/bin/Rscript
+Rscript (R) version 4.5.0 (2025-04-11)
+BUILD R library: exit 0, 5 min 43 s
+TEST C_dbscan_regions: exit 0, 2 min 1 s
+bins with module_5 > 4.0: 1882; DBSCAN clusters kept (>= 20 bins): 12
+sub_df_containsdbscan_info.rds: identical() = TRUE; all.equal() = TRUE; rows new 29442, archived 29442
+regions: new 12, archived 12; bins per region identical: TRUE
+bins per region (new):      1:1029 2:252 3:629 4:229 5:1063 6:230 7:418 8:268 9:164 10:153 11:215 12:257
+bins per region (archived): 1:1029 2:252 3:629 4:229 5:1063 6:230 7:418 8:268 9:164 10:153 11:215 12:257
+bins inside any region: new 4907, archived 4907
+sub_df weight column: max |new - archived| = 0
+hs_out.rds: identical() = FALSE; all.equal() = TRUE
+JobID|JobName|Elapsed|MaxRSS|State|ExitCode
+35423372|renv_dbscan_regions|00:07:49||RUNNING|0:0
+35423372.batch|batch|00:07:49||RUNNING|0:0
+35423372.extern|extern|00:07:49||RUNNING|0:0
+35423372.0|C_dbscan_regions|00:02:01||RUNNING|0:0
+finished Fri 20 Nov 2026 13:26:14 AEDT

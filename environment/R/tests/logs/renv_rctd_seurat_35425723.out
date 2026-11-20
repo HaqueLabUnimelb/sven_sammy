@@ -1,0 +1,51 @@
+job 35425723 on spartan-bm080.hpc.unimelb.edu.au, Fri 20 Nov 2026 14:06:46 AEDT, CPUs 16
+STAGING=<build_dir>/_build_tools/env_staging/R
+ARCHIVE=<build_dir>/sven_sammy
+/apps/easybuild-2022/easybuild/software/MPI/GCC/11.3.0/OpenMPI/4.1.4/R/4.5.0/bin/Rscript
+Rscript (R) version 4.5.0 (2025-04-11)
+BUILD R library: exit 0, 7 min 34 s
+TEST D_seurat: exit 0, 0 min 10 s
+library(Seurat): loaded, version 5.5.1, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(ggplot2): loaded, version 4.0.3, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(tidyverse): loaded, version 2.0.0, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(dplyr): loaded, version 1.2.1, from /tmp/renv_rctd_seurat_35425723/Rlib
+library(ggrepel): loaded, version 0.9.8, from /tmp/renv_rctd_seurat_35425723/Rlib
+cells: new 2934, sven_liver_for_paper.RDS 2934, same cell names in the same order: TRUE
+clusters: new 15 (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14), stored 15
+cells with the same cluster number: 2934 of 2934
+cluster sizes, new:    0:754 1:491 2:364 3:312 4:215 5:170 6:167 7:163 8:72 9:67 10:65 11:51 12:24 13:13 14:6
+cluster sizes, stored: 0:754 1:491 2:364 3:312 4:215 5:170 6:167 7:163 8:72 9:67 10:65 11:51 12:24 13:13 14:6
+adjusted Rand index new vs stored: 1.000000
+RNA_snn_res.0.7 identical to stored: TRUE
+SeuratObject version stamp of GEX_HTO_Processed.rds: 5.1.0; of sven_liver_for_paper.RDS: 5.1.0
+graph used by FindClusters: RNA_nn, RNA_snn
+run time 0.2 min
+TEST B1_bin20_run: exit 0, 0 min 20 s
+TEST B1_bin20_compare: exit 0, 0 min 8 s
+dimensions: new 24886 x 293543, archived 24886 x 293543
+counts matrix identical(): TRUE; same gene and bin names: TRUE
+meta.data identical(): TRUE
+spatial embedding identical(): TRUE
+whole object identical(): TRUE (version stamps and command logs may differ)
+SeuratObject version stamp: new 5.4.0, archived 5.4.0
+TEST B2_rctd_run: exit 0, 20 min 25 s
+TEST B2_rctd_compare: exit 0, 0 min 10 s
+class: new SpatialExperiment, archived SpatialExperiment
+dimensions (cell types x bins): new 6 x 289703, archived 6 x 289703
+assays: new weights; archived weights
+same cell types (rownames, in order): TRUE; same bins (colnames, in order): TRUE
+assay weights: identical() TRUE; max |new - archived| = 0; mean |diff| = 0; bins with any |diff| > 1e-6: 0 of 289703
+weights per cell type, max |diff|: hepatocyte=0; MNP1=0; infected CD4=0;  naive CD4=0; uninfected MNP=0; MNP2=0
+weights column sums: new range 0.132573-1.069828, archived range 0.132573-1.069828
+spatialCoords identical(): TRUE
+metadata entries: new spatial_rna, config, cell_type_info, internal_vars; archived spatial_rna, config, cell_type_info, internal_vars
+JobID|JobName|Elapsed|MaxRSS|State|ExitCode
+35425723|renv_rctd_seurat|00:28:57||RUNNING|0:0
+35425723.batch|batch|00:28:57||RUNNING|0:0
+35425723.extern|extern|00:28:57||RUNNING|0:0
+35425723.0|D_seurat|00:00:11|2284956K|COMPLETED|0:0
+35425723.1|B1_bin20_run|00:00:20|5302844K|COMPLETED|0:0
+35425723.2|B1_bin20_compare|00:00:08|3151908K|COMPLETED|0:0
+35425723.3|B2_rctd_run|00:20:25|16269828K|COMPLETED|0:0
+35425723.4|B2_rctd_compare|00:00:10||RUNNING|0:0
+finished Fri 20 Nov 2026 14:35:37 AEDT

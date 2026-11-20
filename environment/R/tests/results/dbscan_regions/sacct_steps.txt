@@ -1,0 +1,5 @@
+JobID|JobName|Account|Partition|AllocCPUS|ReqMem|Elapsed|MaxRSS|State|ExitCode|NodeList
+35423372|renv_dbscan_regions|uom00060|sapphire|8|48G|00:07:49||COMPLETED|0:0|spartan-bm152
+35423372.batch|batch|uom00060||8||00:07:49|2280236K|COMPLETED|0:0|spartan-bm152
+35423372.extern|extern|uom00060||8||00:07:49||COMPLETED|0:0|spartan-bm152
+35423372.0|C_dbscan_regions|uom00060||8||00:02:01|3226272K|COMPLETED|0:0|spartan-bm152

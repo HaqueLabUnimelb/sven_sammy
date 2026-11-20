@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "01_Y01453J8_bin20_gef_to_h5ad_test.py", line 14, in <module>
+    import stereo as st
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/__init__.py", line 4, in <module>
+    from . import io
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/io/__init__.py", line 23, in <module>
+    from .writer import (
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/io/writer.py", line 29, in <module>
+    from stereo.core.ms_data import MSData
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/core/ms_data.py", line 13, in <module>
+    from .ms_pipeline import MSDataPipeLine
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/core/ms_pipeline.py", line 13, in <module>
+    from stereo.plots.decorator import download, download_only
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/plots/__init__.py", line 24, in <module>
+    from .vt3d_browser.example import Plot3DBrowser
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/plots/vt3d_browser/__init__.py", line 3, in <module>
+    from .stereopy_3D_browser import endServer
+  File "/tmp/ss_stereopy_35423537/envs/sven_sammy_stereopy/lib/python3.8/site-packages/stereo/plots/vt3d_browser/stereopy_3D_browser.py", line 13, in <module>
+    from IPython.display import IFrame
+ModuleNotFoundError: No module named 'IPython'
+run_script exit=1 elapsed=0:03.28 maxrss_kb=402000

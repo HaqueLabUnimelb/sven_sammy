@@ -1,0 +1,866 @@
+[2026-11-20T13:24:14.156] error: couldn't chdir to `/tmp/renv_dbscan_regions_35423372/build': No such file or directory: going to /tmp instead
+copy_with_paths: <build_dir>/sven_sammy/3_STOmics_liver_v1.3/5_DBSCAN_regions_enrichment/liverstomics_hotspot_dbscan_NI.R -> /tmp/renv_dbscan_regions_35423372/test_dbscan_regions/liverstomics_hotspot_dbscan_NI_copy.R; 47 line(s) changed
+  line 43
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module1_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module1_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+  line 45
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module2_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module2_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+  line 47
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module3_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module3_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+  line 49
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module4_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module4_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+  line 51
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+  line 53
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module6_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module6_hotspot.png"), width = 6, height = 6, dpi = 300, bg = "white")# whole array
+  line 57
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 58
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 59
+    - saveRDS(rctd.res, file = "/data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_results/rctd_res_hotspot_modules.RDS")
+    + saveRDS(rctd.res, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rctd_res_hotspot_modules.RDS")
+  line 61
+    - rctd.res <- readRDS(file = "/data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_results/rctd_res_hotspot_modules.RDS")
+    + rctd.res <- readRDS(file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rctd_res_hotspot_modules.RDS")
+  line 75
+    - setwd('/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/')
+    + setwd('/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/')
+  line 77
+    - rctd_loc <- "rctd_MNP1_2_Tcell_combined_no_sinusoids.rds"
+    + rctd_loc <- "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/rctd_MNP1_2_Tcell_combined_no_sinusoids.rds"
+  line 144
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_4.0_k15_eps200.png"),
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200.png"),
+  line 168
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_4.0_k15_eps200_border.png"),   b, width = 15, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200_border.png"),   b, width = 15, height = 12, dpi = 300, bg = "white")
+  line 206
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/module5_4.0_k15_eps200_border_fill.png"),   c, width = 15, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200_border_fill.png"),   c, width = 15, height = 12, dpi = 300, bg = "white")
+  line 253
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+  line 277
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check_infectedCD4.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_infectedCD4.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+  line 278
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check_MNP2.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_MNP2.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+  line 294
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_infected_CD4.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_infected_CD4.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 295
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_MNP2.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_MNP2.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 296
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_hepatocyte.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_hepatocyte.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 297
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_uninfectedMNP.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_uninfectedMNP.pdf"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 299
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_infected_CD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_infected_CD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 300
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_MNP2.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_MNP2.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 301
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_hepatocyte.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_hepatocyte.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 302
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_uninfectedMNP.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_uninfectedMNP.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 303
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_MNP1.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_MNP1.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 304
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/zoom/module5_hotspot_zoom_naiveCD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/zoom/module5_hotspot_zoom_naiveCD4.png"), width = 2.1, height = 2.1, dpi = 300, bg = "white")
+  line 307
+    - saveRDS(hs_out, file = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/hs_out.rds")
+    + saveRDS(hs_out, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/hs_out.rds")
+  line 308
+    - saveRDS(sub_df, file = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/sub_df_containsdbscan_info.rds")
+    + saveRDS(sub_df, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/sub_df_containsdbscan_info.rds")
+  line 342
+    -     filename = file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/", paste0("coloc_region40um_", nm, ".pdf")),
+    +     filename = file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", paste0("coloc_region40um_", nm, ".pdf")),
+  line 352
+    - ggsave(filename = "outs_40_all_dbscanned_regions.pdf", device = "pdf", path = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/", width = 15, height = 15, units = "cm")
+    + ggsave(filename = "outs_40_all_dbscanned_regions.pdf", device = "pdf", path = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", width = 15, height = 15, units = "cm")
+  line 359
+    -     file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/", paste0("rho_region_40um", nm, ".csv"))
+    +     file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", paste0("rho_region_40um", nm, ".csv"))
+  line 387
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/afterdbscan_subsetted_check_radius40.png"),   e, width = 15, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_radius40.png"),   e, width = 15, height = 12, dpi = 300, bg = "white")
+  line 411
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/bakcground_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/bakcground_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+  line 412
+    - write.csv(outs_background$rho_mat, "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/rho_background40um.csv")
+    + write.csv(outs_background$rho_mat, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rho_background40um.csv")
+  line 414
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/bakcground_minus_dbscan_rgeions_coloc100um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/bakcground_minus_dbscan_rgeions_coloc100um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+  line 415
+    - write.csv(outs_background$rho_mat, "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/rho_background100um.csv")
+    + write.csv(outs_background$rho_mat, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rho_background100um.csv")
+  line 492
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/randomwindows.png"),   f, width = 12, height = 12, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/randomwindows.png"),   f, width = 12, height = 12, dpi = 300, bg = "white")
+  line 494
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/randomwindows.pdf"),   f, width = 6, height = 6, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/randomwindows.pdf"),   f, width = 6, height = 6, dpi = 300, bg = "white")
+  line 510
+    -   ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/", paste0("coloc_", nm, ".pdf")),
+    +   ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/", paste0("coloc_", nm, ".pdf")),
+  line 512
+    -   write.csv(outs_rand[[nm]]$rho_mat, file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/", paste0("rho_", nm, ".csv")))
+    +   write.csv(outs_rand[[nm]]$rho_mat, file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/", paste0("rho_", nm, ".csv")))
+  line 523
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/background_regions/background_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/background_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+  line 562
+    - write.csv(enrich, "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/enrichment_of_celltypes.csv")
+    + write.csv(enrich, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/enrichment_of_celltypes.csv")
+  line 573
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/foldchange.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/foldchange.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+  line 583
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/distribution.png"), width = 5, height = 5, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/distribution.png"), width = 5, height = 5, dpi = 300, bg = "white")
+  line 615
+    - ggsave(file.path("/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/enrichment/enrichment_foldchnage_heatmap.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+    + ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/enrichment_foldchnage_heatmap.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+[1] TRUE
+
+Attaching package: ‘dbscan’
+
+The following object is masked from ‘package:stats’:
+
+    as.dendrogram
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+######## liverstomics_hotspot_dbscan_NI_copy.R lines 1-40 (13:24:15)
+> library(data.table); library(dplyr)
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:reshape2’:
+
+    dcast, melt
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+> #load seurat object with cell weights
+> 
+> rctd.res <- readRDS(file = "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/rctd_MNP1_2_Tcell_combined_no_sinusoids.rds")
+> hs_out <- fread("/data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_results/hotspot_spot_scores.csv", colClasses = c(barcode = "character")) |>
++   as.data.frame()
+> rownames(hs_out) <- hs_out$barcode
+> mod_cols <- grep("^module_", colnames(hs_out), value = TRUE)
+> # check the IDs match before adding anything
+> sum(hs_out$barcode %in% colnames(rctd.res))     # spots shared with your SpatialExperiment
+Loading required namespace: SpatialExperiment
+[1] 289703
+> length(hs_out$barcode); ncol(rctd.res)
+[1] 293543
+[1] 289703
+> # Add to your R object
+> library(SummarizedExperiment)
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following object is masked from ‘package:dplyr’:
+
+    count
+
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: generics
+
+Attaching package: ‘generics’
+
+The following object is masked from ‘package:dplyr’:
+
+    explain
+
+The following objects are masked from ‘package:base’:
+
+    as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
+    setequal, union
+
+
+Attaching package: ‘BiocGenerics’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,
+    unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:data.table’:
+
+    first, second
+
+The following objects are masked from ‘package:dplyr’:
+
+    first, rename
+
+The following objects are masked from ‘package:Matrix’:
+
+    expand, unname
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:data.table’:
+
+    shift
+
+The following objects are masked from ‘package:dplyr’:
+
+    collapse, desc, slice
+
+Loading required package: Seqinfo
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+> colData(rctd.res)[, mod_cols] <- hs_out[colnames(rctd.res), mod_cols]
+> library(ggplot2); library(dplyr)
+> mod_cols <- grep("^module_\\d+$", colnames(hs_out), value = TRUE)
+> plot_module <- function(m, xlim = NULL, ylim = NULL) {
++   ggplot(hs_out %>% arrange(.data[[m]]),
++          aes(x, y, colour = .data[[m]])) +
++     geom_point(size = 0.2) +
++     scale_colour_viridis_c(option = "viridis", name = "Score", oob = scales::squish) +
++     coord_fixed(xlim = xlim, ylim = ylim) +          # NULL = show everything
++     theme_void() +
++     theme(
++       plot.background  = element_rect(fill = "white", colour = NA),
++       panel.background = element_rect(fill = "whi ..." ... [TRUNCATED] 
+
+######## liverstomics_hotspot_dbscan_NI_copy.R lines 64-253 (13:24:22)
+> #Now essentially need to perform the DBscan but this time on the module 5 score
+> 
+> suppressMessages({
++   library(SpatialExperiment)
++   library(ggplot2)
++   library(viridisLite)
++   library(patchwork)
++   library(Matrix)
++ })
+> ### Load in the RCTD output of liver stomics
+> setwd('/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/')
+> rctd_loc <- "/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/rctd_MNP1_2_Tcell_combined_no_sinusoids.rds"
+> out_dir  <- "."
+> res <- readRDS(rctd_loc)
+> coords <- as.data.frame(spatialCoords(res))
+> colnames(coords) <- c("x", "y")
+> weights <- assay(res, "weights")          # cell_type x spot matrix, colSums ~1
+> cell_types <- rownames(weights)
+> ## build one long data frame: x, y, cell_type, weight
+> df <- do.call(rbind, lapply(cell_types, function(ct) {
++   data.frame(
++     x = coords$x,
++     y = coords$y,
++     cell_type = ct,
++     weight = as.numeric(weights[ct, ])
++   )
++ }))
+> ## keep a consistent, readable facet order (by total contribution, descending)
+> ct_order <- names(sort(Matrix::rowSums(weights), decreasing = TRUE))
+> df$cell_type <- factor(df$cell_type, levels = ct_order)
+> ## y is flipped to match image/array orientation (row 0 at top)
+> y_range <- range(df$y)
+> ### Claude DBscan script - inputting the spatial deconvolution results
+> 
+> library(dbscan)
+> library(ggplot2)
+> # res = data.frame with x, y and one column per cell type (as built earlier)
+> # 1) Pick the spots of interest, e.g. spots with a high B cell weight
+> library(dplyr)
+> sel <- hs_out %>%
++   filter(module_5 > 4.0)         # use your own cell type and threshold
+> xy <- sel[, c("x", "y")]
+> # 2) Choose eps from the k-nearest-neighbour distance plot
+> kNNdistplot(xy, k = 15)             # look for the "elbow"
+> abline(h = 200, lty = 2)           # set h at the elbow, then use it as eps
+> # 3) Run DBSCAN
+> db <- dbscan(xy, eps = 200, minPts = 15)
+> xy$cluster <- factor(db$cluster)   # 0 = noise
+> # 4) Optionally drop small clusters
+> sizes <- table(xy$cluster)
+> keep  <- names(sizes[sizes >= 20 & names(sizes) != "0"])
+> xy$cluster[!xy$cluster %in% keep] <- "0"
+> # 5) Plot
+> 
+> # Capture all background spots in grey
+> bg <- unique(hs_out[, c("x", "y")])
+> a <- ggplot() +
++   geom_point(data = bg, aes(x, y), colour = "grey90", size = 0.3) +
++   geom_point(data = xy, aes(x, y, colour = cluster), size = 0.3) +
++   coord_fixed() +
++   theme_void()
+> a
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200.png"),
++        a, width = 15, height = 12, dpi = 300, bg = "white")
+> # now wish to to do a convex hulll to loosely capture grnauloma region to then perform co-loclaisation analysis
+> 
+> library(dplyr)
+> library(ggplot2)
+> # xy has x, y, cluster (from dbscan); drop noise
+> clust <- xy %>% filter(cluster != "0")
+> b <- ggplot() +
++   geom_point(data = bg, aes(x, y), colour = "grey85", size = 0.3) +
++   geom_point(data = clust, aes(x, y, colour = cluster), size = 0.5) +
++   stat_density_2d(data = clust, aes(x, y, group = cluster, colour = cluster),
++                   geom = "path", contour_var = "ndensity", breaks = 0.05,
++                   h = c(200, 200)) +
++   coord_fixed() + theme_void()
+> b
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200_border.png"),   b, width = 15, height = 12, dpi = 300, bg = "white")
+> # fill in dbscan regions
+> 
+> library(dplyr)
+> library(ggplot2)
+> clust <- xy %>% filter(cluster != "0")
+> # one colour per cluster, reused for fill, outline and points
+> cl_names <- sort(unique(as.character(clust$cluster)))
+> cols <- setNames(scales::hue_pal()(length(cl_names)), cl_names)
+> # filled layer for each cluster
+> fills <- lapply(cl_names, function(cl) {
++   stat_density_2d_filled(
++     data = filter(clust, cluster == cl),
++     aes(x, y), inherit.aes = FALSE,
++     contour_var = "ndensity", breaks = c(0.05, 1.05),  # same 10% level as your outline
++     h = c(200, 200),                                  # same smoothing as before
++     fill = cols[[cl]], alpha = 1, colour = NA
++   )
++ })
+> c <- ggplot() +
++   geom_point(data = bg, aes(x, y), colour = "grey85", size = 0.3) +
++   fills +                                              # filled clusters
++   geom_point(data = clust, aes(x, y, colour = cluster), size = 0.5) +
++   stat_density_2d(data = clust, aes(x, y, group = cluster, colour = cluster),
++                   geom = "path", contour_var = "ndensity", breaks = 0.05,
++                   h = c(200, 200)) +                   # outline on top
++   scale_colour_manual(values = co .... [TRUNCATED] 
+> c
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/module5_4.0_k15_eps200_border_fill.png"),   c, width = 15, height = 12, dpi = 300, bg = "white")
+> ### Now to extratc the DBscanned regions (the expanded region) as dataframe
+> 
+> library(MASS); library(dplyr)
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:patchwork’:
+
+    area
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+> h_val <- 200      # same as your plot
+> level <- 0.05      # same as your breaks
+> pad   <- 4 * h_val
+> # every unique spot position in the full dataset
+> pos <- hs_out %>% distinct(x, y)
+> hit <- lapply(cl_names, function(cl) {
++   d <- filter(clust, cluster == cl)
++   
++   k <- MASS::kde2d(d$x, d$y, h = c(h_val, h_val), n = 400,
++                    lims = c(range(d$x) + c(-pad, pad),
++                             range(d$y) + c(-pad, pad)))
++   k$z <- k$z / max(k$z)                        # ndensity
++   
++   # look up the density grid cell for every spot
++   ix <- findInterval(pos$x, k$x, all.inside = TRUE)
++   iy <- findInterval(pos$y, k$y, all.inside = TRUE)
++   in_grid <- p .... [TRUNCATED] 
+> # attach back to the long data: all cell type weights for those spots
+> sub_df <- df %>% inner_join(hit, by = c("x", "y"))
+> # chekc this subsetting has worked
+> 
+> library(ggplot2); library(dplyr)
+> d <- ggplot() +
++   geom_point(data = bg, aes(x, y), colour = "grey85", size = 0.3) +
++   geom_point(data = hit, aes(x, y, colour = cluster), size = 0.6) +        # all spots kept
++   geom_point(data = clust, aes(x, y), colour = "black", size = 0.3) +      # original DBSCAN spots
++   scale_colour_manual(values = cols) +
++   coord_fixed() + theme_void()
+> d
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check.png"),   d, width = 15, height = 12, dpi = 300, bg = "white")
+
+######## liverstomics_hotspot_dbscan_NI_copy.R lines 307-615 (13:24:55)
+> saveRDS(hs_out, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/hs_out.rds")
+> saveRDS(sub_df, file = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/sub_df_containsdbscan_info.rds")
+> #~~~~~~~~~~~~
+> #~~~~~~~~~~~~
+> #~~~~~~~~~~~~
+> 
+> ### co-localisation analysis on grnauloma regions, indiviudally and in comaprison to non grnauloma regions
+> 
+> #~~~~~~~~~~~~
+> #~~~~~~~~~~~~
+> #~~~~~~~~~~~~
+> 
+> library(dplyr); library(tidyr)
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+The following objects are masked from ‘package:Matrix’:
+
+    expand, pack, unpack
+
+> sub_wide <- sub_df %>%
++   dplyr::select(x, y, cluster, cell_type, weight) %>%
++   pivot_wider(names_from = cell_type, values_from = weight, values_fill = 0)
+> cell_cols <- setdiff(colnames(sub_wide), c("x", "y", "cluster"))
+> region_list <- sub_wide %>%
++   split(.$cluster) %>%
++   lapply(function(d) as.data.frame(d[, c("x", "y", cell_cols)]))
+> sapply(region_list, nrow)
+   1   10   11   12    2    3    4    5    6    7    8    9 
+1029  153  215  257  252  629  229 1063  230  418  268  164 
+> outs_regions <- lapply(region_list, function(d)
++   coloc_analysis_replicates_fast(list(d)))
+> outs_regions[["7"]]$plot
+> for (nm in names(outs_regions)) {
++   ggsave(
++     filename = file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", paste0("coloc_region40um_", nm, ".pdf")),
++     plot     = outs_regions[[nm]]$plot + ggtitle(paste("Region", nm)),
++     width = 5, height = 5
++   )
++ }
+> # r = 40
+> outs_pooled <- coloc_analysis_replicates_fast(unname(region_list))
+> outs_pooled$plot
+> ggsave(filename = "outs_40_all_dbscanned_regions.pdf", device = "pdf", path = "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", width = 15, height = 15, units = "cm")
+> library(dplyr)
+> for (nm in names(outs_regions)) {
++   write.csv(
++     outs_regions[[nm]]$rho_mat,
++     file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/", paste0("rho_region_40um", nm, ".csv"))
++   )
++ }
+> # Plot below allows you to see the siz eof the neighbourhoods
+> 
+> library(ggplot2); library(dplyr)
+> r  <- 40
+> bg <- distinct(df, x, y)
+> circle <- function(cx, cy, r, id, n = 100) {
++   t <- seq(0, 2 * pi, length.out = n)
++   data.frame(x = cx + r * cos(t), y = cy + r * sin(t), id = id)
++ }
+> ex      <- hit %>% slice_sample(n = 5)
+> circles <- bind_rows(lapply(seq_len(nrow(ex)), function(i) circle(ex$x[i], ex$y[i], r, i)))
+> e <- ggplot() +
++   geom_point(data = bg, aes(x, y), colour = "grey85", size = 0.2) +
++   geom_point(data = hit, aes(x, y, colour = cluster), size = 0.4) +
++   geom_path(data = circles, aes(x, y, group = id), colour = "red", linewidth = 0.6) +
++   coord_fixed() + theme_void()
+> e
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/afterdbscan_subsetted_check_radius40.png"),   e, width = 15, height = 12, dpi = 300, bg = "white")
+> ### Do co-localisation of entire array minus the dbscanned regions, i.e. not granulomas
+> 
+> 
+> 
+> map <- df %>%
++   dplyr::select(x, y, cell_type, weight) %>%
++   pivot_wider(names_from = cell_type, values_from = weight, values_fill = 0) %>%
++   as.data.frame()
+> dim(map)         # spots x (2 + number of cell types)
+[1] 289703      8
+> colnames(map) 
+[1] "x"              "y"              "hepatocyte"     "MNP1"          
+[5] "infected CD4"   " naive CD4"     "uninfected MNP" "MNP2"          
+> region_spots <- hit %>% distinct(x, y)
+> bg_wide <- map %>% anti_join(region_spots, by = c("x", "y"))
+> nrow(map); nrow(region_spots); nrow(bg_wide)   # the last should equal the first minus the second
+[1] 289703
+[1] 4954
+[1] 284796
+> # co-localisation on the rest of the array
+> outs_background <- coloc_analysis_replicates_fast(list(as.data.frame(bg_wide)))
+> f <- outs_background$plot
+> f
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/bakcground_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+> write.csv(outs_background$rho_mat, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rho_background40um.csv")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/bakcground_minus_dbscan_rgeions_coloc100um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+> write.csv(outs_background$rho_mat, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/rho_background100um.csv")
+> # Or check the enriuchment of cells in grnauloma vs non? Co-localisation might not be greta?
+> 
+> ### Assign 11 random regions in the rest of the array, as comparator
+> 
+> 
+> library(dplyr); library(dbscan); library(ggplot2)
+> ## ---- 0) setup ---------------------------------------------------------
+> cell_cols    <- setdiff(colnames(map), c("x", "y"))
+> region_spots <- hit %>% distinct(x, y)
+> bg_wide      <- map %>% anti_join(region_spots, by = c("x", "y"))
+> ## ---- 1) window size matched to your granulomas -----------------------
+> hull_area <- function(d) {
++   h <- d[chull(d$x, d$y), c("x", "y")]
++   abs(sum(h$x * c(h$y[-1], h$y[1]) - c(h$x[-1], h$x[1]) * h$y)) / 2
++ }
+> R <- 300
+> ## ---- 2) settings you can tweak ---------------------------------------
+> n_regions <- 12
+> min_spots <- 50        # reject windows over sparse tissue or the edge
+> min_sep   <- 6 * R     # minimum distance between window centres (raise for more spread)
+> max_tries <- 10000
+> set.seed(42)
+> ## ---- 3) candidate centres: background spots at least R from any granuloma
+> d_gran <- dbscan::kNN(as.matrix(region_spots[, c("x", "y")]), k = 1,
++                       query = as.matrix(bg_wide[, c("x", "y")]))$dist[, 1]
+> cand <- bg_wide[d_gran > R, ]
+> ## ---- 4) pick dispersed random windows --------------------------------
+> centres   <- data.frame(x = numeric(), y = numeric())
+> rand_list <- list()
+> tries     <- 0
+> while (length(rand_list) < n_regions && tries < max_tries) {
++   tries <- tries + 1
++   cx <- cand[sample(nrow(cand), 1), ]
++   
++   # enforce the minimum gap between windows
++   if (nrow(centres) > 0 &&
++       any(sqrt((centres$x - cx$x)^2 + (centres$y - cx$y)^2) < min_sep)) next
++   
++   in_win <- sqrt((bg_wide$x - cx$x)^2 + (bg_wide$y - cx$y)^2) <= R
++   if (sum(in_win) < min_spots) next
++   
++   centres <- rbind(centres, data.frame(x = cx$x, y = cx$y))
++   rand_list[[length(rand_list) + 1 .... [TRUNCATED] 
+> if (length(rand_list) < n_regions)
++   warning("Only found ", length(rand_list), " windows. Lower min_sep or R, or lower min_spots.")
+> names(rand_list) <- paste0("rand_", seq_along(rand_list))
+> sapply(rand_list, nrow)      # compare with sapply(region_list, nrow)
+ rand_1  rand_2  rand_3  rand_4  rand_5  rand_6  rand_7  rand_8  rand_9 rand_10 
+    709     709     709     709     709     709     709     591     709     709 
+rand_11 rand_12 
+    709     709 
+> ## ---- 5) check where the windows landed -------------------------------
+> circle <- function(cx, cy, r, id, n = 100) {
++   t <- seq(0, 2 * pi, length.out = n)
++   data.frame(x = cx + r * cos(t), y = cy + r * sin(t), id = id)
++ }
+> circ <- bind_rows(lapply(seq_len(nrow(centres)),
++                          function(i) circle(centres$x[i], centres$y[i], R, i)))
+> f <- ggplot() +
++   geom_point(data = distinct(map, x, y), aes(x, y), colour = "grey88", size = 0.4) +
++   geom_point(data = hit, aes(x, y), colour = "firebrick", size = 0.4) +   # granulomas
++   geom_path(data = circ, aes(x, y, group = id), colour = "black") +       # random windows
++   coord_fixed() + theme_void()
+> f
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/randomwindows.png"),   f, width = 12, height = 12, dpi = 300, bg = "white")
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/randomwindows.pdf"),   f, width = 6, height = 6, dpi = 300, bg = "white")
+> outs_rand <- lapply(rand_list, function(d)
++   coloc_analysis_replicates_fast(list(d), radius = 40, nbins = 2000))
+> f <- outs_rand$plot
+> f
+NULL
+> names(outs_rand)                 # e.g. "rand_1" ... "rand_11"
+ [1] "rand_1"  "rand_2"  "rand_3"  "rand_4"  "rand_5"  "rand_6"  "rand_7" 
+ [8] "rand_8"  "rand_9"  "rand_10" "rand_11" "rand_12"
+> f <- outs_rand[["rand_1"]]$plot  # or outs_rand[[1]]$plot
+> f
+> for (nm in names(outs_rand)) {
++   ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/", paste0("coloc_", nm, ".pdf")),
++          outs_rand[[nm]]$plot + ggtitle(nm), width = 6, height = 5)
++   write.csv(outs_rand[[nm]]$rho_mat, file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/", paste0("rho_", nm, ".csv")))
++ }
+> # one pooled heatmap across all 11 windows
+> outs_rand_pooled <- coloc_analysis_replicates_fast(unname(rand_list), radius = 40, nbins = 2000)
+> f <- outs_rand_pooled$plot
+> f
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/background_regions/background_minus_dbscan_rgeions_coloc40um.png"),   f, width = 5, height = 5, dpi = 300, bg = "white")
+> # Enrichment of clel type sin db scan vs non dbscan - analysis below is done for eahc spot in or out of dbscanned rgeions, not done on a by region basis
+> 
+> library(dplyr); library(tidyr); library(ggplot2)
+> cell_cols    <- setdiff(colnames(map), c("x", "y"))
+> region_spots <- hit %>% distinct(x, y) %>% mutate(inside = TRUE)
+> dat <- map %>%
++   left_join(region_spots, by = c("x", "y")) %>%
++   mutate(inside = ifelse(is.na(inside), FALSE, TRUE))
+> table(dat$inside)    # spots outside vs inside
+
+ FALSE   TRUE 
+284796   4907 
+> # Enrichment per celltype
+> 
+> enrich <- lapply(cell_cols, function(ct) {
++   a <- dat[[ct]][dat$inside]
++   b <- dat[[ct]][!dat$inside]
++   w <- wilcox.test(a, b)
++   data.frame(
++     celltype  = ct,
++     mean_in   = mean(a),
++     mean_out  = mean(b),
++     log2FC    = log2((mean(a) + 1e-3) / (mean(b) + 1e-3)),   # small pseudocount avoids dividing by 0
++     auc       = unname(w$statistic) / (length(a) * length(b)), # 0.5 = no difference, >0.5 = higher inside
++     p         = w$p.value
++ .... [TRUNCATED] 
+> enrich
+        celltype    mean_in    mean_out       log2FC       auc             p
+1           MNP2 0.13343848 0.053468714  1.303446446 0.7714174  0.000000e+00
+2   infected CD4 0.02455190 0.012525382  0.917761466 0.6413956 1.158164e-253
+3      naive CD4 0.01676672 0.009883269  0.707064986 0.6526149 3.698007e-295
+4           MNP1 0.01653599 0.012697360  0.356420858 0.6732302  0.000000e+00
+5 uninfected MNP 0.01271996 0.012801504 -0.008549533 0.6375063 5.137497e-240
+6     hepatocyte 0.36228388 0.563247268 -0.635230185 0.1610795  0.000000e+00
+           padj
+1  0.000000e+00
+2 1.389796e-253
+3 5.547010e-295
+4  0.000000e+00
+5 5.137497e-240
+6  0.000000e+00
+> write.csv(enrich, "/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/enrichment_of_celltypes.csv")
+> # plot
+> 
+> ggplot(enrich, aes(reorder(celltype, log2FC), log2FC, fill = log2FC > 0)) +
++   geom_col() + coord_flip() +
++   scale_fill_manual(values = c("royalblue3", "red3"), guide = "none") +
++   labs(x = NULL, y = "log2 fold change (inside vs outside regions)") +
++   theme_minimal()
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/foldchange.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+> # distributions
+> dat %>%
++   pivot_longer(all_of(cell_cols), names_to = "celltype", values_to = "weight") %>%
++   ggplot(aes(celltype, weight, fill = inside)) +
++   geom_boxplot(outlier.size = 0.2) +
++   scale_fill_manual(values = c("grey80", "firebrick"), labels = c("outside", "inside"), name = NULL) +
++   theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/distribution.png"), width = 5, height = 5, dpi = 300, bg = "white")
+> # one regions
+> 
+> reg_levels <- sort(unique(hit$cluster))
+> outside    <- dat[!dat$inside, ]
+> enrich_reg <- lapply(reg_levels, function(cl) {
++   inreg <- map %>% semi_join(filter(hit, cluster == cl), by = c("x", "y"))
++   lapply(cell_cols, function(ct) {
++     a <- inreg[[ct]]; b <- outside[[ct]]
++     data.frame(region = cl, celltype = ct,
++                log2FC = log2((mean(a) + 1e-3) / (mean(b) + 1e-3)),
++                auc    = unname(wilcox.test(a, b)$statistic) / (length(a) * length(b)))
++   }) %>% bind_rows()
++ }) %>% bind_rows()
+> ct_order  <- c("MNP2", "infected CD4", " naive CD4", "MNP1", "uninfected MNP", "hepatocyte")      # your order, spelled exactly as in the data
+> reg_order <- c("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12")                              # region labels, as character
+> enrich_reg <- enrich_reg %>%
++   mutate(celltype = factor(celltype, levels = ct_order),
++          region   = factor(region,   levels = reg_order))
+> ggplot(enrich_reg, aes(celltype, region, fill = log2FC)) +
++   geom_tile() +
++   scale_fill_gradient2(low = "royalblue3", mid = "white", high = "red3", midpoint = 0) +
++   theme_minimal() + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+> ggsave(file.path("/tmp/renv_dbscan_regions_35423372/test_dbscan_regions/enrichment/enrichment_foldchnage_heatmap.pdf"), width = 5, height = 5, dpi = 300, bg = "white")
+There were 30 warnings (use warnings() to see them)
+
+################ comparison with the archived results
+bins with module_5 > 4.0: 1882; DBSCAN clusters kept (>= 20 bins): 12 
+sub_df_containsdbscan_info.rds: identical() = TRUE; all.equal() = TRUE; rows new 29442, archived 29442 
+regions: new 12, archived 12; bins per region identical: TRUE 
+bins per region (new):      1:1029 2:252 3:629 4:229 5:1063 6:230 7:418 8:268 9:164 10:153 11:215 12:257 
+bins per region (archived): 1:1029 2:252 3:629 4:229 5:1063 6:230 7:418 8:268 9:164 10:153 11:215 12:257 
+bins inside any region: new 4907, archived 4907 
+sub_df weight column: max |new - archived| = 0 
+hs_out.rds: identical() = FALSE; all.equal() = TRUE 
+                       table bytes_identical nrow_new nrow_old ncol_new
+ enrichment_of_celltypes.csv            TRUE        6        6        8
+        rho_region_40um1.csv           FALSE        6        6        7
+       rho_region_40um10.csv            TRUE        6        6        7
+       rho_region_40um11.csv            TRUE        6        6        7
+       rho_region_40um12.csv            TRUE        6        6        7
+        rho_region_40um2.csv            TRUE        6        6        7
+        rho_region_40um3.csv           FALSE        6        6        7
+        rho_region_40um4.csv            TRUE        6        6        7
+        rho_region_40um5.csv           FALSE        6        6        7
+        rho_region_40um6.csv            TRUE        6        6        7
+        rho_region_40um7.csv            TRUE        6        6        7
+        rho_region_40um8.csv            TRUE        6        6        7
+        rho_region_40um9.csv           FALSE        6        6        7
+              rho_rand_1.csv            TRUE        6        6        7
+              rho_rand_2.csv            TRUE        6        6        7
+              rho_rand_3.csv           FALSE        6        6        7
+              rho_rand_4.csv            TRUE        6        6        7
+              rho_rand_5.csv            TRUE        6        6        7
+              rho_rand_6.csv            TRUE        6        6        7
+              rho_rand_7.csv            TRUE        6        6        7
+              rho_rand_8.csv            TRUE        6        6        7
+              rho_rand_9.csv            TRUE        6        6        7
+             rho_rand_10.csv            TRUE        6        6        7
+             rho_rand_11.csv            TRUE        6        6        7
+             rho_rand_12.csv            TRUE        6        6        7
+ ncol_old same_columns text_cells_differing numeric_columns max_abs_diff
+        8         TRUE                    0               7 0.000000e+00
+        7         TRUE                    0               6 1.558127e-06
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 2.046939e-06
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 8.539654e-07
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 1.590455e-04
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 5.238238e-06
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+        7         TRUE                    0               6 0.000000e+00
+ max_rel_diff                   status bins sampled_bins
+ 0.000000e+00        identical (bytes)   NA           NA
+ 1.343326e-05 numeric differences only 1029         1029
+ 0.000000e+00        identical (bytes)  153          153
+ 0.000000e+00        identical (bytes)  215          215
+ 0.000000e+00        identical (bytes)  257          257
+ 0.000000e+00        identical (bytes)  252          252
+ 6.674362e-05 numeric differences only  629          629
+ 0.000000e+00        identical (bytes)  229          229
+ 1.007458e-05 numeric differences only 1063         1063
+ 0.000000e+00        identical (bytes)  230          230
+ 0.000000e+00        identical (bytes)  418          418
+ 0.000000e+00        identical (bytes)  268          268
+ 9.818533e-04 numeric differences only  164          164
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 1.163007e-04 numeric differences only  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  591          591
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+ 0.000000e+00        identical (bytes)  709          709
+driver run time (script sections): 2.0 min 
+DONE
+	Command being timed: "Rscript <build_dir>/_build_tools/env_staging/R/tests/test_dbscan_regions.R <build_dir>/sven_sammy /data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/rctd_MNP1_2_Tcell_combined_no_sinusoids.rds /data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_results/hotspot_spot_scores.csv /data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot /tmp/renv_dbscan_regions_35423372/test_dbscan_regions"
+	User time (seconds): 115.61
+	System time (seconds): 2.87
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:00.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3082976
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 10
+	Minor (reclaiming a frame) page faults: 2001872
+	Voluntary context switches: 2291
+	Involuntary context switches: 217
+	Swaps: 0
+	File system inputs: 1672
+	File system outputs: 1084512
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

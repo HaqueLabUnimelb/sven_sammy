@@ -1,0 +1,3 @@
+build exit=0 elapsed=0:59.92 maxrss_kb=969480
+REBUILD: lock file and pip freeze identical to the first build
+autocorrelation replicates n_neighbors=15: 8 tables, elapsed=341s

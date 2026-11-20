@@ -1,0 +1,34 @@
+anndata_version: 0.9.2
+md5_new: 000f5f0fef13bd5aa5971c3d232b3570
+md5_archived: 000f5f0fef13bd5aa5971c3d232b3570
+file_bytes_identical: True
+shape_new: [293543, 24886]
+shape_archived: [293543, 24886]
+X_type_new: csr_matrix
+X_type_archived: csr_matrix
+X_dtype_new: int64
+X_dtype_archived: int64
+X_nnz_new: 57212888
+X_nnz_archived: 57212888
+X_data_identical: True
+X_indices_identical: True
+X_indptr_identical: True
+obs_names_identical: True
+var_names_identical: True
+obs_x_identical: True
+obs_x_dtype: ['uint32', 'uint32']
+obs_y_identical: True
+obs_y_dtype: ['uint32', 'uint32']
+obs_nCount_RNA_identical: True
+obs_nCount_RNA_dtype: ['int64', 'int64']
+obs_nFeature_RNA_identical: True
+obs_nFeature_RNA_dtype: ['int64', 'int64']
+obs_columns: [['x', 'y', 'nCount_RNA', 'nFeature_RNA'], ['x', 'y', 'nCount_RNA', 'nFeature_RNA']]
+var_columns: [[], []]
+obs_index_name: ['bin_id', 'bin_id']
+var_index_name: ['gene', 'gene']
+hdf5_datasets_compared: 9
+hdf5_differences: []
+hdf5_storage_layout_differences: []
+hdf5_all_datasets_and_attributes_identical: True
+compare exit=0 elapsed=0:09.50 maxrss_kb=2550724

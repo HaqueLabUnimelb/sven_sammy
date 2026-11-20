@@ -1,0 +1,16 @@
+/etc/profile.d/slurm.sh: line 8: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 5: pathmunge: command not found
+/etc/profile.d/z03_common.sh: line 6: pathmunge: command not found
+job 35427214 part knn_n30 on spartan-bm141.hpc.unimelb.edu.au, Fri 20 Nov 2026 14:41:44 AEDT, 12 CPUs
+CPU(s):                                  128
+Model name:                              Intel(R) Xeon(R) Gold 6448H
+CPU(s) scaling MHz:                      83%
+REBUILD: lock file and pip freeze identical to the first build
+KNNCHECK mode=unseeded numba_threads=default n_neighbors=30 bins=293543 rows_differ_between_two_NNDescent_builds=276609 rows_differ_NNDescent_vs_exact=276963 rows_with_wrong_kth_distance=0 build_seconds=19.1,6.0
+KNNCHECK mode=unseeded numba_threads=default n_neighbors=15 bins=293543 rows_differ_between_two_NNDescent_builds=280445 rows_differ_NNDescent_vs_exact=279822 rows_with_wrong_kth_distance=0 build_seconds=1.9,1.9
+KNNCHECK mode=seeded numba_threads=default n_neighbors=30 bins=293543 rows_differ_between_two_NNDescent_builds=0 rows_differ_NNDescent_vs_exact=276850 rows_with_wrong_kth_distance=0 build_seconds=18.9,5.6
+KNNCHECK mode=seeded numba_threads=default n_neighbors=15 bins=293543 rows_differ_between_two_NNDescent_builds=0 rows_differ_NNDescent_vs_exact=279969 rows_with_wrong_kth_distance=0 build_seconds=2.0,1.9
+KNNCHECK mode=seeded numba_threads=1 n_neighbors=30 bins=293543 rows_differ_between_two_NNDescent_builds=0 rows_differ_NNDescent_vs_exact=276850 rows_with_wrong_kth_distance=0 build_seconds=25.5,13.9
+KNNCHECK mode=seeded numba_threads=1 n_neighbors=15 bins=293543 rows_differ_between_two_NNDescent_builds=0 rows_differ_NNDescent_vs_exact=279969 rows_with_wrong_kth_distance=0 build_seconds=5.0,4.9
+autocorrelation replicates n_neighbors=30: 8 tables, elapsed=365s
+done Fri 20 Nov 2026 14:51:22 AEDT

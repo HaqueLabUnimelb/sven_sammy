@@ -1,0 +1,4 @@
+build exit=0 elapsed=0:55.43 maxrss_kb=972328
+REBUILD: lock file and pip freeze identical to the first build
+a3 exit=0 elapsed=28:54.53 maxrss_kb=4038272
+a2 exit=0 elapsed=29:45.10 maxrss_kb=4037724
