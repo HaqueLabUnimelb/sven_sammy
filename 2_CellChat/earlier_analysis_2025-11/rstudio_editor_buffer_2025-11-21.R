@@ -8,7 +8,7 @@ devtools::install_github("jinworks/CellChat")
 
 
 install.packages('dplyr')
-#一定要跑
+#must run this
 devtools::install_github("jokergoo/ComplexHeatmap")
 devtools::install_github("jokergoo/circlize")
 devtools::install_github('immunogenomics/presto')
@@ -29,7 +29,7 @@ rna_counts <- counts$`Gene Expression`
 hto_counts <- counts$`Antibody Capture`
 common_cells <- intersect(colnames(rna_counts), colnames(hto_counts))
 
-length(common_cells)     # 看看交集多少
+length(common_cells)     # how many cells are shared
 rna_counts <- rna_counts[, common_cells]
 hto_counts <- hto_counts[, common_cells]
 
@@ -37,7 +37,7 @@ seu <- CreateSeuratObject(
   counts = rna_counts,
   project = "Liver_scRNA_hashing")
 
-# 正常加入 HTO assay
+# add the HTO assay as usual
 seu@assays[["HTO"]] <- CreateAssayObject(counts = hto_counts)
 
 DefaultAssay(seu) <- "RNA"
@@ -45,7 +45,7 @@ DefaultAssay(seu) <- "RNA"
 seu
 
 
-# 计算线粒体比例
+# compute the mitochondrial fraction
 seu[["percent.mt"]] <- PercentageFeatureSet(seu, pattern = "^mt-")
 
 VlnPlot(seu, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
@@ -63,17 +63,17 @@ seu <- subset(
 
 
 
-# 切换到 HTO assay，做 CLR 标准化
+# switch to the HTO assay and run CLR normalisation
 DefaultAssay(seu) <- "HTO"
 
 seu <- NormalizeData(seu)
 
 
-# 基于 HTO 的最近邻图（用于 demux）
+# nearest-neighbour graph on HTO (for demultiplexing)
 seu <- FindVariableFeatures(seu)
 seu <- ScaleData(seu)
 
-# 运行 HTODemux（Seurat 自带，取阳性阈值可调）
+# run HTODemux (built into Seurat; the positive threshold can be tuned)
 seu <- HTODemux(
   seu,
   assay            = "HTO",
@@ -83,7 +83,7 @@ seu <- HTODemux(
 
 table(seu$hash.ID)
 
-# 看一下每个 hash.ID 在 UMAP 上的分布（先用 RNA 跑个粗略 UMAP）
+# look at each hash.ID on the UMAP (first a rough UMAP on RNA)
 DefaultAssay(seu) <- "RNA"
 seu <- NormalizeData(seu)
 seu <- FindVariableFeatures(seu, selection.method = "vst", nfeatures = 2000)
@@ -241,10 +241,10 @@ ggplot(df_long, aes(y = interaction_name, x = log_prob, fill = group)) +
 
 
 cellchat@netP$pathways
-# 获取通信数据
+# get the communication data
 df.net <- subsetCommunication(cellchat, slot.name = "net")
 
-# 设置实验组和对照组的 log(prob+1)
+# set log(prob+1) of the treated and control groups
 exp <- df.net %>%
   filter(source == "cytotoxic CD4", target == "MNP") %>%
   mutate(log_prob_exp = log(prob + 1)) %>%
@@ -255,7 +255,7 @@ ctrl <- df.net %>%
   mutate(log_prob_ctrl = log(prob + 1)) %>%
   select(interaction_name, log_prob_ctrl)
 
-# 合并并计算差值
+# merge and compute the difference
 df_wide <- full_join(exp, ctrl, by = "interaction_name") %>%
   mutate(
     log_prob_exp = ifelse(is.na(log_prob_exp), 0, log_prob_exp),
@@ -263,7 +263,7 @@ df_wide <- full_join(exp, ctrl, by = "interaction_name") %>%
     log_prob_diff = log_prob_exp - log_prob_ctrl
   )
 
-# 按照差值排序绘图顺序
+# order the plot by the difference
 df_wide <- df_wide %>%
   arrange(log_prob_diff) %>%
   mutate(interaction_name = factor(interaction_name, levels = interaction_name))
@@ -319,7 +319,7 @@ p <- ggplot(df_wide, aes(x = log_prob_diff, y = interaction_name, fill = log_pro
     axis.title.x = element_text(size = 12, face = "bold"),
     plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
     legend.position = "top",
-    # 关键：适当加大边距（单位可以用 "pt" 或 "cm"）
+    # key: make the margins a little larger (units can be "pt" or "cm")
     plot.margin = margin(t = 9, r = 30, b = 20, l = 18, unit = "pt")
   ) +
   coord_flip()
@@ -327,7 +327,7 @@ p <- ggplot(df_wide, aes(x = log_prob_diff, y = interaction_name, fill = log_pro
 ggsave(
   "interaction_bar.pdf",
   plot   = p,
-  width  = 16,   # 单位 inch，适当加大
+  width  = 16,   # unit inch, made a little larger
   height = 10,
   units  = "in",
   dpi    = 1200

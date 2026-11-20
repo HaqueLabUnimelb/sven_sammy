@@ -17,7 +17,9 @@ Contents:
 - The analysis scripts and results are byte-for-byte copies of the files on the lab's storage on the
   Spartan cluster (University of Melbourne), copied on 20 November 2026. They were not edited for this
   repository. Four files come from records in the home folder of the account `czhu3869` instead (see
-  [Files recovered from records](#files-recovered-from-records)).
+  [Files recovered from records](#files-recovered-from-records)). In one of them,
+  `rstudio_editor_buffer_2025-11-21.R`, the 14 comment lines that were not in English were translated into
+  English; its code is unchanged, and `MANIFEST.tsv` gives the md5 of the translated file.
 - Six scripts were last saved by their author on 19 November 2026, after the results had been produced
   (6 to 27 October 2026): `liver_scRNAseq_processed_NI.R`, `sven_liverscRNAseq.R`, `rctd_script_NI.R`,
   `hotspot_liverstomics_NI.ipynb`, `liverstomics_hotspot_dbscan_NI.R`, `colocalisation_script_NI.R`. The

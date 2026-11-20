@@ -50,7 +50,8 @@ flowchart TB
 
 - The analysis scripts and results are byte-for-byte copies of the files on the lab's storage on Spartan
   (copied on 20 November 2026), not edited for this repository; four files were recovered from editor records
-  and session logs instead. Six scripts were saved again by their author after the results were produced; the
+  and session logs instead (the comments of one of them, an RStudio editor buffer, were translated into
+  English; its code is unchanged). Six scripts were saved again by their author after the results were produced; the
   differences found (for example `n_neighbors` in the Hotspot notebook) are noted in the part READMEs.
   [`MANIFEST.tsv`](MANIFEST.tsv) lists the origin, owner, date and md5 of each file.
 - Added for this repository: the READMEs, `docs/`, `environment/`, `MANIFEST.tsv`, `DATA_NOT_IN_REPOSITORY.tsv`
