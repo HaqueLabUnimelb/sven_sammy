@@ -39,10 +39,11 @@ The R scripts of this part start from one Seurat object, `GEX_HTO_Processed.rds`
 2 June 2025 with the standard Cell Ranger and Seurat workflow). `1_cellranger/run_cellranger.sh` and
 `2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` are standard scripts for these two steps,
 written for this repository: the first uses the commands that Cell Ranger recorded for the run of
-November 2025 (`1_cellranger/2025-11_mkfastq_and_count/`), the second the calls recorded in the object.
-Run on the November 2025 count matrix, the second script gives 9,560 cells; on the 9,368 cells shared with
-`GEX_HTO_Processed.rds`, 94 % get the same hashtag call and the resolution-0.3 clusters agree with an
-adjusted Rand index of 0.89.
+November 2025 (`1_cellranger/2025-11_mkfastq_and_count/`), the second the steps and settings given in the
+Methods of the manuscript (hashtag demultiplexing with `positive.quantile = 0.95`, then the cell filter); its
+RNA calls are the ones recorded in the object. Run on the November 2025 count matrix, the second script
+gives 9,430 cells; on the 9,368 cells shared with `GEX_HTO_Processed.rds`, 95 % get the same hashtag call and
+the resolution-0.3 clusters agree with an adjusted Rand index of 0.885.
 
 ### Cell Ranger runs and archived files in detail
 
@@ -53,7 +54,7 @@ adjusted Rand index of 0.89.
 | | `1_cellranger/2025-11_mkfastq_and_count/library.csv`, `new_cellranger/_cmdline`, `_invocation`, `_versions` | `cellranger count` 8.0.1 with both libraries (`Gene Expression` and `Antibody Capture`), reference `refdata-gex-mm10-2020-A`, `--create-bam=false`, 24 cores, 128 GB (SLURM job 18810731). `_cmdline` is the full command. |
 | | `1_cellranger/2025-11_mkfastq_and_count/new_cellranger/outs/feature_reference.csv`, `outs/metrics_summary.csv` | The hashtag reference that the count run used, and its summary metrics (9,560 cells). |
 | | `../2_CellChat/earlier_analysis_2025-11/rstudio_editor_buffer_2025-11-21.R`, lines 23 to 98 | Seurat processing of the November 2025 count matrix into `new_livescRNA.RDS`: cells kept with `nFeature_RNA > 200 & nFeature_RNA < 6000 & percent.mt < 10` (lines 57 to 62), `HTODemux(seu, assay = "HTO", positive.quantile = 0.99)` (lines 77 to 81), then PCA and UMAP. This object is not used by the archived analyses; the file is described in part 2. |
-| 2. Seurat object, hashtag demultiplexing, first clustering | `2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` | Standard Seurat script written for this repository with the calls recorded in `GEX_HTO_Processed.rds` (listed below); `HTODemux` uses the standard `positive.quantile = 0.99`. Result: `GEX_HTO_Processed.rds`. |
+| 2. Seurat object, hashtag demultiplexing, cell filter, first clustering | `2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` | Standard Seurat script written for this repository with the steps and settings given in the Methods of the manuscript: `HTODemux(positive.quantile = 0.95)` on the CLR-normalised hashtag counts, removal of cells with more than 20 % mitochondrial counts, more than 60,000 UMIs or more than 7,500 detected genes, then the RNA calls recorded in `GEX_HTO_Processed.rds` (listed below). Result: `GEX_HTO_Processed.rds`. |
 | 3. Clean-up, liver subset, clustering, annotation, figures | `2_seurat_clustering_annotation/liver_scRNAseq_processed_NI.R` | The script of the "NI revision" (line 254: `# Re-annotate scRNAseq dataset for NI revision and perform dotplot`). Reads `GEX_HTO_Processed.rds`. Removes contaminating clusters (saves `sven_refined.RDS`), keeps the four liver hashtags, clusters again with `FindClusters(resolution = 0.7)` (saves `sven_liver_for_paper.RDS`), draws the gene UMAPs, adds the MNP1, MNP2 and pDC signature scores, assigns the cell-type labels of the revision (line 260) and draws the annotated UMAPs and the dot plot (`Dotplot_NI_revision_v3.pdf`). |
 | | `2_seurat_clustering_annotation/gene_signatures/MNP1.txt`, `MNP2.txt`, `pDCs.txt`, `DCs.txt` | Gene lists for `AddModuleScore`. The revision script reads the first three (lines 180 to 182), the working script reads all four. On Spartan they are in `/data/projects/punim1236/liver_scRNAseq/Ollie/`. |
 | 4. Annotated objects for RCTD and CellChat | `2_seurat_clustering_annotation/sven_liverscRNAseq.R` | The complete working script (941 lines) from which the revision script was taken. Besides `Tcell_combined_ref.R`, it is the only archived file with code for the annotated reference objects. Line 414 labels the resolution-0.7 clusters; line 417 assigns the labels again with the MNP clusters merged into one label `MNP`; lines 427 to 430 remove the DC and pDC clusters and save `sven_liver_new_cytotoxic_cluster_forRCTD_v2.RDS`. Lines 860 to 872 read `sven_liver_Tcells_combined_forRCTD.RDS`, assign the labels `MNP1`, `MNP2`, `uninfected MNP` and the CD4 subsets, and save `sven_liver_Tcells_split_up_MNP1_MNP2_forRCTD.RDS`. |
@@ -69,6 +70,7 @@ the file was saved on 3 June 2025) and the metadata.
 | Genes and cells | 32,285 genes, 9,461 cells; assays `RNA` and `HTO` (8 hashtags) |
 | Hashtag normalisation | `NormalizeData(seurat_obj, assay = "HTO", normalization.method = "CLR")` |
 | Hashtag demultiplexing | Metadata columns `HTO_maxID`, `HTO_secondID`, `HTO_margin`, `HTO_classification`, `HTO_classification.global`, `hash.ID` (the columns written by Seurat `HTODemux`): 7,425 singlets, 1,989 doublets, 47 negatives. Doublets and negatives are still in this object; the later scripts drop them by selecting hashtag names. |
+| Cell filter | Metadata column `percent.mt`. The cells of the object have at most 19.8 % mitochondrial counts, 59,782 UMIs and 7,496 detected genes, in line with the filter given in the Methods (more than 20 %, more than 60,000 or more than 7,500 removed). |
 | RNA normalisation | `NormalizeData(seurat_obj)` |
 | Variable genes | `FindVariableFeatures(seurat_obj, nfeatures = 2000)` |
 | Scaling and PCA | `ScaleData(seurat_obj)`, `RunPCA(seurat_obj, npcs = 30)` |

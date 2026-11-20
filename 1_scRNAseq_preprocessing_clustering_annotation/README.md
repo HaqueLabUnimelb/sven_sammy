@@ -11,7 +11,7 @@ uses as the RCTD reference.
 |---|---|
 | `1_cellranger/run_cellranger.sh` | Standard Cell Ranger 8.0.1 workflow (`mkfastq`, then `count` of the gene expression and hashtag libraries), written for this repository with the recorded commands |
 | `1_cellranger/2025-11_mkfastq_and_count/` | Records of the Cell Ranger run of November 2025: `samplesheet.csv`, `library.csv`, hashtag reference, command records (`Split_Output_new/_invocation`, `new_cellranger/_cmdline`) and metrics |
-| `2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` | Standard Seurat processing into `GEX_HTO_Processed.rds` (hashtag demultiplexing, normalisation, first clustering), written for this repository with the settings recorded in that object |
+| `2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` | Standard Seurat processing into `GEX_HTO_Processed.rds` (hashtag demultiplexing, cell filter, normalisation, first clustering), written for this repository with the settings given in the Methods of the manuscript |
 | `2_seurat_clustering_annotation/liver_scRNAseq_processed_NI.R` | Main script: removes contaminating clusters, keeps the liver cells, clusters them (resolution 0.7), assigns cell labels, draws UMAPs and the dot plot |
 | `2_seurat_clustering_annotation/sven_liverscRNAseq.R` | Full working script of the same analysis. Lines 860 to 872 save `sven_liver_Tcells_split_up_MNP1_MNP2_forRCTD.RDS` (CellChat run 2); lines 413 to 430 save `sven_liver_new_cytotoxic_cluster_forRCTD_v2.RDS` (read by the November 2025 CellChat code) |
 | `2_seurat_clustering_annotation/Tcell_combined_ref.R` | Merges the four CD4 labels into `Tcell` (intermediate reference object) |
@@ -38,7 +38,7 @@ run in which order: [`../docs/PROVENANCE.md`](../docs/PROVENANCE.md#running-the-
 | Step | Setting | Where |
 |---|---|---|
 | Cell Ranger | `cellranger count` with both libraries, reference `refdata-gex-mm10-2020-A` (mouse GRCm38, GENCODE vM23), `--create-bam=false` | `1_cellranger/run_cellranger.sh` |
-| Hashtag demultiplexing, normalisation, first clustering | CLR for hashtags, `HTODemux` (standard `positive.quantile = 0.99`), 2,000 variable genes, 30 PCs, 20 dimensions, resolution 0.3 | `0_make_GEX_HTO_Processed.R` (settings recorded in `GEX_HTO_Processed.rds`) |
+| Hashtag demultiplexing, cell filter, normalisation, first clustering | CLR for hashtags, `HTODemux(positive.quantile = 0.95)`; cells with more than 20 % mitochondrial counts, more than 60,000 UMIs or more than 7,500 detected genes removed; 2,000 variable genes, 30 PCs, 20 dimensions, resolution 0.3 | `0_make_GEX_HTO_Processed.R` (settings given in the Methods of the manuscript) |
 | Remove contaminating clusters | keep first-clustering clusters 0, 1, 2, 3, 4, 6, 7, 8, 9, 12, 13, 14 | line 67 |
 | Liver cells | hashtags B1 to B4 (liver) and the clusters of line 67 except cluster 3: 2,934 cells | lines 20 and 65 (line 80 includes cluster 3; skip lines 80 to 95) |
 | Clustering of liver cells | `FindClusters(resolution = 0.7)`: 15 clusters | line 101 |
