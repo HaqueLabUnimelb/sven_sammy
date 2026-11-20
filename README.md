@@ -17,9 +17,9 @@ Terms used in all parts:
   Part 1 lists which cluster carries which label.
 - The sample names of the scRNA-seq library distinguish infected and uninfected mice. The archived files
   do not name the infection.
-- Files with `_NI` in their name were set aside by their author for the manuscript revision. Comments in
-  the part 1 scripts call it the "NI revision"; the archived files do not expand `NI` and do not name
-  the manuscript.
+- The five files with `_NI` in their name are kept by their author in one folder on Spartan,
+  `/data/projects/punim1236/liver_stomicsv1.3/scripts_for_NI/`. Comments in the part 1 scripts speak of
+  the "NI revision"; the archived files do not expand `NI` and do not name the manuscript.
 
 The archived files are byte-for-byte copies of the files on the lab's storage on the Spartan cluster
 (University of Melbourne), copied on 20 November 2026. They were not edited for this archive.

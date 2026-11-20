@@ -20,9 +20,10 @@ Lengths in the scripts (`radius`, `eps`, `h`, `R`) are in the coordinate units o
 which neighbouring bins are 20 units apart. The cell-type names (`MNP1`, `MNP2`, `infected CD4`,
 `naive CD4`, `uninfected MNP`) are the labels of the scRNA-seq reference (see
 [`../1_scRNAseq_preprocessing_clustering_annotation/README.md`](../1_scRNAseq_preprocessing_clustering_annotation/README.md#objects-and-labels)).
-The four files with `_NI` in their name come from the folder `scripts_for_NI/`, which their author
-created on 19 November 2026. Comments in the scRNA-seq scripts of part 1 use "NI revision" for the
-manuscript revision; the archived files do not expand `NI`.
+The four files with `_NI` in their name come from the folder
+`/data/projects/punim1236/liver_stomicsv1.3/scripts_for_NI/`, in which their author saved them on
+19 November 2026; the folder also holds `liver_scRNAseq_processed_NI.R` of part 1. Comments in the part 1
+scripts speak of the "NI revision"; the archived files do not expand `NI`.
 
 ## Files
 
