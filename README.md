@@ -4,7 +4,24 @@ Analysis code of a mouse liver study (Haque Lab, University of Melbourne): singl
 CD4 T cells and mononuclear phagocytes (MNPs), ligand-receptor analysis with CellChat, and Stereo-seq v1.3
 spatial transcriptomics of a liver section analysed with RCTD, Hotspot and DBSCAN.
 
-<img src="docs/workflow.svg" alt="Workflow: part 1 scRNA-seq (Cell Ranger, Seurat), part 2 CellChat, part 3 Stereo-seq v1.3 (SAW, bin20 matrix, RCTD, Hotspot, DBSCAN regions)" width="100%">
+```mermaid
+flowchart TB
+    subgraph P1["Part 1: scRNA-seq"]
+        A["Cell Ranger"] --> B["Seurat: clustering and cell labels"]
+    end
+    subgraph P2["Part 2: CellChat"]
+        C["MNP2 cells with CD4 T cells"]
+    end
+    subgraph P3["Part 3: Stereo-seq v1.3"]
+        D["SAW (Stereo-seq Analysis Workflow)"] --> E["bin20 count matrix"]
+        E --> F["RCTD cell-type weights"]
+        E --> G["Hotspot gene modules"]
+        F --> H["DBSCAN regions, enrichment, colocalisation"]
+        G --> H
+    end
+    B --> C
+    B -->|reference| F
+```
 
 ## Contents
 
