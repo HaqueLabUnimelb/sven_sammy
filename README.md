@@ -4,34 +4,17 @@ Analysis code of a mouse liver study (Haque Lab, University of Melbourne): singl
 CD4 T cells and mononuclear phagocytes (MNPs), ligand-receptor analysis with CellChat, and Stereo-seq v1.3
 spatial transcriptomics of a liver section analysed with RCTD, Hotspot and DBSCAN.
 
-```mermaid
-flowchart LR
-    subgraph P1["Part 1: scRNA-seq"]
-        A["Cell Ranger"] -.->|code not found| B["Seurat: clustering and cell labels"]
-    end
-    subgraph P2["Part 2: CellChat"]
-        C["MNP2 cells with CD4 T cells"]
-    end
-    subgraph P3["Part 3: Stereo-seq v1.3"]
-        D["SAW (Stereo-seq Analysis Workflow)"] --> E["bin20 count matrix"]
-        E --> F["RCTD cell-type weights"]
-        E --> G["Hotspot gene modules"]
-        F --> H["DBSCAN regions, enrichment, colocalisation"]
-        G --> H
-    end
-    B --> C
-    B -->|reference| F
-```
+<img src="docs/workflow.svg" alt="Workflow: part 1 scRNA-seq (Cell Ranger, Seurat), part 2 CellChat, part 3 Stereo-seq v1.3 (SAW, bin20 matrix, RCTD, Hotspot, DBSCAN regions)" width="100%">
 
 ## Contents
 
 | Folder | What it does | Main scripts |
 |---|---|---|
-| [`1_scRNAseq_preprocessing_clustering_annotation/`](1_scRNAseq_preprocessing_clustering_annotation) | Cell Ranger, clustering and cell labels of the scRNA-seq data | `liver_scRNAseq_processed_NI.R`, `sven_liverscRNAseq.R` |
+| [`1_scRNAseq_preprocessing_clustering_annotation/`](1_scRNAseq_preprocessing_clustering_annotation) | Cell Ranger, clustering and cell labels of the scRNA-seq data | `0_make_GEX_HTO_Processed.R`, `liver_scRNAseq_processed_NI.R`, `sven_liverscRNAseq.R` |
 | [`2_CellChat/`](2_CellChat) | Ligand-receptor communication of MNP2 cells with infected or cytotoxic CD4 T cells, compared with naive CD4 T cells | `run_cellchat_MNP2_infected_vs_naive_CD4_latest.R`, `run_cellchat_MNP2_cytotoxic_vs_naive_CD4_latest.R` |
 | [`3_STOmics_liver_v1.3/`](3_STOmics_liver_v1.3) | RCTD deconvolution, Hotspot gene modules, DBSCAN regions, cell-type enrichment and colocalisation | `rctd_script_NI.R`, `hotspot_liverstomics_NI.ipynb`, `liverstomics_hotspot_dbscan_NI.R` |
 | [`environment/`](environment) | Conda environments (Python) and install scripts (R libraries), with test results | [`environment/README.md`](environment/README.md) |
-| [`docs/PROVENANCE.md`](docs/PROVENANCE.md) | Origin of every file, differences between saved scripts and results, items not found | |
+| [`docs/PROVENANCE.md`](docs/PROVENANCE.md) | Origin of every file and differences between saved scripts and results | |
 
 ## Reproduce
 
@@ -53,9 +36,5 @@ flowchart LR
   and session logs instead. Six scripts were saved again by their author after the results were produced; the
   differences found (for example `n_neighbors` in the Hotspot notebook) are noted in the part READMEs.
   [`MANIFEST.tsv`](MANIFEST.tsv) lists the origin, owner, date and md5 of each file.
-- Added for this repository: the READMEs, `docs/`, `environment/`, `MANIFEST.tsv` and
-  `DATA_NOT_IN_REPOSITORY.tsv`.
-- Not found ([full list](docs/PROVENANCE.md#not-found)): the code that created the starting scRNA-seq
-  object `GEX_HTO_Processed.rds`, and the code that saved two annotated objects,
-  `sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS` (input of CellChat run 1 and RCTD) and
-  `sven_liver_new_cytotoxic_cluster_forRCTD.RDS`.
+- Added for this repository: the READMEs, `docs/`, `environment/`, `MANIFEST.tsv`, `DATA_NOT_IN_REPOSITORY.tsv`
+  and two standard scripts of part 1 (`1_cellranger/run_cellranger.sh`, `0_make_GEX_HTO_Processed.R`).

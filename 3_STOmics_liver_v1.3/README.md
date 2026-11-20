@@ -29,7 +29,7 @@ the Spartan cluster; edit them first.
 | 2 | conda `sven_sammy_stereopy`, then R `rctd_seurat` | `python 01_Y01453J8_bin20_gef_to_h5ad.py`, then `Rscript 02_Y01453J8_bin20_h5ad_to_rds.R` (edit input and output paths at the top of each) |
 | 3 | R `rctd_seurat` | edit lines 1, 13, 25, 57 and 59 of `rctd_script_NI.R`, then `Rscript rctd_script_NI.R` (16 CPUs, 100 GB, about 20 minutes) |
 | 4 | conda `sven_sammy_hotspot` | in the notebook, edit the input path (second code cell) and the `os.chdir` folder (eighth code cell), set `n_neighbors=30` (third code cell), run all cells. Run top to bottom, the fifth code cell writes `hotspot_plots/local_correlations.pdf` and `.png` before the `os.chdir` cell, into the starting folder |
-| 5 | R `dbscan_regions` (reconstructed; the original session ran R 4.3.1) | in R, `source("colocalisation_script_NI.R", encoding = "UTF-8")`, then run `liverstomics_hotspot_dbscan_NI.R` section by section (edit paths; create the output folder with its subfolders `zoom/`, `background_regions/`, `enrichment/`, and the folder of line 59) |
+| 5 | R `dbscan_regions` | in R, `source("colocalisation_script_NI.R", encoding = "UTF-8")`, then run `liverstomics_hotspot_dbscan_NI.R` section by section (edit paths; create the output folder with its subfolders `zoom/`, `background_regions/`, `enrichment/`, and the folder of line 59) |
 
 ## Key settings
 
@@ -38,6 +38,7 @@ Lengths are in the units of the bin coordinates `x` and `y`, in which neighbouri
 
 | Step | Setting | Where |
 |---|---|---|
+| SAW reference | mouse GRCm38 primary assembly with the Ensembl release 93 annotation (`Mus_musculus.GRCm38.93.saw.gtf`), STOmics reference `Mus_musculus_index` | `1_SAW/run_2026-07-06_original_image/config.yaml` |
 | RCTD reference | Tabula Muris liver hepatocytes (1,764 cells) + the 2,537 annotated liver cells of part 1 | `rctd_script_NI.R` lines 13 to 41 |
 | RCTD | `createRctd()` defaults (among them `UMI_min = 100`: weights for 289,703 of the 293,543 bins); `runRctd(rctd_mode = "full")` | `rctd_script_NI.R` lines 129 to 139 |
 | Hotspot genes | genes detected in at least 1 % of bins (3,467) | notebook, second code cell |

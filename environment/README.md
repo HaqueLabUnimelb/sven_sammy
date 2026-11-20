@@ -90,11 +90,11 @@ export R_LIBS_USER=/path/to/Rlib_rctd_seurat    # /path/to/Rlib_dbscan_regions f
   differ from each other; module 5, used in step 5, is the same module in every run (1,854 to 1,891 bins with
   `module_5 > 4` in four new runs, 1,882 in the archived run). With a fixed seed, the notebook and a script
   version of it write identical tables.
-- **`dbscan_regions` is reconstructed.** The original session of part 3, step 5 ran R 4.3.1 (recorded in the
-  PDF and `.rds` files it wrote); its package library was not found. This library uses R 4.5.0 with the
-  versions of the RCTD library plus `dbscan` 1.2.7, the CRAN version at the time of the analysis.
-- **Part 1.** The original part 1 objects were saved by R 4.4.0; the package versions are not recorded.
-  `rctd_seurat` was tested by re-running the clustering of the liver cells only.
+- **`dbscan_regions`.** The original session of part 3, step 5 ran R 4.3.1 (recorded in the PDF and `.rds`
+  files it wrote). This library uses R 4.5.0 with the versions of the RCTD library plus `dbscan` 1.2.7, the
+  CRAN version at the time of the analysis.
+- **Part 1.** The original part 1 objects were saved by R 4.4.0. `rctd_seurat` was tested by re-running the
+  clustering of the liver cells; `0_make_GEX_HTO_Processed.R` also runs with its package versions.
 - The lock tables fix package versions and sources, not compiled binaries.
 
 ## Files

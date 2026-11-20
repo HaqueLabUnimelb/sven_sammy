@@ -7,7 +7,7 @@
 # colocalisation_script_NI.R).
 #
 # PROPOSAL: the original R session ran R 4.3.1 (Producer field of its PDF files, version stamp of its .rds
-# files); its package versions are not recorded.
+# files).
 # This lock table takes every package that the two scripts load, and their dependencies, at the
 # versions of the RCTD library (rctd_seurat_packages.tsv, R 4.5.0, installed 14 July 2026), which
 # wrote the RCTD result that the scripts read. dbscan is not in that library; the lock table uses

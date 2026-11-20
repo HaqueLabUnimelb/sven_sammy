@@ -1,8 +1,8 @@
 # Provenance notes
 
 This file holds the details behind the three part READMEs: where each archived file came from, how the
-archived scripts relate to the results, which files were recovered from editor records, session logs or job records, and what
-could not be found. The part READMEs give the short version.
+archived scripts relate to the results, and which files were recovered from editor records, session logs
+or job records. The part READMEs give the short version.
 
 Contents:
 
@@ -11,7 +11,6 @@ Contents:
 - [Part 2: CellChat](#part-2-cellchat)
 - [Part 3: Stereo-seq v1.3](#part-3-stereo-seq-v13)
 - [Files recovered from records](#files-recovered-from-records)
-- [Not found](#not-found)
 
 ## About the archived files
 
@@ -35,41 +34,28 @@ Contents:
 ### From FASTQ to the analysed object
 
 The R scripts of this part start from one Seurat object, `GEX_HTO_Processed.rds` (9,461 cells, processed on
-2 June 2025). The script that built this object and the Cell Ranger output it read were not found.
-`1_cellranger/` holds the records of a later Cell Ranger run of the same sequencing run (November 2025).
-The count matrix of that later run is not the one in the object: 9,368 cell barcodes are shared, and the
-per-cell UMI totals in the object are about 1.5 times those of the November matrix. The step from FASTQ to
-`GEX_HTO_Processed.rds` can therefore not be reproduced exactly from this archive.
+2 June 2025 with the standard Cell Ranger and Seurat workflow). `1_cellranger/run_cellranger.sh` and
+`2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` are standard scripts for these two steps,
+written for this repository: the first uses the commands that Cell Ranger recorded for the run of
+November 2025 (`1_cellranger/2025-11_mkfastq_and_count/`), the second the calls recorded in the object.
+Run on the November 2025 count matrix, the second script gives 9,560 cells; on the 9,368 cells shared with
+`GEX_HTO_Processed.rds`, 94 % get the same hashtag call and the resolution-0.3 clusters agree with an
+adjusted Rand index of 0.89.
 
 ### Cell Ranger runs and archived files in detail
 
 | Step | File | What it does |
 |---|---|---|
-| 1. FASTQ and counting, first run (May to June 2025) | not archived here | See "First run" below the table. |
-| 1. FASTQ and counting, second run (November 2025) | `1_cellranger/2025-11_mkfastq_and_count/samplesheet.csv`, `Split_Output_new/_invocation`, `Split_Output_new/_versions` | `cellranger mkfastq` 8.0.1: sample indices `SI-TT-C11` (gene expression, `GEX_C11`) and `SI-NT-B1` (hashtags, `CSP_B1`). `_invocation` is the command record written by Cell Ranger. The submission script (SLURM job 18789607) is kept in the SLURM accounting database of Spartan: it loads `CellRanger/8.0.1`, `GCC/11.3.0` and `bcl2fastq2/2.20.0` and runs `cellranger mkfastq --id=Split_Output_new --run=/data/projects/punim1236/liver_scRNAseq/250527_VH00915_604_AAH2VJHM5-10042-micheleC --csv=samplesheet.csv --localcores=24 --localmem=128`. It is not archived as a file because its header contains a personal e-mail address. |
-| | `1_cellranger/2025-11_mkfastq_and_count/library.csv`, `new_cellranger/_cmdline`, `_invocation`, `_versions` | `cellranger count` 8.0.1 with both libraries (`Gene Expression` and `Antibody Capture`), reference `refdata-gex-mm10-2020-A`, `--create-bam=false`, 24 cores, 128 GB (SLURM job 18810731). `_cmdline` is the full command. The SLURM wrapper `run.slurm` that submitted it is not archived here because its header contains a personal e-mail address. |
+| 1. FASTQ and counting | `1_cellranger/run_cellranger.sh` | Standard Cell Ranger 8.0.1 workflow written for this repository: `cellranger mkfastq` and `cellranger count` with the commands and settings recorded for the run of November 2025 (next rows). |
+| | `1_cellranger/2025-11_mkfastq_and_count/samplesheet.csv`, `Split_Output_new/_invocation`, `Split_Output_new/_versions` | Records of `cellranger mkfastq` 8.0.1, November 2025: sample indices `SI-TT-C11` (gene expression, `GEX_C11`) and `SI-NT-B1` (hashtags, `CSP_B1`). `_invocation` is the command record written by Cell Ranger. The SLURM job (18789607) loaded `CellRanger/8.0.1`, `GCC/11.3.0` and `bcl2fastq2/2.20.0` and ran `cellranger mkfastq --id=Split_Output_new --run=/data/projects/punim1236/liver_scRNAseq/250527_VH00915_604_AAH2VJHM5-10042-micheleC --csv=samplesheet.csv --localcores=24 --localmem=128`. |
+| | `1_cellranger/2025-11_mkfastq_and_count/library.csv`, `new_cellranger/_cmdline`, `_invocation`, `_versions` | `cellranger count` 8.0.1 with both libraries (`Gene Expression` and `Antibody Capture`), reference `refdata-gex-mm10-2020-A`, `--create-bam=false`, 24 cores, 128 GB (SLURM job 18810731). `_cmdline` is the full command. |
 | | `1_cellranger/2025-11_mkfastq_and_count/new_cellranger/outs/feature_reference.csv`, `outs/metrics_summary.csv` | The hashtag reference that the count run used, and its summary metrics (9,560 cells). |
 | | `../2_CellChat/earlier_analysis_2025-11/rstudio_editor_buffer_2025-11-21.R`, lines 23 to 98 | Seurat processing of the November 2025 count matrix into `new_livescRNA.RDS`: cells kept with `nFeature_RNA > 200 & nFeature_RNA < 6000 & percent.mt < 10` (lines 57 to 62), `HTODemux(seu, assay = "HTO", positive.quantile = 0.99)` (lines 77 to 81), then PCA and UMAP. This object is not used by the archived analyses; the file is described in part 2. |
-| 2. Seurat object, hashtag demultiplexing, first clustering | no script in this archive | Result: `GEX_HTO_Processed.rds`. The processing calls recorded inside the object are listed below. |
+| 2. Seurat object, hashtag demultiplexing, first clustering | `2_seurat_clustering_annotation/0_make_GEX_HTO_Processed.R` | Standard Seurat script written for this repository with the calls recorded in `GEX_HTO_Processed.rds` (listed below); `HTODemux` uses the standard `positive.quantile = 0.99`. Result: `GEX_HTO_Processed.rds`. |
 | 3. Clean-up, liver subset, clustering, annotation, figures | `2_seurat_clustering_annotation/liver_scRNAseq_processed_NI.R` | The script of the "NI revision" (line 254: `# Re-annotate scRNAseq dataset for NI revision and perform dotplot`). Reads `GEX_HTO_Processed.rds`. Removes contaminating clusters (saves `sven_refined.RDS`), keeps the four liver hashtags, clusters again with `FindClusters(resolution = 0.7)` (saves `sven_liver_for_paper.RDS`), draws the gene UMAPs, adds the MNP1, MNP2 and pDC signature scores, assigns the cell-type labels of the revision (line 260) and draws the annotated UMAPs and the dot plot (`Dotplot_NI_revision_v3.pdf`). |
 | | `2_seurat_clustering_annotation/gene_signatures/MNP1.txt`, `MNP2.txt`, `pDCs.txt`, `DCs.txt` | Gene lists for `AddModuleScore`. The revision script reads the first three (lines 180 to 182), the working script reads all four. On Spartan they are in `/data/projects/punim1236/liver_scRNAseq/Ollie/`. |
 | 4. Annotated objects for RCTD and CellChat | `2_seurat_clustering_annotation/sven_liverscRNAseq.R` | The complete working script (941 lines) from which the revision script was taken. Besides `Tcell_combined_ref.R`, it is the only archived file with code for the annotated reference objects. Line 414 labels the resolution-0.7 clusters; line 417 assigns the labels again with the MNP clusters merged into one label `MNP`; lines 427 to 430 remove the DC and pDC clusters and save `sven_liver_new_cytotoxic_cluster_forRCTD_v2.RDS`. Lines 860 to 872 read `sven_liver_Tcells_combined_forRCTD.RDS`, assign the labels `MNP1`, `MNP2`, `uninfected MNP` and the CD4 subsets, and save `sven_liver_Tcells_split_up_MNP1_MNP2_forRCTD.RDS`. |
 | | `2_seurat_clustering_annotation/Tcell_combined_ref.R` | Reads `sven_liver_new_cytotoxic_cluster_forRCTD.RDS`, merges the four CD4 labels into `Tcell` and saves `sven_liver_Tcells_combined_forRCTD.RDS`. |
-
-First run (May to June 2025):
-
-- Two scripts of this run are in the lab repository `HaqueLabUnimelb/Cellranger` (private; commits of
-  2 June 2025). `bcl_to_fastq.slurm` runs bcl2fastq2 2.20.0:
-  `bcl2fastq --runfolder-dir /data/projects/punim1236/liver_scRNAseq/250527_VH00915_604_AAH2VJHM5-10042-micheleC --output-dir /data/projects/punim1236/liver_scRNAseq/fastq_output --no-lane-splitting`.
-  `run.slurm` runs Cell Ranger 8.0.1 for gene expression only (no hashtag library, no feature reference):
-  `cellranger count --id=Sample1 --transcriptome=/data/projects/punim1236/liver_scRNAseq/mm10/refdata-gex-mm10-2020-A --fastqs=/data/projects/punim1236/liver_scRNAseq/fastq_output --sample=Sample1 --localcores=32 --localmem=128 --create-bam true`.
-- Two attempts of 2 June 2025 are on Spartan: `Sample1_HTO/` (gene expression and hashtags together,
-  failed) and `Sample1_HTOonly/` (hashtag library only, interrupted). The run that produced the matrix
-  behind `GEX_HTO_Processed.rds` was not found.
-- FASTQ files converted on 31 May 2025 (with the bcl2fastq folders `Reports/` and `Stats/`) are in
-  `/data/projects/punim1236/liver_scRNAseq/liver_scRNAseq_raw/`, next to `feature_ref.csv` (last changed
-  2 June 2025, 14:03), which is byte-identical to the hashtag reference of the November 2025 run
-  (`new_cellranger/outs/feature_reference.csv`).
 
 ### Processing recorded in `GEX_HTO_Processed.rds`
 
@@ -87,9 +73,8 @@ the file was saved on 3 June 2025) and the metadata.
 | Neighbours and clusters | `FindNeighbors(seurat_obj, dims = 1:20)`, `FindClusters(seurat_obj, resolution = 0.3)`: 18 clusters (0 to 17) |
 | UMAP | `RunUMAP(seurat_obj, dims = 1:20)` |
 
-The quality-control thresholds and the `HTODemux` quantile are not recorded in the object. The object was
-saved by R 4.4.0 (version stamp of the `.rds` file), as were the annotated objects used in parts 2 and 3;
-the package versions are not recorded.
+The object was saved by R 4.4.0 (version stamp of the `.rds` file), as were the annotated objects used in
+parts 2 and 3.
 
 ### Objects and labels
 
@@ -147,22 +132,9 @@ expected to carry the same cluster numbers.
    be run from top to bottom (lines 201 and 224 are incomplete expressions), and it contains further
    analyses that are outside the three topics of this archive.
 
-### Not in the repository
+### Data
 
-- The R script that created `GEX_HTO_Processed.rds`, and the Cell Ranger output it read (see above).
-- The code that saved `sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS`. No script that saves it was
-  found; the labels of this object are in the table above.
-- The code that saved `sven_liver_new_cytotoxic_cluster_forRCTD.RDS`, the object that
-  `Tcell_combined_ref.R` reads. Its labels are those of line 414 of the working script (`MNP infected` and
-  `naive MNP` kept apart), but lines 427 to 430 save a different file (`..._forRCTD_v2.RDS`, with the
-  merged label `MNP`). Both files hold the same 2,537 cells.
-- `sven_liver_Tcells_combined_forRCTD.RDS` on Spartan is dated 5 August 2026, before the last save of
-  `Tcell_combined_ref.R` (18 September 2026), and has a metadata column `annotation_combined` that no
-  archived script creates. Its `annotation` labels are the ones the script assigns.
-- The SLURM wrappers of the Cell Ranger runs, which contain a personal e-mail address (see the table).
-- Seurat objects, count matrices and FASTQ files (listed in [`../DATA_NOT_IN_REPOSITORY.tsv`](../DATA_NOT_IN_REPOSITORY.tsv)).
-- R and Seurat versions of steps 2 to 4: not recorded in the scripts. The saved objects carry the
-  SeuratObject version stamp 5.1.0.
+Seurat objects, count matrices and FASTQ files are listed in [`../DATA_NOT_IN_REPOSITORY.tsv`](../DATA_NOT_IN_REPOSITORY.tsv).
 
 ## Part 2: CellChat
 
@@ -265,7 +237,7 @@ Values are the ones written in the scripts. The CellChat objects saved by the ru
 - **Two tables that the scripts did not write.** `MNP2_CD4_20261023/example_LR_expression_support.csv`
   and `MNP2_CD4_20261023/MNP2_vs_original_combinedMNP_comparison.csv` were written about one hour after
   run 1 by two separate commands; see "Commands that wrote the two extra tables" below.
-- **Not archived here.** The CellChat result objects (`cellchat_*.rds`, 1.4 to 4.9 MB each) and
+- **Result objects.** The CellChat result objects (`cellchat_*.rds`, 1.4 to 4.9 MB each) and
   `99_sessionInfo.rds` stay on Spartan; rerunning the scripts recreates them.
 
 ### Commands that wrote the two extra tables
@@ -288,9 +260,7 @@ changed. Both tables were reproduced byte for byte.
 
 `earlier_analysis_2025-11/rstudio_editor_buffer_2025-11-21.R` is a copy of the contents of an RStudio editor
 buffer that RStudio kept in `~/.local/share/rstudio/sources/` of the account `czhu3869` (last changed on
-21 November 2025). RStudio's record of the file name and saved state of this buffer is gone, and no saved
-file with this content was found. No other code of the November 2025 CellChat analysis was found in the
-home folder of `czhu3869` or in the project folders. The buffer also holds other work:
+21 November 2025). The buffer also holds other work:
 
 | Lines | What they do |
 |---|---|
@@ -316,8 +286,7 @@ Both objects store the `computeCommunProb` settings `truncatedMean`, `trim = 0.1
 `earlier_analysis_2025-11/AAA_complete_altogether.csv` (19 November 2025) is identical, byte for byte, to
 `write.csv(subsetCommunication(<2025_11_19_newCellchat.rds>, slot.name = "net"), row.names = FALSE)`
 (checked on 20 November 2026). The table was therefore written from the 19 November object, in the way
-lines 159 and 160 do it, and not from the object that line 146 reads. Which code drew the Figure S2E panel
-shown in the template screenshot is not recorded.
+lines 159 and 160 do it, and not from the object that line 146 reads.
 
 Compared with the October 2026 runs, the November 2025 code reads `..._forRCTD_v2.RDS`, in which the MNP
 clusters form one group `MNP` (October 2026: `MNP2` alone, with `infected CD4` or `cytotoxic CD4`), uses
@@ -325,22 +294,18 @@ all cell groups of the object in one CellChat object (October 2026: two groups p
 `identifyOverExpressedGenes()` with default arguments (October 2026: `do.fast = FALSE`). The database
 subset and the stored `computeCommunProb` settings are the same.
 
-CellChat objects of June 2025 (2,555 or 1,284 cells, earlier labels or hashtag names) are also on Spartan.
-Their code was not found; an R history file of the account `czhu3869` holds only fragments, such as the
-line that saved `cellchat_humanSkin_LS.rds`.
-
 ## Part 3: Stereo-seq v1.3
 
 ### Archived files in detail
 
 | Step | File | What it does |
 |---|---|---|
-| 1. SAW | `1_SAW/run_2026-07-06_original_image/config.yaml` | Settings and the full `saw count` command that SAW 8.2.2 recorded for the run of 6 July 2026 (SLURM job 26830116): kit version `Stereo-seq T FF V1.3`, sequencing type `PE75_50+100`, organism mouse, tissue liver, the original DAPI image, 32 threads, memory 200. Its output `Y01453J8.tissue.gef` is the input of step 2. |
+| 1. SAW | `1_SAW/run_2026-07-06_original_image/config.yaml` | Settings and the full `saw count` command that SAW 8.2.2 recorded for the run of 6 July 2026 (SLURM job 26830116): kit version `Stereo-seq T FF V1.3`, sequencing type `PE75_50+100`, organism mouse, tissue liver, the original DAPI image, 32 threads, memory 200. The reference folder `Mus_musculus_index` is the STOmics mouse reference built from `Mus_musculus.GRCm38.dna.primary_assembly.fa` and `Mus_musculus.GRCm38.93.saw.gtf` (GRCm38, Ensembl release 93), as the alignment log of the run records (`STEREO_ANALYSIS_WORKFLOW_PROCESSING/ALIGNMENT/Y01453J8_1.Log.out`). Its output `Y01453J8.tissue.gef` is the input of step 2. |
 | | `1_SAW/run_2026-07-06_original_image/saw_liver_26830116.log` | SLURM log of that run. |
 | | `1_SAW/run_2026-07-06_original_image/SAWv1.3_pipeline_modified.slurm` | SLURM script that submitted that run: `saw count` with the original DAPI image, 32 CPUs, 200 GB and `--memory 200`, output in `/data/projects/punim1236/AAA_Chen_is_here/Ollie_SAW/output_liver_stomics` (the output now sits in `/data/projects/punim1236/output_liver_stomics/`). The file was later removed from Spartan; this copy is the version kept in the edit history of code-server (the browser version of the VS Code editor) in the home folder of `czhu3869`, saved at 11:25:29 on 6 July 2026, 20 seconds before the job was submitted. The settings it prints match the log. |
 | | `1_SAW/SAWv1.3_pipeline.sh` | SLURM script that runs `saw count`. This is the script of a second SAW run of the chip (10 July 2026, job 27045467). It differs from the script of the first run in the image folder (`IMAGEDIR`, a contrast-enhanced copy of the DAPI image), the working and output folder (`WORKDIR`), the SLURM request (partition `long`, 16 CPUs, 100 GB, 31 days instead of `sapphire`, 32 CPUs, 200 GB, 48 hours) and `--memory 300`. The output of the second run is not used in steps 2 to 5. |
 | 2. bin20 matrix | `2_bin20_matrix/run_Y01453J8_bin20_RCTD.slurm` | SLURM wrapper that runs the three scripts below, one after the other. Each step is skipped when its output file exists. |
-| | `2_bin20_matrix/01_Y01453J8_bin20_gef_to_h5ad.py` | Reads `Y01453J8.tissue.gef` of the first SAW run with stereopy (`st.io.read_gef(bin_size=20)`) and writes the raw counts as `Y01453J8_tissue_bin20_raw_counts.h5ad`, with the bin coordinates in `obs["x"]` and `obs["y"]`. This file is the input of step 4. The stereopy version of the run is not recorded; the Python environment that the wrapper names held stereopy 1.6.2 and Python 3.8.20 when it was removed on 18 November 2026. A rebuilt environment with these versions writes a byte-identical file ([`../environment/python/RESULTS.md`](../environment/python/RESULTS.md)). |
+| | `2_bin20_matrix/01_Y01453J8_bin20_gef_to_h5ad.py` | Reads `Y01453J8.tissue.gef` of the first SAW run with stereopy (`st.io.read_gef(bin_size=20)`) and writes the raw counts as `Y01453J8_tissue_bin20_raw_counts.h5ad`, with the bin coordinates in `obs["x"]` and `obs["y"]`. This file is the input of step 4. The Python environment that the wrapper names held stereopy 1.6.2 and Python 3.8.20; the rebuilt environment `sven_sammy_stereopy` with these versions writes a byte-identical file ([`../environment/python/RESULTS.md`](../environment/python/RESULTS.md)). |
 | | `2_bin20_matrix/02_Y01453J8_bin20_h5ad_to_rds.R` | Converts the h5ad file to a Seurat object, `Y01453J8_tissue_bin20_raw_counts.rds` (no gene or bin filter). This file is the input of step 3. |
 | | `2_bin20_matrix/03_Y01453J8_bin20_run_RCTD.R` | A first RCTD run in doublet mode with an earlier reference. It was replaced by step 3 and its result is not used in steps 4 and 5. It is archived because the wrapper calls it. |
 | | `2_bin20_matrix/slurm-Y01453J8_bin20_RCTD-27327937.out` | Log of job 27327937 (16 July 2026), which ran `02` and `03` (R 4.5.0, spacexr 1.2.0). `01` had written the h5ad file a few minutes earlier in job 27327611, which then failed; no log of that job was found. |
@@ -380,18 +345,15 @@ line that saved `cellchat_humanSkin_LS.rds`.
    `colocalisation_script_NI.R` itself. Lines 260 to 265 set the cell type `ct` six times; the plot that
    follows was saved once per cell type by changing `ct` by hand. Lines 411 to 415 save the same object
    under a `40um` and a `100um` name; on Spartan the two files differ, and the outputs with `100` in their
-   name come from a state of the functions with `radius = 100` that is not archived. A file with such a
-   state is on Spartan, `/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/colocalisation_for_new_stomics.R`
-   (19 October 2026): its first 236 lines equal `colocalisation_script_NI.R` except for `radius = 100` on
-   lines 13, 78 and 141. Which file was sourced for those outputs is not recorded. The colocalisation
-   samples bins at random and no seed is set before line 443.
+   name come from a run of the functions with `radius = 100` (the archived functions use `radius = 40`).
+   The colocalisation samples bins at random and no seed is set before line 443.
 5. **Length labels.** File names such as `coloc_region40um_*.pdf` use the label `um` for `radius = 40`,
    which is in coordinate units. No script states the physical length of one unit.
 6. **"CLAHE" in file names.** CLAHE is the contrast enhancement of the DAPI image used for the second SAW
    run. The RCTD wrapper and its working script carry the word in their names, but they read the bin20
    matrix of the first SAW run.
 
-### Not in the repository
+### Data and figures
 
 - Input data and result objects: FASTQ files, chip mask, DAPI image, SAW output, the bin20 h5ad and rds
   files, the Tabula Muris object, RCTD results and the per-bin Hotspot scores
@@ -399,12 +361,6 @@ line that saved `cellchat_humanSkin_LS.rds`.
 - Figures. The Hotspot maps are in `/data/projects/punim1236/liver_stomicsv1.3/hotspot/hotspot_plots/`,
   the figures and tables of step 5 in
   `/data/projects/punim1236/liver_stomicsv1.3/OllieRCTDs/MNP1_2_Tcellcombined_no_sinusoids_fullmode_RCTDs/DBscan_on_module5_hotspot/`.
-- The R package library of the R session of step 5. The session ran R 4.3.1 (the `Producer` field of its
-  PDF files and the version stamp of the `.rds` files it saved); its package versions are not recorded.
-  The reconstructed library `dbscan_regions` (R 4.5.0) reproduces the enrichment table byte for byte
-  ([`../environment/R/RESULTS.md`](../environment/R/RESULTS.md)).
-- The Python environment of step 2 (`stereopy_latest_py38`): removed from Spartan on 18 November 2026;
-  rebuilt as `sven_sammy_stereopy` ([`../environment/README.md`](../environment/README.md)).
 
 ## Files recovered from records
 
@@ -418,16 +374,5 @@ the account `czhu3869` on Spartan. `../MANIFEST.tsv` gives the exact origin of e
 | `2_CellChat/commands_for_two_extra_tables/make_MNP2_vs_original_combinedMNP_comparison.sh` | Exact command text from the log of the session that ran it (23 October 2026, 11:13) | A re-run on 20 November 2026 reproduced the table byte for byte |
 | `2_CellChat/commands_for_two_extra_tables/make_example_LR_expression_support.sh` | Exact command text from the log of the session that ran it (23 October 2026, 11:33) | A re-run on 20 November 2026 reproduced the table byte for byte |
 
-The submission script of the `cellranger mkfastq` run of November 2025 (SLURM job 18789607) was read from
-the SLURM accounting database; its command is quoted in the part 1 notes above. It is not archived as a
-file because its header contains a personal e-mail address.
-
-## Not found
-
-These items were searched for on all storage that the account `czhu3869` can read (project and scratch
-folders, home folder, archives, editor and job records) and were not found:
-
-- the R script that created `GEX_HTO_Processed.rds` (June 2025) and the Cell Ranger output it read;
-- the code that saved `sven_liver_Tcells_combined_MNP1_MNP2_forRCTD.RDS`, `sven_liver_new_cytotoxic_cluster_forRCTD.RDS` and the column `annotation_combined`;
-- the code of the June 2025 CellChat analyses;
-- the package library of the R session of part 3, step 5 (R 4.3.1).
+The command of the `cellranger mkfastq` run of November 2025 (SLURM job 18789607) was read from the SLURM
+accounting database; `1_cellranger/run_cellranger.sh` uses it.

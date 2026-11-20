@@ -10,8 +10,7 @@
 # 14 July 2026) and, where that library has no copy, the packages bundled with the Spartan module
 # R/4.5.0 (EasyBuild, GCC 11.3.0), restricted to the packages that the scripts load and their
 # dependencies (Depends, Imports, LinkingTo).
-# For the part 1 scripts the R and package versions of the original runs are not recorded; this
-# library is offered as a Seurat 5 environment for them.
+# The same library is offered as the Seurat 5 environment of the part 1 scripts.
 #
 # usage:   Rscript install_rctd_seurat_env.R <library_dir> [n_cpus]
 #

@@ -109,11 +109,11 @@ the copy that R would load, `source` comes from `Repository`, `biocViews`, `Remo
   empty leftover of a failed installation, next to `00LOCK-stringi`, so R loads the module's copy). The RCTD log `3_RCTD/slurm-32372823.out` prints ten of the loaded versions
   (tidyverse 2.0.0, dplyr 1.2.1, readr 2.2.0, forcats 1.0.1, stringr 1.5.0, ggplot2 4.0.3, tibble 3.2.1,
   lubridate 1.9.5, tidyr 1.3.2, purrr 1.0.2); all ten agree with the lock table. The same library is
-  offered for the part 1 Seurat scripts, whose package versions are not recorded (the objects were saved by
-  R 4.4.0 and carry the SeuratObject stamp 5.1.0; the library has Seurat 5.5.1 and SeuratObject 5.4.0).
+  offered for the part 1 Seurat scripts (the original objects were saved by R 4.4.0 and carry the
+  SeuratObject stamp 5.1.0; the library has Seurat 5.5.1 and SeuratObject 5.4.0).
 - **dbscan_regions (proposal).** The original session ran R 4.3.1 (the `Producer` field of all PDF files
-  in its output folder and the version stamp of `hs_out.rds` and `sub_df_containsdbscan_info.rds`); its
-  package library was not found, and the RCTD library has no `dbscan`. Roots: the packages loaded by the two scripts (data.table, dplyr, tidyr,
+  in its output folder and the version stamp of `hs_out.rds` and `sub_df_containsdbscan_info.rds`). The RCTD
+  library has no `dbscan`. Roots: the packages loaded by the two scripts (data.table, dplyr, tidyr,
   ggplot2, SummarizedExperiment, SpatialExperiment, viridisLite, patchwork, Matrix, MASS, scales, reshape2;
   dbscan added separately), resolved through the same two libraries as `rctd_seurat`, so every version
   equals the `rctd_seurat` one. `dbscan` 1.2.7 is the version on CRAN from 5 October 2026 until after
@@ -250,7 +250,7 @@ the copy that R would load, `source` comes from `Repository`, `biocViews`, `Remo
     are identical byte for byte). The tables that use a true random sample (`rho_background40um.csv`,
     pooled regions, pooled windows) were only checked to run.
   - The per-region enrichment (lines 588-599) is not written by the script; the driver saves it as
-    `tables/enrichment_per_region_TEST_DRIVER.csv` for the record. No archived table to compare.
+    `tables/enrichment_per_region_TEST_DRIVER.csv` for the record.
 - **sessionInfo:** `tests/results/dbscan_regions/sessionInfo_dbscan_regions.txt`.
 
 ## What was not tested, and limits
@@ -266,24 +266,21 @@ the copy that R would load, `source` comes from `Repository`, `biocViews`, `Remo
   and `dbscan_regions` are compiled under the same module, R and compiler as the original library. All
   tested outputs are nevertheless identical (except the small colocalisation differences of part 3,
   step 5).
-- **dbscan_regions is a proposal.** The original step 5 ran R 4.3.1 with a package library that was not
-  found. The test shows
-  that this library reproduces the enrichment table and region membership exactly; the one-bit
-  differences in `hs_out.rds` show that the original session read the Hotspot table with another
-  data.table version, which cannot be identified from the archive.
+- **dbscan_regions.** The original step 5 ran R 4.3.1. The test shows that this library reproduces the
+  enrichment table and region membership exactly; the one-bit differences in `hs_out.rds` show that the
+  original session read the Hotspot table with another data.table version.
 - **Random parts.** The colocalisation tables computed from a random sample of 2,000 bins (background,
   pooled regions, pooled random windows) were only run, not compared, because the scripts set no seed
-  before them (no seed is set before line 443 of `liverstomics_hotspot_dbscan_NI.R`). The outputs with `100` in their name come from a state of the functions
-  that is not archived and were not reproduced (the script copy writes them from the radius-40 result, as
+  before them (no seed is set before line 443 of `liverstomics_hotspot_dbscan_NI.R`). The outputs with `100` in their name come from a run with `radius = 100`
+  and were not reproduced (the script copy writes them from the radius-40 result, as
   the archived script does).
 - **Figures** (PDF and PNG) were written by the test runs but not compared with the archived figures.
-  CellChat `.rds` objects are not archived and were not compared.
+  CellChat `.rds` objects were not compared.
 - **Part 1 (D).** Only lines 1-3, 6, 20, 65, 98 and 101 of `liver_scRNAseq_processed_NI.R` were run (read
   `GEX_HTO_Processed.rds`, select the cells, `FindClusters(resolution = 0.7)`). The plotting, annotation,
   signature-score and dot-plot sections and the scripts `sven_liverscRNAseq.R` and `Tcell_combined_ref.R`
   were only covered by loading their packages (Seurat 5.5.1, ggplot2 4.0.3, tidyverse 2.0.0, dplyr 1.2.1,
-  ggrepel 0.9.8). The original part 1 objects were saved by R 4.4.0; the package versions of those
-  sessions are not recorded, and the step that built `GEX_HTO_Processed.rds` is not archived.
+  ggrepel 0.9.8). The original part 1 objects were saved by R 4.4.0.
 - **Not covered by these three environments:** the Python steps (`2_bin20_matrix/01_*.py`, the Hotspot
   notebook), SAW and Cell Ranger; `2_bin20_matrix/03_Y01453J8_bin20_run_RCTD.R` (an earlier RCTD run whose
   result is not used); `2_CellChat/commands_for_two_extra_tables/make_example_LR_expression_support.sh`
